@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco para la integración de la IA generativa en las tareas educativas (v.2 revisada)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            color: #2d3748;
+            display: flex;
+            flex-direction: column;
+            padding: clamp(0.2vh, 0.6vh, 6px) clamp(0.5vw, 1vw, 10px);
+        }
+        
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: min(98vw, 1400px);
+            width: 100%;
+            margin: 0 auto;
+            min-height: 0;
+            height: 100%;
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: clamp(0.9rem, 3.2vh, 2.6rem);
+            text-align: center;
+            padding-bottom: clamp(0.35vh, 0.7vh, 9px);
+            border-bottom: 2px solid #4a5568;
+            margin-bottom: clamp(0.4vh, 0.8vh, 12px);
+            flex-shrink: 0;
+        }
+        
+        .levels-grid {
+            flex: 1;
+            display: grid;
+            grid-template-rows: repeat(6, auto);
+            gap: clamp(0.25vh, 0.45vh, 7px);
+            min-height: 0;
+            overflow: hidden;
+        }
+        
+        .level-card {
+            background: white;
+            border: 1px solid #cbd5e0;
+            padding: clamp(0.32vh, 0.7vh, 12px);
+            padding-bottom: clamp(0.48vh, 0.9vh, 14px);
+            padding-inline: clamp(0.8vw, 1.6vw, 24px);
+            display: flex;
+            align-items: flex-start;
+            gap: clamp(0.45vw, 1.2vw, 15px);
+            min-height: 0;
+        }
+        
+        .level-0 { border-left: 4px solid #94a3b8; }
+        .level-1 { border-left: 4px solid #a78bfa; }
+        .level-2 { border-left: 4px solid #8b5cf6; }
+        .level-3 { border-left: 4px solid #7c3aed; }
+        .level-4 { border-left: 4px solid #6d28d9; }
+        .level-5 { border-left: 4px solid #5b21b6; }
+        
+        .level-number {
+            min-width: clamp(1.8vh, 2.8vh, 40px);
+            height: clamp(1.8vh, 2.8vh, 40px);
+            background: #4a5568;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(0.75rem, 1.7vh, 1.3rem);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .level-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-right: clamp(0.6vw, 0.9vw, 14px);
+            min-height: 0;
+        }
+
+        .level-title {
+            color: #2d3748;
+            font-size: clamp(0.57rem, 1.4vh, 1.2rem);
+            margin-bottom: 0.26vh;
+            font-weight: 600;
+            line-height: 1.14;
+            min-height: 0;
+        }
+        
+        .level-description {
+            color: #4a5568;
+            line-height: 1.14;
+            text-align: justify;
+            font-size: clamp(0.44rem, 1.1vh, 0.86rem);
+            overflow-wrap: anywhere;
+            padding-bottom: clamp(0.15vh, 0.36vh, 5px);
+            min-height: 0;
+        }
+        
+        
+        .footer {
+            margin-top: clamp(0.35vh, 0.7vh, 10px);
+            padding-top: clamp(0.25vh, 0.5vh, 7px);
+            padding-bottom: clamp(0.4vh, 0.8vh, 12px);
+            border-top: 1px solid #cbd5e0;
+            text-align: center;
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(0.18vh, 0.35vh, 6px);
+        }
+        
+        .footer-link {
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: clamp(0.2vh, 0.4vh, 6px);
+            font-size: clamp(0.75rem, 1.5vh, 1.25rem);
+            display: inline-block;
+        }
+        
+        .footer-credits {
+            color: #718096;
+            font-size: clamp(0.55rem, 1vh, 0.9rem);
+        }
+        
+        .language-switcher {
+            position: absolute;
+            right: clamp(0.5vw, 1vw, 20px);
+            bottom: clamp(0.2vh, 0.6vh, 10px);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .language-button {
+            border: 1px solid #cbd5e0;
+            background: white;
+            color: #2d3748;
+            font-size: clamp(0.55rem, 1.1vh, 0.85rem);
+            padding: 2px 10px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+        
+        .language-button:hover {
+            border-color: #4a5568;
+        }
+        
+        .language-button:focus-visible {
+            outline: 2px solid #4a5568;
+            outline-offset: 2px;
+        }
+        
+        .language-button.active {
+            background: #4a5568;
+            color: white;
+            border-color: #4a5568;
+        }
+        
+        .footer-credits a {
+            color: #4a5568;
+            text-decoration: none;
+        }
+        
+        @media (max-height: 760px) {
+            h1 {
+                font-size: clamp(0.8rem, 2.8vh, 2.2rem);
+            }
+            
+            .level-card {
+                padding: clamp(0.28vh, 0.6vh, 11px);
+                padding-bottom: clamp(0.42vh, 0.8vh, 12px);
+                padding-inline: clamp(0.7vw, 1.4vw, 20px);
+            }
+            
+            .level-number {
+                min-width: clamp(1.7vh, 2.6vh, 36px);
+                height: clamp(1.7vh, 2.6vh, 36px);
+                font-size: clamp(0.7rem, 1.6vh, 1.15rem);
+            }
+            
+            .level-title {
+                font-size: clamp(0.48rem, 1.3vh, 0.95rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.4rem, 1.05vh, 0.78rem);
+                line-height: 1.12;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.7rem, 1.5vh, 1.1rem);
+            }
+        }
+        
+        @media (max-height: 620px) {
+            body {
+                padding: clamp(0.2vh, 0.4vh, 4px) clamp(0.5vw, 0.8vw, 8px);
+            }
+            
+            h1 {
+                font-size: clamp(0.75rem, 2.5vh, 2rem);
+            }
+            
+            .level-card {
+                padding: clamp(0.26vh, 0.55vh, 10px);
+                padding-bottom: clamp(0.4vh, 0.75vh, 12px);
+                padding-inline: clamp(0.65vw, 1.3vw, 18px);
+                gap: clamp(0.4vw, 1vw, 14px);
+            }
+            
+            .level-number {
+                min-width: clamp(1.6vh, 2.3vh, 32px);
+                height: clamp(1.6vh, 2.3vh, 32px);
+                font-size: clamp(0.64rem, 1.4vh, 1.05rem);
+            }
+            
+            .level-title {
+                font-size: clamp(0.44rem, 1.15vh, 0.9rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.35rem, 0.95vh, 0.72rem);
+                line-height: 1.1;
+            }
+            
+            .footer-credits {
+                font-size: clamp(0.5rem, 1vh, 0.85rem);
+            }
+        }
+        
+        @media (max-height: 520px) {
+            h1 {
+                font-size: clamp(0.7rem, 2.2vh, 1.8rem);
+                margin-bottom: clamp(0.3vh, 0.7vh, 10px);
+            }
+            
+            .level-card {
+                padding: clamp(0.24vh, 0.5vh, 9px);
+                padding-bottom: clamp(0.36vh, 0.68vh, 11px);
+                padding-inline: clamp(0.58vw, 1.2vw, 16px);
+            }
+            
+            .level-number {
+                min-width: clamp(1.5vh, 2.1vh, 30px);
+                height: clamp(1.5vh, 2.1vh, 30px);
+                font-size: clamp(0.56rem, 1.25vh, 0.92rem);
+            }
+            
+            .level-title {
+                font-size: clamp(0.4rem, 1vh, 0.82rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.3rem, 0.75vh, 0.62rem);
+                line-height: 1.08;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.6rem, 1.1vh, 0.9rem);
+            }
+        }
+        
+        @media (max-height: 460px) {
+            body {
+                padding: clamp(0.15vh, 0.3vh, 3px) clamp(0.4vw, 0.6vw, 6px);
+            }
+            
+            .level-card {
+                padding: clamp(0.2vh, 0.45vh, 8px);
+                padding-bottom: clamp(0.34vh, 0.62vh, 10px);
+                padding-inline: clamp(0.5vw, 1vw, 13px);
+                gap: clamp(0.3vw, 0.7vw, 10px);
+            }
+            
+            .level-number {
+                min-width: clamp(1.4vh, 1.8vh, 26px);
+                height: clamp(1.4vh, 1.8vh, 26px);
+                font-size: clamp(0.44rem, 0.85vh, 0.76rem);
+            }
+            
+            .level-title {
+                font-size: clamp(0.36rem, 0.75vh, 0.7rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.26rem, 0.58vh, 0.52rem);
+                line-height: 1.06;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.5rem, 0.85vh, 0.75rem);
+            }
+        }
+        
+        @media (max-height: 400px) {
+            h1 {
+                font-size: clamp(0.6rem, 1.8vh, 1.4rem);
+            }
+            
+            .level-card {
+                padding: clamp(0.25vh, 0.6vh, 8px);
+                padding-bottom: clamp(0.5vh, 0.95vh, 14px);
+                padding-inline: clamp(0.6vw, 1.2vw, 16px);
+            }
+            
+            .level-number {
+                min-width: clamp(1.35vh, 1.7vh, 24px);
+                height: clamp(1.35vh, 1.7vh, 24px);
+                font-size: clamp(0.48rem, 0.95vh, 0.8rem);
+            }
+            
+            .level-title {
+                font-size: clamp(0.38rem, 0.8vh, 0.7rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.3rem, 0.65vh, 0.55rem);
+                line-height: 1.12;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.45rem, 0.75vh, 0.65rem);
+            }
+            
+            .footer-credits {
+                font-size: clamp(0.35rem, 0.65vh, 0.55rem);
+            }
+        }
+        
+        /* Ajustes para pantallas muy anchas (landscape) */
+        @media (min-aspect-ratio: 16/9) {
+            .container {
+                max-width: 80vw;
+            }
+            
+            .level-card {
+                padding: clamp(0.45vh, 0.85vh, 12px);
+                padding-bottom: clamp(0.65vh, 1.2vh, 18px);
+                padding-inline: clamp(1.4vw, 2vw, 32px);
+            }
+            
+            .level-number {
+                min-width: 4.5vh;
+                height: 4.5vh;
+            }
+            
+            .level-title {
+                font-size: clamp(1.1rem, 2.8vh, 2rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.9rem, 2.2vh, 1.6rem);
+            }
+        }
+        
+        /* Ajustes para pantallas muy altas (portrait) */
+        @media (max-aspect-ratio: 3/4) {
+            .level-card {
+                padding: clamp(0.55vh, 1vh, 14px);
+                padding-bottom: clamp(0.75vh, 1.4vh, 20px);
+                padding-inline: clamp(1.2vw, 1.5vw, 28px);
+            }
+            
+            .level-title {
+                font-size: clamp(1rem, 3vh, 2rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.9rem, 2.3vh, 1.6rem);
+            }
+        }
+        
+        /* Para pantallas pequeñas */
+        @media (max-width: 480px) {
+            body {
+                padding: 2px;
+            }
+            
+            h1 {
+                font-size: clamp(0.6rem, 2vh, 1.3rem);
+                margin-bottom: 0.8vh;
+                padding-bottom: 0.4vh;
+            }
+            
+            .levels-grid {
+                gap: clamp(0.2vh, 0.4vh, 5px);
+            }
+            
+            .level-card {
+                padding: 0.22vh;
+                padding-bottom: 0.65vh;
+                padding-inline: clamp(0.95vw, 1.5vw, 17px);
+                gap: 0.8vw;
+            }
+            
+            .level-number {
+                min-width: 3vh;
+                height: 3vh;
+                font-size: clamp(0.5rem, 1.3vh, 0.95rem);
+            }
+            
+            .level-title {
+                font-size: clamp(0.4rem, 1.2vh, 0.9rem);
+                margin-bottom: 0.3vh;
+            }
+            
+            .level-description {
+                font-size: clamp(0.32rem, 1.05vh, 0.7rem);
+                line-height: 1.2;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.45rem, 1vh, 0.75rem);
+            }
+            
+            .footer-credits {
+                font-size: clamp(0.32rem, 0.8vh, 0.55rem);
+            }
+            
+            .footer {
+                padding-bottom: clamp(0.6vh, 1vh, 14px);
+            }
+            
+            .language-switcher {
+                position: static;
+                margin-top: 0.4vh;
+            }
+        }
+        
+        /* Para pantallas medianas */
+        @media (min-width: 768px) and (min-height: 600px) {
+            .level-title {
+                font-size: clamp(0.95rem, 2.2vh, 1.6rem);
+            }
+            
+            .level-description {
+                font-size: clamp(0.85rem, 2vh, 1.3rem);
+                line-height: 1.2;
+            }
+        }
+        
+        /* Para pantallas grandes */
+        @media (min-width: 1200px) and (min-height: 700px) {
+            h1 {
+                font-size: clamp(1.8rem, 4vh, 3.5rem);
+                margin-bottom: 2vh;
+            }
+            
+            .level-card {
+                padding: clamp(0.5vh, 0.95vh, 14px);
+                padding-bottom: clamp(0.75vh, 1.4vh, 20px);
+                padding-inline: clamp(1.6vw, 2.2vw, 36px);
+            }
+            
+            .level-number {
+                min-width: 4.8vh;
+                height: 4.8vh;
+                font-size: clamp(1.2rem, 2.8vh, 2.1rem);
+            }
+            
+            .level-title {
+                font-size: clamp(1rem, 2.4vh, 1.8rem);
+                margin-bottom: 0.55vh;
+            }
+            
+            .level-description {
+                font-size: clamp(0.85rem, 2vh, 1.4rem);
+                line-height: 1.22;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.85rem, 1.8vh, 1.4rem);
+            }
+            
+            .footer-credits {
+                font-size: clamp(0.7rem, 1.2vh, 1rem);
+            }
+        }
+        
+        /* Para pantallas muy grandes */
+        @media (min-width: 1600px) and (min-height: 900px) {
+            h1 {
+                font-size: clamp(1.8rem, 3.8vh, 3.4rem);
+            }
+            
+            .level-card {
+                padding: clamp(0.55vh, 0.95vh, 15px) clamp(1.5vw, 2.1vw, 34px);
+            }
+            
+            .level-number {
+                min-width: 4.8vh;
+                height: 4.8vh;
+                font-size: clamp(1.2rem, 2.6vh, 2.1rem);
+            }
+            
+            .level-title {
+                font-size: clamp(1.15rem, 2.4vh, 2rem);
+                margin-bottom: 0.6vh;
+            }
+            
+            .level-description {
+                font-size: clamp(0.9rem, 2.2vh, 1.5rem);
+                line-height: 1.22;
+            }
+            
+            .footer-link {
+                font-size: clamp(0.95rem, 2vh, 1.6rem);
+            }
+            
+            .footer-credits {
+                font-size: clamp(0.75rem, 1.3vh, 1.1rem);
+            }
+        }
+        
+        /* Para pantallas 4K */
+        @media (min-width: 2560px) and (min-height: 1440px) {
+            h1 {
+                font-size: clamp(2.1rem, 4.2vh, 3.6rem);
+            }
+            
+            .level-number {
+                min-width: 5.2vh;
+                height: 5.2vh;
+                font-size: clamp(1.3rem, 2.8vh, 2.2rem);
+            }
+            
+            .level-title {
+                font-size: clamp(1.3rem, 2.6vh, 2.2rem);
+            }
+            
+            .level-description {
+                font-size: clamp(1rem, 2.3vh, 1.7rem);
+                line-height: 1.24;
+            }
+        }
+        
+        /* Estilos de impresión */
+        @media print {
+            html, body {
+                height: auto;
+                overflow: visible;
+            }
+            
+            body {
+                padding: 10px;
+                font-size: 10pt;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 14pt;
+                margin-bottom: 10px;
+                color: black;
+            }
+            
+            .levels-grid {
+                overflow: visible;
+                gap: 5px;
+            }
+            
+            .level-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                padding: 6px;
+                margin-bottom: 4px;
+            }
+            
+            .level-number {
+                background: #4a5568 !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                width: 25px !important;
+                height: 25px !important;
+                font-size: 10pt !important;
+            }
+            
+            .level-title {
+                font-size: 9pt;
+                margin-bottom: 3px;
+            }
+            
+            .level-description {
+                font-size: 8pt;
+                line-height: 1.3;
+            }
+            
+            .footer {
+                margin-top: 10px;
+                padding-top: 6px;
+            }
+            
+            .footer-link {
+                font-size: 9pt;
+            }
+            
+            .level-0 { border-left: 3px solid #94a3b8 !important; }
+            .level-1 { border-left: 3px solid #a78bfa !important; }
+            .level-2 { border-left: 3px solid #8b5cf6 !important; }
+            .level-3 { border-left: 3px solid #7c3aed !important; }
+            .level-4 { border-left: 3px solid #6d28d9 !important; }
+            .level-5 { border-left: 3px solid #5b21b6 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-title">Marco para la integración de la IA generativa en las tareas educativas (v.2 revisada)</h1>
+        
+        <div class="levels-grid">
+            <div class="level-card level-0">
+                <div class="level-number">0</div>
+                <div class="level-content">
+                    <h2 class="level-title" id="level-title-0">Nivel 0 - La persona crea</h2>
+                    <p class="level-description" id="level-desc-0">No hay uso de IA en ningún paso. Todo el contenido, diseño y producto son generados exclusivamente por la persona utilizando recursos tradicionales.</p>
+                </div>
+            </div>
+            
+            <div class="level-card level-1">
+                <div class="level-number">1</div>
+                <div class="level-content">
+                    <h2 class="level-title" id="level-title-1">Nivel 1 - La persona crea, la IA reformula</h2>
+                    <p class="level-description" id="level-desc-1">La IA se utiliza para tareas mecánicas (como corrección ortográfica, formateo) o para procesar y reformular información existente (como resumir o traducir). La IA no aporta ideas, análisis o conceptos nuevos al contenido original.</p>
+                </div>
+            </div>
+            
+            <div class="level-card level-2">
+                <div class="level-number">2</div>
+                <div class="level-content">
+                    <h2 class="level-title" id="level-title-2">Nivel 2 - La persona crea, la IA planifica</h2>
+                    <p class="level-description" id="level-desc-2">La IA ayuda en la generación inicial de ideas y en la estructuración del trabajo, pero todo el contenido final es desarrollado por la persona. La IA no produce contenidos para el producto final, pero sí influye en las ideas.</p>
+                </div>
+            </div>
+            
+            <div class="level-card level-3">
+                <div class="level-number">3</div>
+                <div class="level-content">
+                    <h2 class="level-title" id="level-title-3">Nivel 3 - La IA crea un borrador, la persona construye</h2>
+                    <p class="level-description" id="level-desc-3">La IA genera borradores iniciales o "esqueletos" de contenido. La persona utiliza este material como un punto de partida, pero asume la autoría principal, reescribiendo, adaptando y construyendo significativamente sobre la base generada por la IA. La interacción es principalmente unidireccional: la IA produce y la persona revisa y modifica.</p>
+                </div>
+            </div>
+            
+            <div class="level-card level-4">
+                <div class="level-number">4</div>
+                <div class="level-content">
+                    <h2 class="level-title" id="level-title-4">Nivel 4 - La persona y la IA cocrean</h2>
+                    <p class="level-description" id="level-desc-4">Hay un diálogo continuo y bidireccional entre persona y IA, con iteraciones frecuentes. La persona guía activamente a la IA durante todo el proceso, refinando su contenido a través de la conversación continuada. El resultado es una fusión estrecha y co-creada del trabajo de ambos, donde la IA actúa como un colaborador activo.</p>
+                </div>
+            </div>
+            
+            <div class="level-card level-5">
+                <div class="level-number">5</div>
+                <div class="level-content">
+                    <h2 class="level-title" id="level-title-5">Nivel 5 - La IA crea, la persona supervisa</h2>
+                    <p class="level-description" id="level-desc-5">La IA genera el contenido o producto de forma autónoma. La persona establece los parámetros iniciales, pero la IA desarrolla el trabajo con mínima o nula intervención durante el proceso. El rol de la persona es validar el producto final para su uso o entrega, asegurando que cumple con los requisitos iniciales y es de calidad.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-link" id="footer-link">🔗 https://ja.cat/marcoiae</div>
+            <div class="footer-credits" id="footer-credits">
+                <a href="https://bilateria.org" target="_blank" rel="noopener noreferrer">Juan José de Haro</a> | 
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Licencia Creative Commons BY-SA</a>
+            </div>
+            <div class="language-switcher" aria-label="Cambiar idioma">
+                <button type="button" class="language-button" data-lang="es">ES</button>
+                <button type="button" class="language-button" data-lang="ca">CA</button>
+                <button type="button" class="language-button" data-lang="en">EN</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            'use strict';
+            
+            const translations = {
+                es: {
+                    title: 'Marco para la integración de la IA generativa en las tareas educativas (v.2 revisada)',
+                    levels: [
+                        {
+                            title: 'Nivel 0 - La persona crea',
+                            description: 'No hay uso de IA en ningún paso. Todo el contenido, diseño y producto son generados exclusivamente por la persona utilizando recursos tradicionales.'
+                        },
+                        {
+                            title: 'Nivel 1 - La persona crea, la IA reformula',
+                            description: 'La IA se utiliza para tareas mecánicas (como corrección ortográfica, formateo) o para procesar y reformular información existente (como resumir o traducir). La IA no aporta ideas, análisis o conceptos nuevos al contenido original.'
+                        },
+                        {
+                            title: 'Nivel 2 - La persona crea, la IA planifica',
+                            description: 'La IA ayuda en la generación inicial de ideas y en la estructuración del trabajo, pero todo el contenido final es desarrollado por la persona. La IA no produce contenidos para el producto final, pero sí influye en las ideas.'
+                        },
+                        {
+                            title: 'Nivel 3 - La IA crea un borrador, la persona construye',
+                            description: 'La IA genera borradores iniciales o "esqueletos" de contenido. La persona utiliza este material como un punto de partida, pero asume la autoría principal, reescribiendo, adaptando y construyendo significativamente sobre la base generada por la IA. La interacción es principalmente unidireccional: la IA produce y la persona revisa y modifica.'
+                        },
+                        {
+                            title: 'Nivel 4 - La persona y la IA cocrean',
+                            description: 'Hay un diálogo continuo y bidireccional entre persona y IA, con iteraciones frecuentes. La persona guía activamente a la IA durante todo el proceso, refinando su contenido a través de la conversación continuada. El resultado es una fusión estrecha y co-creada del trabajo de ambos, donde la IA actúa como un colaborador activo.'
+                        },
+                        {
+                            title: 'Nivel 5 - La IA crea, la persona supervisa',
+                            description: 'La IA genera el contenido o producto de forma autónoma. La persona establece los parámetros iniciales, pero la IA desarrolla el trabajo con mínima o nula intervención durante el proceso. El rol de la persona es validar el producto final para su uso o entrega, asegurando que cumple con los requisitos iniciales y es de calidad.'
+                        }
+                    ],
+                    footerLink: '🔗 https://ja.cat/marcoiae',
+                    license: {
+                        url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.es',
+                        text: 'Licencia Creative Commons BY-SA'
+                    },
+                    languageLabel: 'Cambiar idioma',
+                    languages: {
+                        es: 'Castellano',
+                        ca: 'Catalán',
+                        en: 'Inglés'
+                    }
+                },
+                ca: {
+                    title: 'Marc per a la integració de la IA generativa en les tasques educatives (v.2 revisada)',
+                    levels: [
+                        {
+                            title: 'Nivell 0 - La persona crea',
+                            description: 'No hi ha ús d’IA en cap pas. Tot el contingut, disseny i producte són generats exclusivament per la persona utilitzant recursos tradicionals.'
+                        },
+                        {
+                            title: 'Nivell 1 - La persona crea, la IA reformula',
+                            description: 'La IA s’utilitza per a tasques mecàniques (com correcció ortogràfica, format) o per processar i reformular informació existent (com resumir o traduir). La IA no aporta idees, anàlisis ni conceptes nous al contingut original.'
+                        },
+                        {
+                            title: 'Nivell 2 - La persona crea, la IA planifica',
+                            description: 'La IA ajuda en la generació inicial d’idees i en l’estructuració del treball, però tot el contingut final és desenvolupat per la persona. La IA no produeix continguts per al producte final, però sí influeix en les idees.'
+                        },
+                        {
+                            title: 'Nivell 3 - La IA crea un esborrany, la persona construeix',
+                            description: 'La IA genera esborranys inicials o "esquelets" de contingut. La persona utilitza aquest material com a punt de partida, però assumeix l’autoria principal, reescrivint, adaptant i construint significativament sobre la base generada per la IA. La interacció és principalment unidireccional: la IA produeix i la persona revisa i modifica.'
+                        },
+                        {
+                            title: 'Nivell 4 - La persona i la IA cocreen',
+                            description: 'Hi ha un diàleg continu i bidireccional entre persona i IA, amb iteracions freqüents. La persona guia activament la IA durant tot el procés, refinant el contingut a través de la conversa continuada. El resultat és una fusió estreta i cocreada del treball d’ambdós, on la IA actua com un col·laborador actiu.'
+                        },
+                        {
+                            title: 'Nivell 5 - La IA crea, la persona supervisa',
+                            description: 'La IA genera el contingut o producte de manera autònoma. La persona estableix els paràmetres inicials, però la IA desenvolupa la feina amb mínima o nul·la intervenció durant el procés. El rol de la persona és validar el producte final per al seu ús o lliurament, assegurant que compleix els requisits inicials i és de qualitat.'
+                        }
+                    ],
+                    footerLink: '🔗 https://ja.cat/marcoiae',
+                    license: {
+                        url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.ca',
+                        text: 'Llicència Creative Commons BY-SA'
+                    },
+                    languageLabel: 'Canvia l’idioma',
+                    languages: {
+                        es: 'Castellà',
+                        ca: 'Català',
+                        en: 'Anglès'
+                    }
+                },
+                en: {
+                    title: 'Framework for integrating generative AI in educational tasks (revised v2)',
+                    levels: [
+                        {
+                            title: 'Level 0 – The person creates',
+                            description: 'No AI is used at any stage. All content, design, and outputs are generated exclusively by the person using traditional resources.'
+                        },
+                        {
+                            title: 'Level 1 – The person creates, AI reformulates',
+                            description: 'AI is used for mechanical tasks (such as spell-checking or formatting) or to process and reformulate existing information (e.g., summarising or translating). AI does not contribute new ideas, analysis, or concepts to the original content.'
+                        },
+                        {
+                            title: 'Level 2 – The person creates, AI plans',
+                            description: 'AI supports the initial generation of ideas and the structuring of the work, but all final content is developed by the person. AI does not produce material for the final product, yet it influences the ideas.'
+                        },
+                        {
+                            title: 'Level 3 – AI drafts, the person builds',
+                            description: 'AI produces initial drafts or content “skeletons”. The person uses this material as a starting point but keeps primary authorship, rewriting, adapting, and significantly building on the AI-generated base. Interaction is mostly one-way: AI produces and the person reviews and edits.'
+                        },
+                        {
+                            title: 'Level 4 – The person and AI co-create',
+                            description: 'There is an ongoing, two-way dialogue between the person and the AI with frequent iterations. The person actively guides the AI throughout the process, refining content through continued conversation. The result is a close, co-created blend of both contributions, with AI acting as an active collaborator.'
+                        },
+                        {
+                            title: 'Level 5 – AI creates, the person supervises',
+                            description: 'AI generates the content or product autonomously. The person sets the initial parameters, but the AI carries out the work with minimal or no intervention during the process. The person’s role is to validate the final product for use or delivery, ensuring it meets the initial requirements and quality.'
+                        }
+                    ],
+                    footerLink: '🔗 https://ja.cat/marcoiae',
+                    license: {
+                        url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.en',
+                        text: 'Creative Commons BY-SA Licence'
+                    },
+                    languageLabel: 'Change language',
+                    languages: {
+                        es: 'Spanish',
+                        ca: 'Catalan',
+                        en: 'English'
+                    }
+                }
+            };
+            
+            const supportedLanguages = Object.keys(translations);
+            const authorLinkHTML = '<a href="https://bilateria.org" target="_blank" rel="noopener noreferrer">Juan José de Haro</a>';
+            const elements = {
+                title: document.getElementById('main-title'),
+                footerLink: document.getElementById('footer-link'),
+                footerCredits: document.getElementById('footer-credits'),
+                languageSwitcher: document.querySelector('.language-switcher')
+            };
+            const levelTitles = [];
+            const levelDescriptions = [];
+            for (let i = 0; i < 6; i += 1) {
+                levelTitles.push(document.getElementById(`level-title-${i}`));
+                levelDescriptions.push(document.getElementById(`level-desc-${i}`));
+            }
+            
+            const languageButtons = Array.from(document.querySelectorAll('.language-button'));
+            const storageKey = 'miae-language';
+            
+            const persistLanguage = (lang) => {
+                try {
+                    window.localStorage.setItem(storageKey, lang);
+                } catch (error) {
+                    /* ignore persistence errors */
+                }
+            };
+            
+            const getStoredLanguage = () => {
+                try {
+                    const stored = window.localStorage.getItem(storageKey);
+                    if (stored && supportedLanguages.includes(stored)) {
+                        return stored;
+                    }
+                } catch (error) {
+                    /* ignore read errors */
+                }
+                return null;
+            };
+            
+            const setLanguage = (lang) => {
+                if (!supportedLanguages.includes(lang)) {
+                    lang = 'es';
+                }
+                
+                const data = translations[lang];
+                document.documentElement.setAttribute('lang', lang);
+                elements.title.textContent = data.title;
+                data.levels.forEach((item, index) => {
+                    if (levelTitles[index]) levelTitles[index].textContent = item.title;
+                    if (levelDescriptions[index]) levelDescriptions[index].textContent = item.description;
+                });
+                elements.footerLink.textContent = data.footerLink;
+                elements.footerCredits.innerHTML = `${authorLinkHTML} | <a href="${data.license.url}" target="_blank" rel="noopener noreferrer">${data.license.text}</a>`;
+                if (elements.languageSwitcher) {
+                    elements.languageSwitcher.setAttribute('aria-label', data.languageLabel);
+                }
+                
+                languageButtons.forEach((button) => {
+                    const buttonLang = button.dataset.lang;
+                    const isActive = buttonLang === lang;
+                    button.classList.toggle('active', isActive);
+                    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                    const buttonLabel = data.languages[buttonLang] || button.textContent;
+                    button.setAttribute('title', buttonLabel);
+                    button.setAttribute('aria-label', buttonLabel);
+                });
+                
+                persistLanguage(lang);
+            };
+            
+            languageButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const lang = button.dataset.lang;
+                    setLanguage(lang);
+                });
+            });
+            
+            const storedLang = getStoredLanguage();
+            const navigatorLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+            const initialLang = storedLang || (supportedLanguages.includes(navigatorLang) ? navigatorLang : 'es');
+            setLanguage(initialLang);
+        })();
+    </script>
+</body>
+</html>
