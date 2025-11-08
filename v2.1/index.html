@@ -168,7 +168,8 @@
             padding: 4px 28px 4px 10px;
             font-size: clamp(0.58rem, 1.2vh, 0.95rem);
             color: #2d3748;
-            min-width: clamp(110px, 14vw, 220px);
+            width: auto;
+            min-width: 0;
             background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%234a5568' d='M5 6c-.2 0-.4-.1-.6-.2l-4-4A.8.8 0 0 1 1 0h8a.8.8 0 0 1 .6 1.8l-4 4A.8.8 0 0 1 5 6Z'/%3E%3C/svg%3E") no-repeat right 9px center;
             appearance: none;
             cursor: pointer;
@@ -960,6 +961,7 @@
                 languageLabel: document.getElementById('language-label'),
                 languageSelect: document.getElementById('language-select')
             };
+            let measurementNode = null;
             const levelTitles = [];
             const levelDescriptions = [];
             for (let i = 0; i < 6; i += 1) {
@@ -980,6 +982,39 @@
             }
 
             const storageKey = 'miae-language';
+            const ensureMeasurementNode = () => {
+                if (measurementNode || !elements.languageSelect) {
+                    return measurementNode;
+                }
+                measurementNode = document.createElement('span');
+                measurementNode.style.position = 'absolute';
+                measurementNode.style.visibility = 'hidden';
+                measurementNode.style.whiteSpace = 'nowrap';
+                measurementNode.style.pointerEvents = 'none';
+                measurementNode.style.zIndex = '-1';
+                document.body.appendChild(measurementNode);
+                return measurementNode;
+            };
+
+            const adjustSelectWidth = () => {
+                if (!elements.languageSelect) {
+                    return;
+                }
+                const selectedOption = elements.languageSelect.options[elements.languageSelect.selectedIndex];
+                const optionText = selectedOption ? selectedOption.textContent : '';
+                const computedStyle = window.getComputedStyle(elements.languageSelect);
+                const measure = ensureMeasurementNode();
+                if (!measure) {
+                    return;
+                }
+                measure.style.font = computedStyle.font;
+                measure.textContent = optionText;
+                const paddingLeft = parseFloat(computedStyle.paddingLeft || '0');
+                const paddingRight = parseFloat(computedStyle.paddingRight || '0');
+                const iconSpace = 18;
+                const newWidth = Math.ceil(measure.offsetWidth + paddingLeft + paddingRight + iconSpace);
+                elements.languageSelect.style.width = `${newWidth}px`;
+            };
             
             const persistLanguage = (lang) => {
                 try {
@@ -1039,6 +1074,7 @@
                             option.textContent = `${code.toUpperCase()} — ${optionLabel}`;
                         }
                     });
+                    adjustSelectWidth();
                 }
                 
                 persistLanguage(lang);
