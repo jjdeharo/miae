@@ -683,7 +683,7 @@
         </div>
         
         <div class="footer">
-            <div class="footer-link" id="footer-link">🔗 https://ja.cat/marcoiae</div>
+            <a class="footer-link" id="footer-link" href="https://ja.cat/marcoiae" target="_blank" rel="noopener noreferrer">🔗 https://ja.cat/marcoiae</a>
             <div class="footer-credits" id="footer-credits">
                 <a href="https://bilateria.org" target="_blank" rel="noopener noreferrer">Juan José de Haro</a> | 
                 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Licencia Creative Commons BY-SA</a>
@@ -728,7 +728,10 @@
                             description: 'La IA genera el contenido o producto de forma autónoma. La persona establece los parámetros iniciales, pero la IA desarrolla el trabajo con mínima o nula intervención durante el proceso. El rol de la persona es validar el producto final para su uso o entrega, asegurando que cumple con los requisitos iniciales y es de calidad.'
                         }
                     ],
-                    footerLink: '🔗 https://ja.cat/marcoiae',
+                    footerLink: {
+                        url: 'https://ja.cat/marcoiae',
+                        text: '🔗 https://ja.cat/marcoiae'
+                    },
                     license: {
                         url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.es',
                         text: 'Licencia Creative Commons BY-SA'
@@ -768,7 +771,10 @@
                             description: 'La IA genera el contingut o producte de manera autònoma. La persona estableix els paràmetres inicials, però la IA desenvolupa la feina amb mínima o nul·la intervenció durant el procés. El rol de la persona és validar el producte final per al seu ús o lliurament, assegurant que compleix els requisits inicials i és de qualitat.'
                         }
                     ],
-                    footerLink: '🔗 https://ja.cat/marcoiae',
+                    footerLink: {
+                        url: 'https://ja.cat/marcoiae',
+                        text: '🔗 https://ja.cat/marcoiae'
+                    },
                     license: {
                         url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.ca',
                         text: 'Llicència Creative Commons BY-SA'
@@ -808,7 +814,10 @@
                             description: 'AI generates the content or product autonomously. The person sets the initial parameters, but the AI carries out the work with minimal or no intervention during the process. The person’s role is to validate the final product for use or delivery, ensuring it meets the initial requirements and quality.'
                         }
                     ],
-                    footerLink: '🔗 https://ja.cat/marcoiae',
+                    footerLink: {
+                        url: 'https://ja.cat/marcoiae',
+                        text: '🔗 https://ja.cat/marcoiae'
+                    },
                     license: {
                         url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.en',
                         text: 'Creative Commons BY-SA Licence'
@@ -872,7 +881,12 @@
                     if (levelTitles[index]) levelTitles[index].textContent = item.title;
                     if (levelDescriptions[index]) levelDescriptions[index].textContent = item.description;
                 });
-                elements.footerLink.textContent = data.footerLink;
+                if (elements.footerLink) {
+                    elements.footerLink.textContent = data.footerLink.text;
+                    elements.footerLink.setAttribute('href', data.footerLink.url);
+                    elements.footerLink.setAttribute('rel', 'noopener noreferrer');
+                    elements.footerLink.setAttribute('target', '_blank');
+                }
                 elements.footerCredits.innerHTML = `${authorLinkHTML} | <a href="${data.license.url}" target="_blank" rel="noopener noreferrer">${data.license.text}</a>`;
                 if (elements.languageSwitcher) {
                     elements.languageSwitcher.setAttribute('aria-label', data.languageLabel);
