@@ -150,33 +150,38 @@
             bottom: clamp(0.2vh, 0.6vh, 10px);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: clamp(0.35vw, 0.6vw, 10px);
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            font-size: clamp(0.55rem, 1.1vh, 0.9rem);
         }
-        
-        .language-button {
+
+        .language-label {
+            color: #4a5568;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .language-select {
             border: 1px solid #cbd5e0;
-            background: white;
+            border-radius: 8px;
+            padding: 4px 28px 4px 10px;
+            font-size: clamp(0.58rem, 1.2vh, 0.95rem);
             color: #2d3748;
-            font-size: clamp(0.55rem, 1.1vh, 0.85rem);
-            padding: 2px 10px;
-            border-radius: 999px;
+            min-width: clamp(110px, 14vw, 220px);
+            background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%234a5568' d='M5 6c-.2 0-.4-.1-.6-.2l-4-4A.8.8 0 0 1 1 0h8a.8.8 0 0 1 .6 1.8l-4 4A.8.8 0 0 1 5 6Z'/%3E%3C/svg%3E") no-repeat right 9px center;
+            appearance: none;
             cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
-        
-        .language-button:hover {
+
+        .language-select:hover {
             border-color: #4a5568;
         }
-        
-        .language-button:focus-visible {
+
+        .language-select:focus-visible {
             outline: 2px solid #4a5568;
             outline-offset: 2px;
-        }
-        
-        .language-button.active {
-            background: #4a5568;
-            color: white;
-            border-color: #4a5568;
         }
         
         .footer-credits a {
@@ -447,6 +452,19 @@
             .language-switcher {
                 position: static;
                 margin-top: 0.4vh;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .language-label {
+                text-align: center;
+            }
+
+            .language-select {
+                width: 100%;
+                min-width: 0;
             }
         }
         
@@ -688,10 +706,15 @@
                 <a href="https://bilateria.org" target="_blank" rel="noopener noreferrer">Juan José de Haro</a> | 
                 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Licencia Creative Commons BY-SA</a>
             </div>
-            <div class="language-switcher" aria-label="Cambiar idioma">
-                <button type="button" class="language-button" data-lang="es">ES</button>
-                <button type="button" class="language-button" data-lang="ca">CA</button>
-                <button type="button" class="language-button" data-lang="en">EN</button>
+            <div class="language-switcher">
+                <label for="language-select" class="language-label" id="language-label">Cambiar idioma</label>
+                <select id="language-select" class="language-select">
+                    <option value="es">ES — Castellano</option>
+                    <option value="ca">CA — Catalán</option>
+                    <option value="gl">GL — Gallego</option>
+                    <option value="eu">EU — Euskera</option>
+                    <option value="en">EN — Inglés</option>
+                </select>
             </div>
         </div>
     </div>
@@ -740,6 +763,8 @@
                     languages: {
                         es: 'Castellano',
                         ca: 'Catalán',
+                        gl: 'Gallego',
+                        eu: 'Euskera',
                         en: 'Inglés'
                     }
                 },
@@ -783,7 +808,99 @@
                     languages: {
                         es: 'Castellà',
                         ca: 'Català',
+                        gl: 'Gallec',
+                        eu: 'Euskera',
                         en: 'Anglès'
+                    }
+                },
+                gl: {
+                    title: 'Marco para a integración da IA xerativa nas tarefas educativas (v.2 revisada)',
+                    levels: [
+                        {
+                            title: 'Nivel 0 - A persoa crea',
+                            description: 'Non hai uso de IA en ningunha fase. Todo o contido, deseño e produto son xerados exclusivamente pola persoa empregando recursos tradicionais.'
+                        },
+                        {
+                            title: 'Nivel 1 - A persoa crea, a IA reformula',
+                            description: 'A IA utilízase para tarefas mecánicas (como corrección ortográfica ou formato) ou para procesar e reformular información existente (como resumir ou traducir). A IA non achega ideas, análises nin conceptos novos ao contido orixinal.'
+                        },
+                        {
+                            title: 'Nivel 2 - A persoa crea, a IA planifica',
+                            description: 'A IA axuda na xeración inicial de ideas e na estruturación do traballo, mais todo o contido final é desenvolvido pola persoa. A IA non produce contidos para o produto final, aínda que inflúe nas ideas.'
+                        },
+                        {
+                            title: 'Nivel 3 - A IA crea un borrador, a persoa constrúe',
+                            description: 'A IA xera borradores iniciais ou \"esqueletos\" de contido. A persoa emprega este material como punto de partida, mais mantén a autoría principal, reescribindo, adaptando e construíndo de maneira significativa sobre a base xerada pola IA. A interacción é principalmente unidireccional: a IA produce e a persoa revisa e modifica.'
+                        },
+                        {
+                            title: 'Nivel 4 - A persoa e a IA cocrean',
+                            description: 'Existe un diálogo continuo e bidireccional entre a persoa e a IA, con iteracións frecuentes. A persoa guía activamente a IA durante todo o proceso, refinando o contido a través da conversa continuada. O resultado é unha fusión estreita e cocreada do traballo de ambos, coa IA actuando como colaboradora activa.'
+                        },
+                        {
+                            title: 'Nivel 5 - A IA crea, a persoa supervisa',
+                            description: 'A IA xera o contido ou produto de forma autónoma. A persoa establece os parámetros iniciais, pero a IA desenvolve o traballo con mínima ou nula intervención durante o proceso. O papel da persoa é validar o produto final para o seu uso ou entrega, asegurando que cumpre cos requisitos iniciais e coa calidade esixida.'
+                        }
+                    ],
+                    footerLink: {
+                        url: 'https://ja.cat/marcoiae',
+                        text: '🔗 https://ja.cat/marcoiae'
+                    },
+                    license: {
+                        url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.gl',
+                        text: 'Licenza Creative Commons BY-SA'
+                    },
+                    languageLabel: 'Cambiar idioma',
+                    languages: {
+                        es: 'Castelán',
+                        ca: 'Catalán',
+                        gl: 'Galego',
+                        eu: 'Éuscaro',
+                        en: 'Inglés'
+                    }
+                },
+                eu: {
+                    title: 'Hezkuntza zereginetan IA sortzailea txertatzeko esparrua (2. bertsio berrikusita)',
+                    levels: [
+                        {
+                            title: 'Maila 0 - Pertsonak sortzen du',
+                            description: 'IArik ez da erabiltzen inolako fasetan. Edukia, diseinua eta produktua pertsonak sortzen ditu baliabide tradizionalak erabiliz.'
+                        },
+                        {
+                            title: 'Maila 1 - Pertsonak sortzen du, IAk birformulatzen du',
+                            description: 'IA lan mekanikoetarako erabiltzen da (adibidez, ortografia zuzentzeko edo formatua egokitzeko) edo lehendik dagoen informazioa prozesatu eta birformulatzeko (laburtu edo itzuli). IAk ez du ideiarik, analisiarik edo kontzeptu berririk eransten jatorrizko edukira.'
+                        },
+                        {
+                            title: 'Maila 2 - Pertsonak sortzen du, IAk planifikatzen du',
+                            description: 'IAk lagundu egiten du ideiak hasieran sortzen eta lana egituratzen, baina azken edukia pertsonak garatzen du. IAk ez du produktu finalerako edukirik sortzen, nahiz eta ideietan eragin.'
+                        },
+                        {
+                            title: 'Maila 3 - IAk zirriborroa sortzen du, pertsonak eraikitzen du',
+                            description: 'IAk edukien hasierako zirriborro edo \"hezurdurak\" sortzen ditu. Pertsonak material hori abiapuntu gisa erabiliz egiletza nagusia mantentzen du, berridatzi, moldatu eta IAren oinarritik nabarmen eraikiz. Elkarrekintza oro har noranzko bakarrekoa da: IAk sortzen du eta pertsonak berrikusi eta editatzen du.'
+                        },
+                        {
+                            title: 'Maila 4 - Pertsonak eta IAk elkarrekin sortzen dute',
+                            description: 'Pertsonaren eta IAren arteko elkarrizketa jarraitua eta bi noranzkokoa da, iterazio ugarirekin. Pertsonak aktiboki gidatzen du IA prozesu osoan zehar, edukia elkarrizketa etengabearen bidez fintzen. Emaitza bi ekarpenen fusio estua eta batera sortua da, IAk lankide aktibo gisa jardunez.'
+                        },
+                        {
+                            title: 'Maila 5 - IAk sortzen du, pertsonak gainbegiratzen du',
+                            description: 'IAk edukia edo produktua modu autonomoan sortzen du. Pertsonak hasierako parametroak ezartzen ditu, baina IAk lana egiten du prozesuan esku-hartze gutxirekin edo gabe. Pertsonaren eginkizuna azken produktuaren egokitasuna egiaztatzea da, hasierako baldintzak eta kalitatea betetzen direla bermatzeko.'
+                        }
+                    ],
+                    footerLink: {
+                        url: 'https://ja.cat/marcoiae',
+                        text: '🔗 https://ja.cat/marcoiae'
+                    },
+                    license: {
+                        url: 'https://creativecommons.org/licenses/by-sa/4.0/deed.eu',
+                        text: 'Creative Commons BY-SA lizentzia'
+                    },
+                    languageLabel: 'Hizkuntza aldatu',
+                    languages: {
+                        es: 'Gaztelania',
+                        ca: 'Katalana',
+                        gl: 'Galegoa',
+                        eu: 'Euskara',
+                        en: 'Ingelesa'
                     }
                 },
                 en: {
@@ -826,6 +943,8 @@
                     languages: {
                         es: 'Spanish',
                         ca: 'Catalan',
+                        gl: 'Galician',
+                        eu: 'Basque',
                         en: 'English'
                     }
                 }
@@ -837,7 +956,9 @@
                 title: document.getElementById('main-title'),
                 footerLink: document.getElementById('footer-link'),
                 footerCredits: document.getElementById('footer-credits'),
-                languageSwitcher: document.querySelector('.language-switcher')
+                languageSwitcher: document.querySelector('.language-switcher'),
+                languageLabel: document.getElementById('language-label'),
+                languageSelect: document.getElementById('language-select')
             };
             const levelTitles = [];
             const levelDescriptions = [];
@@ -846,7 +967,18 @@
                 levelDescriptions.push(document.getElementById(`level-desc-${i}`));
             }
             
-            const languageButtons = Array.from(document.querySelectorAll('.language-button'));
+            const languageOrder = ['es', 'ca', 'gl', 'eu', 'en'].filter((code) => supportedLanguages.includes(code));
+            if (elements.languageSelect) {
+                elements.languageSelect.innerHTML = '';
+                const fragment = document.createDocumentFragment();
+                languageOrder.forEach((code) => {
+                    const option = document.createElement('option');
+                    option.value = code;
+                    fragment.appendChild(option);
+                });
+                elements.languageSelect.appendChild(fragment);
+            }
+
             const storageKey = 'miae-language';
             
             const persistLanguage = (lang) => {
@@ -888,29 +1020,35 @@
                     elements.footerLink.setAttribute('target', '_blank');
                 }
                 elements.footerCredits.innerHTML = `${authorLinkHTML} | <a href="${data.license.url}" target="_blank" rel="noopener noreferrer">${data.license.text}</a>`;
+                if (elements.languageLabel) {
+                    elements.languageLabel.textContent = data.languageLabel;
+                }
                 if (elements.languageSwitcher) {
                     elements.languageSwitcher.setAttribute('aria-label', data.languageLabel);
                 }
-                
-                languageButtons.forEach((button) => {
-                    const buttonLang = button.dataset.lang;
-                    const isActive = buttonLang === lang;
-                    button.classList.toggle('active', isActive);
-                    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-                    const buttonLabel = data.languages[buttonLang] || button.textContent;
-                    button.setAttribute('title', buttonLabel);
-                    button.setAttribute('aria-label', buttonLabel);
-                });
+                if (elements.languageSelect) {
+                    elements.languageSelect.setAttribute('aria-label', data.languageLabel);
+                    elements.languageSelect.setAttribute('title', data.languageLabel);
+                    if (elements.languageSelect.value !== lang) {
+                        elements.languageSelect.value = lang;
+                    }
+                    languageOrder.forEach((code) => {
+                        const option = elements.languageSelect.querySelector(`option[value="${code}"]`);
+                        if (option) {
+                            const optionLabel = (data.languages && data.languages[code]) || code.toUpperCase();
+                            option.textContent = `${code.toUpperCase()} — ${optionLabel}`;
+                        }
+                    });
+                }
                 
                 persistLanguage(lang);
             };
             
-            languageButtons.forEach((button) => {
-                button.addEventListener('click', () => {
-                    const lang = button.dataset.lang;
-                    setLanguage(lang);
+            if (elements.languageSelect) {
+                elements.languageSelect.addEventListener('change', (event) => {
+                    setLanguage(event.target.value);
                 });
-            });
+            }
             
             const storedLang = getStoredLanguage();
             const navigatorLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
