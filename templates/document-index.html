@@ -1,0 +1,9 @@
+<nav class="document-index" aria-label="{{ guide.index }}">
+  <a href="{{ root }}{{ lang }}/#guia">{{ guide.start }}</a>
+  <a href="#resumen">{{ guide.summary }}</a>
+  <a href="#clasificar">{{ guide.classify }}</a>
+  {% for level in range(6) %}<a href="#nivel-{{ level }}"><span class="level-dot level-{{ level }}">{{ level }}</span>{{ ui.level_names[level] }}</a>{% endfor %}
+  <a href="{{ root }}{{ lang }}/#declaracion">{{ guide.template_title }}</a>
+  <a href="{{ root }}{{ lang }}/#preguntas">{{ guide.faq_title }}</a>
+  <a href="#recursos-miae">{{ ui.resources }}</a>
+</nav>

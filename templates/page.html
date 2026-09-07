@@ -36,19 +36,12 @@
   </div>
 
   <main id="contenido" class="document-layout">
-    <aside class="document-tools" aria-label="{{ ui.resources }}">
-      <div class="tools-card">
-        <p class="eyebrow">{{ ui.document }}</p>
-        <h2>{{ ui.read_download }}</h2>
-        <a class="button primary" href="../../output/pdf/miae-v2.1-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
-        {% if lang == 'es' %}<a class="button" href="{{ root }}assets/v2.1/resumen-es.png">{{ ui.summary_image }}</a>{% endif %}
-        <a class="button" href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1">{{ ui.blog_article }}</a>
-      </div>
-      <div class="level-key" aria-label="{{ ui.levels }}">
-        {% for level in range(6) %}<a href="#nivel-{{ level }}"><span class="level-dot level-{{ level }}">{{ level }}</span>{{ ui.level_names[level] }}</a>{% endfor %}
-      </div>
-    </aside>
 
+
+    <details class="mobile-index">
+      <summary>{{ guide.index }}</summary>
+      {% include "document-index.html" %}
+    </details>
     <article class="framework-document">
       <div class="document-heading">
         <p class="eyebrow">{{ ui.full_framework }}</p>
@@ -70,12 +63,22 @@
         <p>De Haro, J. J. (2026, 6 de septiembre). <em>Marco para la integración de la IA generativa en las tareas educativas (MIAE), v.2.1</em>. Bilateria. https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1</p>
       </section>
     </article>
+    <aside class="document-tools" aria-label="{{ ui.resources }}">
+      <div class="tools-card">
+        <p class="eyebrow">{{ ui.document }}</p>
+        <h2>{{ ui.read_download }}</h2>
+        <a class="button primary" href="../../output/pdf/miae-v2.1-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
+{% if lang == 'es' %}        <a class="button" href="{{ root }}assets/v2.1/resumen-es.png">{{ ui.summary_image }}</a>{% endif %}
+        <a class="button" href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1">{{ ui.blog_article }}</a>
+      </div>
+      {% include "document-index.html" %}
+    </aside>
   </main>
 
   <footer>
     <span>© 2026 Juan José de Haro</span>
     <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a>
-    <a href="{{ root }}v2-revisada/">{{ ui.previous_version }}</a>
+    <a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a>
   </footer>
   <script src="{{ root }}assets/site.js"></script>
 </body>

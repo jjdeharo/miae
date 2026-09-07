@@ -6,7 +6,7 @@
     "article": "Artículo",
     "article_note": "Presentación de la versión 2.1 · español",
     "automatic": "Automático (navegador)",
-    "previous_version": "Versión 2 revisada · español"
+    "previous_version": "Versión anterior: 2 revisada"
   },
   "ca": {
     "home_title": "Sis maneres de repartir el treball entre la persona i la IA",
@@ -15,7 +15,7 @@
     "article": "Article",
     "article_note": "Presentació de la versió 2.1 · castellà",
     "automatic": "Automàtic (navegador)",
-    "previous_version": "Versió 2 revisada · castellà"
+    "previous_version": "Versió anterior: 2 revisada"
   },
   "eu": {
     "home_title": "Pertsonaren eta IAren artean lana banatzeko sei modu",
@@ -24,7 +24,7 @@
     "article": "Artikulua",
     "article_note": "2.1 bertsioaren aurkezpena · gaztelaniaz",
     "automatic": "Automatikoa (nabigatzailea)",
-    "previous_version": "2. bertsio berrikusia · gaztelaniaz"
+    "previous_version": "Aurreko bertsioa: 2 berrikusia"
   },
   "gl": {
     "home_title": "Seis formas de repartir o traballo entre a persoa e a IA",
@@ -33,7 +33,7 @@
     "article": "Artigo",
     "article_note": "Presentación da versión 2.1 · castelán",
     "automatic": "Automático (navegador)",
-    "previous_version": "Versión 2 revisada · castelán"
+    "previous_version": "Versión anterior: 2 revisada"
   },
   "en": {
     "home_title": "Six ways to share work between people and AI",
@@ -42,6 +42,6 @@
     "article": "Article",
     "article_note": "Introducing version 2.1 · Spanish",
     "automatic": "Automatic (browser)",
-    "previous_version": "Revised version 2 · Spanish"
+    "previous_version": "Previous version: revised 2"
   }
 }

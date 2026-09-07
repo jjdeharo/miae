@@ -137,3 +137,93 @@ footer a { color: white; }
   .header-actions { gap: .5rem; }
   .language-picker select { max-width: 215px; }
 }
+
+/* Guided introduction and practical resources. */
+.home-intro { min-height: 0; padding: 3rem 0; gap: 3rem; }
+.home-intro h1 { font-size: clamp(2.3rem, 4.5vw, 4rem); line-height: 1.06; }
+.level-spectrum { box-shadow: none; gap: 2px; }
+.level-spectrum a { padding: 1rem; min-height: 116px; color: white; text-decoration: none; display: flex; flex-direction: column; gap: .5rem; }
+.level-spectrum a b { font: 700 2rem/1 Georgia, serif; }
+.level-spectrum a span { display: block; aspect-ratio: auto; font: 600 .88rem/1.35 "Noto Sans", "Segoe UI", sans-serif; }
+.page-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding: 1rem 0; border-block: 1px solid var(--line); }
+.page-nav a { font-size: .9rem; padding-block: .3rem; }
+.guide-section { padding: 3.5rem 0; border-bottom: 1px solid var(--line); scroll-margin-top: 1rem; }
+.guide-section h2 { margin: 0 0 1rem; font: 700 clamp(1.6rem, 3vw, 2.2rem)/1.2 Georgia, serif; }
+.guide-section p, .guide-section li { max-width: 78ch; }
+.section-intro { color: #445067; }
+.guide-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; padding-left: 1.5rem; margin-block: 2rem; }
+.guide-steps li::marker { color: var(--accent-dark); font-weight: 800; }
+.guide-steps h3 { font-size: 1.08rem; margin: 0; }
+.guide-steps p { margin: .6rem 0 0; }
+.principle { padding: 1rem 1.3rem; border-left: 4px solid var(--accent); background: white; }
+.comparison { margin-top: 2rem; }
+.comparison-row { display: grid; grid-template-columns: minmax(200px, 1fr) 2fr; gap: 2rem; padding: 1.3rem 0; border-top: 1px solid var(--line); scroll-margin-top: 1rem; }
+.comparison-row h3, .comparison-row p { margin: 0; }
+.comparison-row h3 { font-size: 1rem; }
+.comparison-row a { display: flex; align-items: center; gap: .75rem; }
+.guide-section details { border-top: 1px solid var(--line); padding: 1rem 0; }
+summary { cursor: pointer; font-weight: 700; padding: .25rem 0; }
+.guide-section details > p { margin-bottom: .25rem; }
+.template-editor { max-width: 850px; padding-bottom: 1.5rem; }
+.template-editor label { display: block; }
+.template-editor textarea { display: block; width: 100%; resize: vertical; border: 1px solid #9ba8b9; padding: 1rem; font: inherit; font-size: 1rem; line-height: 1.6; color: var(--ink); background: white; }
+button.button { font-family: inherit; cursor: pointer; }
+.filled-example { max-width: 78ch; }
+.filled-example dt { font-weight: 700; margin-top: 1rem; }
+.filled-example dd { margin: .25rem 0 0; }
+.practice-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.practice-case { padding: 1.5rem; background: white; border: 1px solid var(--line); min-width: 0; }
+.practice-case fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.practice-case legend { padding: 0; font-weight: 600; }
+.case-number { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-right: .6rem; color: white; background: var(--ink); }
+.answer-options { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.answer-options label { display: flex; align-items: center; gap: .4rem; border: 1px solid var(--line); padding: .6rem; cursor: pointer; font-size: .85rem; }
+.answer-options label:has(input:checked) { border-color: var(--accent); background: var(--wash); }
+.case-result:not(:empty) { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.interactive-only { display: none; }
+.interactive-ready .interactive-only { display: flex; }
+.interactive-ready button.interactive-only { display: block; }
+.interactive-ready .no-interaction { display: none; }
+.editor-status:empty, .case-result:empty { display: none; }
+.document-index { margin-top: 1.2rem; }
+.document-index a { display: flex; align-items: center; gap: .6rem; min-height: 40px; padding: .4rem 0; border-bottom: 1px solid var(--line); font-size: .82rem; line-height: 1.35; }
+.document-tools { grid-column: 1; grid-row: 1; max-height: calc(100vh - 2rem); overflow-y: auto; }
+.framework-document { grid-column: 2; grid-row: 1; }
+.mobile-index { display: none; }
+:where(a, button, select, textarea, input, summary):focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 850px) {
+  .document-layout { display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1.5rem; }
+  .mobile-index { display: block; order: 0; width: 100%; padding: .6rem 1rem; background: var(--wash); border: 1px solid var(--line); }
+  .framework-document { order: 1; width: 100%; min-width: 0; }
+  .document-tools { order: 2; width: 100%; max-height: none; overflow: visible; margin: 0; }
+  .document-tools .document-index { display: none; }
+  .framework-document > h1 { font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.15; }
+  .framework-document > h1 + p { font-size: 1rem; }
+  .document-heading { margin-bottom: 1rem; }
+  .guide-steps { grid-template-columns: 1fr; gap: 1.5rem; }
+  .home-intro { gap: 1.5rem; }
+  .comparison-row { gap: 1rem; }
+}
+@media (max-width: 600px) {
+  .comparison-row, .practice-cases { grid-template-columns: 1fr; }
+  .guide-section { padding: 2.5rem 0; }
+  .level-spectrum { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .level-spectrum a { min-height: 100px; }
+  .home-intro h1 { font-size: 2.3rem; }
+  .practice-case { padding: 1rem; }
+  .page-nav { gap: .25rem 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  .mobile-index, .document-index, .page-nav, .interactive-only { display: none !important; }
+  .document-tools { display: none !important; }
+  .guide-section, .comparison-row { break-inside: avoid; }
+}
+@media screen and (max-width: 520px) {
+  .site-header { gap: 1rem; }
+  .brand { flex-shrink: 0; }
+  .header-actions { min-width: 0; flex: 0 1 215px; }
+  .language-picker { min-width: 0; width: 100%; }
+  .language-picker select { min-width: 0; width: 100%; max-width: 100%; }
+}
+.framework-document { overflow-wrap: anywhere; }

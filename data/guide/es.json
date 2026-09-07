@@ -1,0 +1,53 @@
+{
+  "start": "Entender MIAE en 3 minutos",
+  "index": "En esta página",
+  "guide_title": "Una guía para empezar",
+  "guide_intro": "MIAE sirve al alumnado y al profesorado para describir el uso de IA generativa, acordar cómo se puede utilizar en una tarea y explicar el proceso seguido.",
+  "principle": "Los niveles describen un reparto del trabajo. Un nivel más alto no significa más calidad ni más aprendizaje; tampoco hay que pasar por los anteriores.",
+  "steps": [
+    ["Delimita la tarea", "Indica quién la realiza y qué producto o componente estás clasificando: un informe, su ilustración o el análisis de un texto."],
+    ["Observa el proceso completo", "Describe qué aportó la IA y qué hizo la persona con ello. La primera petición, la cantidad de texto o el número de mensajes no determinan el nivel."],
+    ["Explica la clasificación", "Justifica el nivel por el reparto del trabajo. Si hay fases o componentes diferentes, declara los niveles de cada uno; no elijas automáticamente el más alto."]
+  ],
+  "compare_title": "Un informe sobre un ecosistema, seis procesos",
+  "compare_intro": "En todos los casos el producto es un informe. Lo que cambia es cómo se elabora. Pulsa un nivel para consultar su definición completa.",
+  "examples": [
+    "La persona observa el ecosistema, consulta fuentes y redacta el informe sin IA generativa en ninguna etapa.",
+    "La persona aporta sus observaciones, explicaciones y conclusiones ya desarrolladas. La IA mejora su expresión sin añadir contenido ni cambiar las relaciones entre las ideas.",
+    "La IA propone preguntas y un índice para orientar el trabajo. La persona investiga y desarrolla por sí misma todas las explicaciones y la redacción final.",
+    "La IA redacta un primer informe. La persona reconstruye su contenido: revisa las relaciones ecológicas, incorpora sus datos y elabora nuevas explicaciones y conclusiones propias.",
+    "La persona y la IA desarrollan el informe mediante diálogo. La persona aporta observaciones, cuestiona una explicación y propone otra; ambas contribuciones transforman el contenido durante su elaboración.",
+    "La persona proporciona el tema, los datos y los requisitos. La IA desarrolla el informe completo; la persona comprueba su exactitud y lo valida, sin reconstruirlo ni cocrear su contenido."
+  ],
+  "template_title": "Declara cómo has utilizado la IA",
+  "template_intro": "Completa esta ficha y adjúntala al trabajo. Puedes editarla aquí, copiarla o descargarla como texto. Describe también las consultas descartadas si las hubo.",
+  "fields": ["Tarea o componente y quién lo realiza", "Qué he elaborado yo", "Herramienta de IA y para qué la he utilizado", "Cómo he revisado o transformado sus aportaciones", "Nivel o niveles MIAE y justificación"],
+  "copy": "Copiar texto", "download": "Descargar ficha (.txt)", "copied": "Texto copiado.", "copy_failed": "No se pudo copiar. Selecciona el texto de la ficha y cópialo manualmente.",
+  "filled_title": "Ver una declaración cumplimentada",
+  "filled": ["Informe sobre un ecosistema; realizado por una estudiante.", "He desarrollado las explicaciones ecológicas y las conclusiones a partir de mis observaciones y de las fuentes consultadas.", "ChatGPT: propuesta de índice y corrección lingüística del texto que redacté.", "He elegido los apartados del índice y comprobado que la corrección no añadiera ideas ni alterara mis conclusiones.", "Nivel 2 en la planificación y nivel 1 en la reformulación de un desarrollo humano. La IA no ha desarrollado el contenido del informe."],
+  "teacher_title": "Para docentes: comunica los usos permitidos",
+  "teacher_intro": "Adapta esta plantilla al objetivo de aprendizaje. El nivel describe el proceso; los criterios de evaluación deben valorar el aprendizaje y la calidad del trabajo.",
+  "teacher_fields": ["Tarea y objetivo de aprendizaje", "Usos de IA permitidos por fase o componente", "Usos de IA que no se permiten en esta actividad", "Trabajo que debe realizar el alumnado y evidencias que entregará", "Cómo se declarará el uso de IA y con qué criterios se evaluará el trabajo"],
+  "faq_title": "Dudas frecuentes",
+  "faqs": [
+    ["¿Redactar con IA siempre es nivel 5?", "No. Si la persona aporta los contenidos ya desarrollados y la IA solo los expresa o reformula fielmente, es nivel 1. Dar únicamente un tema no equivale a aportar ese desarrollo."],
+    ["¿Qué distingue el nivel 2 del 3?", "En el 2 la IA prepara ideas o estructura y la persona desarrolla el contenido. En el 3 ya hay un borrador con contenido elaborado por IA que la persona reconstruye significativamente. Si el producto encargado es el propio esquema, hay que clasificar su elaboración como producto."],
+    ["¿Muchas peticiones de cambios implican nivel 4?", "No. Debe haber desarrollo compartido del contenido con aportaciones y juicio humano. Pedir cambios de estilo o aceptar propuestas no basta. En el 5 la persona supervisa el producto; en el 3 lo reconstruye principalmente por sí misma."],
+    ["¿Qué hago si el texto y las imágenes tienen niveles distintos?", "Decláralos por separado, indicando su relación con el conjunto. Por ejemplo: texto sin IA e ilustración de nivel 5. No se asigna automáticamente el nivel más alto a todo el proyecto."],
+    ["¿El nivel indica qué está permitido o qué nota merece?", "Por sí solo, no. El docente debe concretar los usos permitidos según el objetivo de la tarea. El nivel no mide el aprendizaje, la calidad ni el esfuerzo."],
+    ["¿Analizar un texto generado por IA es nivel 5?", "La generación del texto puede ser nivel 5. Si el docente lo proporciona y el alumnado lo analiza sin IA, el análisis puede ser nivel 0. Si el alumno encarga el texto y después lo analiza, conviene describir ambas partes."]
+  ],
+  "practice_title": "Prueba con cuatro casos",
+  "practice_intro": "Elige una clasificación y comprueba el razonamiento. Se clasifica el proceso descrito, no la calidad del resultado.",
+  "mixed": "Proceso mixto", "check": "Comprobar", "choose": "Selecciona una respuesta antes de comprobar.", "correct": "Correcto.", "retry": "Revisa la clasificación.", "answer": "Ver explicación", "level": "Nivel",
+  "cases": [
+    {"question": "Una alumna entrega a la IA sus argumentos y conclusiones completos. La IA los redacta con claridad sin añadir ideas. ¿Qué nivel describe esta ayuda?", "correct": "1", "explanation": "Nivel 1: la IA reformula contenido humano ya desarrollado. La cantidad de texto que redacta no lo convierte en nivel 5."},
+    {"question": "Un profesor pide un informe completo a la IA, comprueba los datos y acepta el resultado con pequeños retoques de estilo. ¿Qué nivel describe la elaboración del informe?", "correct": "5", "explanation": "Nivel 5: hay generación autónoma y supervisión. Los retoques menores no son reconstrucción significativa de nivel 3 ni cocreación de nivel 4."},
+    {"question": "La IA propone una explicación ecológica; la alumna detecta una contradicción, aporta sus datos y una hipótesis alternativa, y ambas partes desarrollan una nueva explicación mediante diálogo. ¿Qué nivel corresponde?", "correct": "4", "explanation": "Nivel 4: la persona y la IA contribuyen al desarrollo del contenido. Lo decisivo es la elaboración compartida, no el número de mensajes."},
+    {"question": "La IA propone un índice. El alumno redacta todo el contenido sin IA. Después, la IA corrige la expresión sin añadir ideas. ¿Cómo se describe mejor el proceso?", "correct": "mixed", "explanation": "Proceso mixto: nivel 2 en la planificación y nivel 1 en la reformulación de un desarrollo humano. Conviene declarar las dos fases."}
+  ],
+  "changes_title": "Qué aclara la versión 2.1",
+  "changes_intro": "Mantiene los seis niveles de la versión 2 revisada y precisa cómo aplicarlos:",
+  "changes": ["La reformulación puede partir de notas y argumentos ya desarrollados, aunque no estén redactados como texto final.", "La clasificación considera el proceso completo y puede cambiar si después hay reconstrucción o cocreación.", "Los procesos mixtos se describen por fases o componentes, sin tomar automáticamente el nivel más alto.", "Se concretan las fronteras entre planificación, reconstrucción, cocreación y supervisión."],
+  "summary": "Resumen de niveles", "classify": "Cómo clasificar una tarea", "full_details": "Consultar la definición completa"
+}

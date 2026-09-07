@@ -5,7 +5,7 @@ import json
 import re
 
 import markdown
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from weasyprint import HTML
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -98,7 +98,9 @@ DESCRIPTIONS = {
     "en": "A framework for describing how work is shared between people and generative AI in educational tasks.",
 }
 
-env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
+GUIDES = {lang: json.loads((ROOT / "data" / "guide" / f"{lang}.json").read_text()) for lang in LANGUAGES}
+
+env = Environment(undefined=StrictUndefined, loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
 
 def heading_ids(html: str) -> str:
     def add_id(match: re.Match) -> str:
@@ -109,7 +111,11 @@ def heading_ids(html: str) -> str:
             return match.group(0)
         level = number.group(1) or number.group(2)
         return f'<h3 id="nivel-{level}">{inner}</h3>'
-    return re.sub(r"<h3>(.*?)</h3>", add_id, html)
+    html = re.sub(r"<h3>(.*?)</h3>", add_id, html)
+    # Stable anchors across translations; the first h3 is the classification section.
+    html = re.sub(r"<h3>", '<h3 id="clasificar">', html, count=1)
+    section_ids = iter(["origen", "escala", "resumen", "descripcion", "referencias"])
+    return re.sub(r"<h2>", lambda _: f'<h2 id="{next(section_ids)}">', html)
 
 def build_page(lang: str) -> str:
     source = ROOT / "content" / "v2.1" / f"{lang}.md"
@@ -120,7 +126,7 @@ def build_page(lang: str) -> str:
     return env.get_template("page.html").render(
         lang=lang, page_title=f"{title} · MIAE", description=DESCRIPTIONS[lang],
         canonical=f"{BASE_URL}/v2.1/{lang}/", base_url=BASE_URL, root="../../",
-        languages=LANGUAGES, ui=UI[lang], content=html_content,
+        languages=LANGUAGES, ui=UI[lang], guide=GUIDES[lang], content=html_content,
         license_lang=lang if lang in {"es", "ca"} else "en", range=range,
     )
 
@@ -130,7 +136,7 @@ def main() -> None:
     args = parser.parse_args()
     def build_home(lang, root_path, automatic=False):
         return env.get_template("home.html").render(
-            lang=lang, ui=UI[lang], description=DESCRIPTIONS[lang],
+            lang=lang, ui=UI[lang], guide=GUIDES[lang], description=DESCRIPTIONS[lang],
             languages=LANGUAGES, range=range, root=root_path,
             base_url=BASE_URL, automatic=automatic,
             license_lang=lang if lang in {"es", "ca"} else "en",

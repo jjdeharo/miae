@@ -1,0 +1,80 @@
+<nav class="page-nav" aria-label="{{ guide.index }}">
+  <a href="#guia">{{ guide.guide_title }}</a>
+  <a href="#ejemplos">{{ guide.summary }}</a>
+  <a href="#declaracion">{{ guide.template_title }}</a>
+  <a href="#practica">{{ guide.practice_title }}</a>
+  <a href="#preguntas">{{ guide.faq_title }}</a>
+  <a href="#cambios">{{ guide.changes_title }}</a>
+  <a href="#recursos-portada">{{ ui.resources }}</a>
+</nav>
+<section class="guide-section" id="guia" aria-labelledby="guia-title">
+  <p class="eyebrow">MIAE · {{ guide.start }}</p>
+  <h2 id="guia-title">{{ guide.guide_title }}</h2>
+  <p class="section-intro">{{ guide.guide_intro }}</p>
+  <ol class="guide-steps">{% for title, text in guide.steps %}<li><h3>{{ title }}</h3><p>{{ text }}</p></li>{% endfor %}</ol>
+  <p class="principle">{{ guide.principle }}</p>
+</section>
+<section class="guide-section" id="ejemplos" aria-labelledby="ejemplos-title">
+  <h2 id="ejemplos-title">{{ guide.compare_title }}</h2>
+  <p class="section-intro">{{ guide.compare_intro }}</p>
+  <div class="comparison">
+    {% for example in guide.examples %}<div class="comparison-row" id="ejemplo-{{ loop.index0 }}">
+      <h3><a href="{{ root }}v2.1/{{ lang }}/#nivel-{{ loop.index0 }}"><span class="level-dot level-{{ loop.index0 }}">{{ loop.index0 }}</span>{{ ui.level_names[loop.index0] }}</a></h3>
+      <p>{{ example }}</p>
+    </div>{% endfor %}
+  </div>
+</section>
+{% macro editor(id, title, fields, intro) -%}
+<div class="template-editor" data-editor data-copied="{{ guide.copied }}" data-copy-failed="{{ guide.copy_failed }}">
+  <p>{{ intro }}</p>
+  <label class="eyebrow" for="{{ id }}">{{ title }}</label>
+  <textarea id="{{ id }}" rows="14" spellcheck="true">{% for field in fields %}{{ field }}:
+
+{% endfor %}</textarea>
+  <div class="home-actions interactive-only">
+    <button class="button primary" type="button" data-copy>{{ guide['copy'] }}</button>
+    <button class="button" type="button" data-download="miae-{{ id }}-{{ lang }}.txt">{{ guide.download }}</button>
+  </div>
+  <p class="editor-status" role="status"></p>
+</div>
+{% endmacro %}
+<section class="guide-section" id="declaracion" aria-labelledby="declaracion-title">
+  <h2 id="declaracion-title">{{ guide.template_title }}</h2>
+  {{ editor('ficha', guide.template_title, guide.fields, guide.template_intro) }}
+  <details>
+    <summary>{{ guide.filled_title }}</summary>
+    <dl class="filled-example">{% for field in guide.fields %}<dt>{{ field }}</dt><dd>{{ guide.filled[loop.index0] }}</dd>{% endfor %}</dl>
+  </details>
+  <details>
+    <summary>{{ guide.teacher_title }}</summary>
+    {{ editor('docente', guide.teacher_title, guide.teacher_fields, guide.teacher_intro) }}
+  </details>
+</section>
+<section class="guide-section" id="preguntas" aria-labelledby="preguntas-title">
+  <h2 id="preguntas-title">{{ guide.faq_title }}</h2>
+  {% for question, answer in guide.faqs %}<details><summary>{{ question }}</summary><p>{{ answer }}</p></details>{% endfor %}
+</section>
+<section class="guide-section" id="practica" aria-labelledby="practica-title">
+  <h2 id="practica-title">{{ guide.practice_title }}</h2>
+  <p class="section-intro">{{ guide.practice_intro }}</p>
+  <div class="practice-cases">
+    {% for case in guide.cases %}<form class="practice-case" data-case data-answer="{{ case.correct }}" data-choose="{{ guide.choose }}" data-correct="{{ guide.correct }}" data-retry="{{ guide.retry }}" data-explanation="{{ case.explanation }}">
+      <fieldset>
+        <legend><span class="case-number">{{ loop.index }}</span>{{ case.question }}</legend>
+        <div class="answer-options interactive-only">
+          {% for level in range(6) %}<label><input type="radio" name="answer" value="{{ level }}">{{ guide.level }} {{ level }}</label>{% endfor %}
+          <label><input type="radio" name="answer" value="mixed">{{ guide.mixed }}</label>
+        </div>
+      </fieldset>
+      <button class="button interactive-only" type="submit">{{ guide.check }}</button>
+      <p class="case-result" role="status"></p>
+      <details class="no-interaction"><summary>{{ guide.answer }}</summary><p>{{ case.explanation }}</p></details>
+    </form>{% endfor %}
+  </div>
+</section>
+<section class="guide-section" id="cambios" aria-labelledby="cambios-title">
+  <h2 id="cambios-title">{{ guide.changes_title }}</h2>
+  <p>{{ guide.changes_intro }}</p>
+  <ul>{% for change in guide.changes %}<li>{{ change }}</li>{% endfor %}</ul>
+  <a href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }} →</a>
+</section>

@@ -10,6 +10,7 @@
   {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base_url }}/">
   <link rel="stylesheet" href="{{ root }}assets/site.css">
   <script src="{{ root }}assets/site.js" defer></script>
+  <script src="{{ root }}assets/guide.js" defer></script>
 </head>
 <body class="home-page" data-page="home" data-root="{{ root }}"{% if automatic %} data-auto-language{% endif %}>
   <a class="skip-link" href="#contenido">{{ ui.skip }}</a>
@@ -32,14 +33,16 @@
         <h1>{{ ui.home_title }}</h1>
         <p class="home-lead">{{ ui.home_lead }}</p>
         <div class="home-actions">
-          <a class="button primary" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
+          <a class="button primary" href="#guia">{{ guide.start }}</a>
+          <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
           <a class="button" href="{{ root }}output/pdf/miae-v2.1-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
         </div>
       </div>
       <div class="level-spectrum" aria-label="{{ ui.levels }}">
-        {% for level in range(6) %}<span class="level-{{ level }}">{{ level }}</span>{% endfor %}
+        {% for level in range(6) %}<a class="level-{{ level }}" href="#ejemplo-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{% endfor %}
       </div>
     </section>
+    {% include "guide.html" %}
     <section class="home-resources" aria-labelledby="recursos-portada">
       <div><p class="eyebrow">MIAE 2.1</p><h2 id="recursos-portada">{{ ui.resources }}</h2></div>
       <div class="resource-grid">
@@ -51,6 +54,6 @@
     </section>
     <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
   </main>
-  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="{{ root }}v2-revisada/">{{ ui.previous_version }}</a></footer>
+  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a></footer>
 </body>
 </html>
