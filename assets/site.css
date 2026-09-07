@@ -31,7 +31,7 @@ a:hover { color: var(--accent); }
 .brand strong { font: 700 1rem/1.2 var(--font-sans); letter-spacing: .08em; }
 .brand small { color: var(--muted); font-size: .72rem; margin-top: .15rem; }
 .header-actions { display: flex; align-items: center; gap: 1.5rem; font-size: .9rem; }
-.header-actions > a, .author-link { color: var(--ink); text-decoration: none; font-weight: 650; }
+.header-actions > a { color: var(--ink); text-decoration: none; font-weight: 650; }
 .language-picker { display: flex; align-items: center; gap: .6rem; color: var(--muted); }
 select { min-height: 42px; border: 1px solid var(--line); border-radius: 0; background: white; color: var(--ink); padding: .45rem 2rem .45rem .7rem; font: inherit; font-size: .9rem; }
 
