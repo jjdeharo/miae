@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIAE v2.1 · Guia ràpida · MIAE</title>
+  <meta name="description" content="Marc per descriure com es reparteix el treball entre la persona i la IA generativa en les tasques educatives.">
+  <link rel="canonical" href="https://jjdeharo.github.io/miae/ca/guia/">
+  <link rel="alternate" hreflang="es" href="https://jjdeharo.github.io/miae/es/guia/">
+  <link rel="alternate" hreflang="ca" href="https://jjdeharo.github.io/miae/ca/guia/">
+  <link rel="alternate" hreflang="eu" href="https://jjdeharo.github.io/miae/eu/guia/">
+  <link rel="alternate" hreflang="gl" href="https://jjdeharo.github.io/miae/gl/guia/">
+  <link rel="alternate" hreflang="en" href="https://jjdeharo.github.io/miae/en/guia/">
+  <link rel="alternate" hreflang="x-default" href="https://jjdeharo.github.io/miae/es/guia/">
+  <script src="../../assets/site.js" defer></script>
+<style>
+:root {
+  --font-sans: "Noto Sans", "Segoe UI", sans-serif;
+  --ink: #172033; --muted: #5f6979; --line: #d8dde6; --wash: #f3f6fa;
+  --accent: #0b6e75; --accent-dark: #075158;
+  --l0: #65758b; --l1: #4263a3; --l2: #376f9e; --l3: #16828d; --l4: #258763; --l5: #547a35;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
+       font: 400 15px/1.5 var(--font-sans); }
+.sheet { width: min(210mm, 100%); margin: 0 auto; padding: 12mm 11mm 10mm; background: #fff;
+         box-shadow: 0 20px 50px rgba(25,35,55,.10); }
+
+.masthead { padding-bottom: .5rem; border-bottom: 2.5px solid var(--ink); }
+.masthead h1 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.masthead h1 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                     font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.masthead p { max-width: 118ch; margin: 1.8mm 0 0; color: var(--muted); font-size: .82rem; line-height: 1.4; }
+
+.scale { margin-top: .4rem; }
+.level { display: grid; grid-template-columns: 34mm 1fr; gap: 0 5mm;
+         padding: 1.7mm 0; border-bottom: 1px solid var(--line); }
+.level:last-child { border-bottom: 0; }
+.tag { display: flex; align-items: baseline; gap: 2.2mm; padding: 1.8mm 2.4mm; color: #fff; align-self: start; }
+.tag b { font: 800 1.38rem/1 var(--font-sans); }
+.tag span { font: 700 .76rem/1.15 var(--font-sans); }
+.l0 .tag { background: var(--l0); } .l1 .tag { background: var(--l1); } .l2 .tag { background: var(--l2); }
+.l3 .tag { background: var(--l3); } .l4 .tag { background: var(--l4); } .l5 .tag { background: var(--l5); }
+
+.split { font: 700 .93rem/1.3 var(--font-sans); margin: 0 0 1mm; }
+.desc { margin: 0; font-size: .83rem; line-height: 1.40; color: #2c3547; }
+.eg { margin: 1.2mm 0 0; padding: 0; list-style: none;
+      display: flex; flex-wrap: wrap; gap: 1mm 4mm; font-size: .80rem; color: #3d4757; }
+.eg li::before { content: "▪"; margin-right: 1.1mm; opacity: .5; }
+.warn { display: block; margin-top: 1mm; font-size: .78rem; color: var(--accent-dark); font-style: italic; }
+
+
+.colophon { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+            margin-top: 3.5mm; padding-top: 2mm; border-top: 2.5px solid var(--ink);
+            font-size: .72rem; color: var(--muted); }
+.colophon a { color: var(--muted); }
+
+/* ---- reverso ---- */
+.sheet + .sheet { margin-top: 1.5rem; }
+.back h2 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.back h2 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                 font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.rules { margin-top: 1.5mm; }
+.rule { display: grid; grid-template-columns: 7mm 1fr; gap: 0 4mm;
+        padding: 3.1mm 0; border-bottom: 1px solid var(--line); }
+.rule .n { width: 7mm; height: 7mm; display: grid; place-items: center; align-self: start;
+           background: var(--ink); color: #fff; font: 800 .92rem/1 var(--font-sans); }
+.rule h3 { margin: 0 0 1mm; font: 700 .93rem/1.3 var(--font-sans); }
+.rule p { margin: 0; font-size: .83rem; line-height: 1.45; color: #2c3547; }
+.rule p + p { margin-top: 1.4mm; }
+.rule em { color: var(--accent-dark); font-style: italic; }
+
+/* ---- barra de navegación (solo pantalla) ---- */
+.qr-bar { display: flex; align-items: center; gap: 1rem; margin: -1.5rem -1.5rem 1.5rem;
+          padding: .65rem 1.1rem; background: var(--ink); color: #fff; font-size: .82rem; }
+.qr-bar a { color: #fff; }
+.qr-bar .qr-pdf { margin-left: auto; font-weight: 700; }
+.qr-bar .language-picker { display: flex; align-items: center; gap: .45rem; }
+.qr-bar select { font: inherit; padding: .15rem .3rem; }
+@media print { .qr-bar { display: none !important; } }
+
+@page { size: A4; margin: 10mm 9mm; }
+@media print {
+  body { padding: 0; background: #fff; font-size: 10pt; }
+  .sheet { width: auto; padding: 0; box-shadow: none; }
+  .level, .rule { break-inside: avoid; }
+  .sheet + .sheet { break-before: page; margin-top: 0; }
+  a { text-decoration: none; }
+}
+@media (max-width: 700px) {
+  body { padding: .75rem; }
+  .sheet { padding: 7mm 5mm; }
+  .qr-bar { margin: -.75rem -.75rem .75rem; gap: .7rem; }
+  .level { grid-template-columns: 1fr; gap: 1.5mm; }
+  .sheet + .sheet { margin-top: .75rem; }
+  .tag { justify-self: start; }
+}
+</style>
+</head>
+<body data-page="quickref" data-root="../../">
+  <nav class="qr-bar" aria-label="Navegació principal">
+    <a href="../../ca/">Inici</a>
+    <a class="qr-pdf" href="../../output/pdf/miae-v2.1-guia-ca.pdf" download>Descarregar PDF</a>
+    <label class="language-picker"><span>Idioma</span>
+      <select data-language-select aria-label="Idioma">
+        <option value="auto">Automàtic (navegador)</option>
+        <option value="es">Castellano</option><option value="ca" selected>Català</option><option value="eu">Euskara</option><option value="gl">Galego</option><option value="en">English</option>
+      </select>
+    </label>
+  </nav>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1><small>MIAE v2.1 · Guia ràpida</small>Marc per a la integració de la IA generativa en les tasques educatives</h1>
+    <p>L'escala descriu <b>com es reparteix el treball</b> en una tasca educativa: no mesura la qualitat, l'esforç ni l'aprenentatge. Els nivells no són acumulatius i un nivell més alt no és millor.</p>
+  </header>
+
+  <div class="scale">
+
+    <section class="level l0">
+      <div class="tag"><b>0</b><span>Sense IA</span></div>
+      <div>
+        <p class="split">La persona crea.</p>
+        <p class="desc">No s&#39;utilitza IA generativa en cap etapa: el contingut, les idees i l&#39;estructura són de la persona. Cercar a Internet o fer servir una eina digital no compta per si sol com a IA generativa.</p>
+        <ul class="eg"><li>Examen escrit a classe</li><li>Debat o prova oral</li><li>Treball fet amb llibres i apunts</li><li>Rúbrica redactada pel docent</li></ul>
+      </div>
+    </section>
+
+    <section class="level l1">
+      <div class="tag"><b>1</b><span>Reformulació</span></div>
+      <div>
+        <p class="split">La persona crea, la IA reformula.</p>
+        <p class="desc">La IA reexpressa material que ja existeix. No aporta idees, anàlisis ni conclusions: el contingut continua sent íntegrament de la persona.</p>
+        <ul class="eg"><li>Corregir ortografia i estil</li><li>Resumir un text propi</li><li>Traduir comprovant el sentit</li><li>Redactar a partir de notes pròpies</li><li>Passar dades a una taula</li></ul>
+        <b class="warn">Corregir l&#39;estil continua sent nivell 1, encara que millori molt la claredat.</b>
+      </div>
+    </section>
+
+    <section class="level l2">
+      <div class="tag"><b>2</b><span>Planificació</span></div>
+      <div>
+        <p class="split">La persona crea, la IA planifica.</p>
+        <p class="desc">La IA suggereix idees, enfocaments o una estructura per preparar el treball. La persona desenvolupa i redacta després tot el contingut final.</p>
+        <ul class="eg"><li>Pluja d&#39;idees inicial</li><li>Índex o esquema d&#39;un assaig</li><li>Suggeriment de temes o fonts</li><li>Idees per a activitats de classe</li></ul>
+        <b class="warn">Si el que es lliura és l&#39;esquema mateix, ja no és planificació: classifica&#39;l com a producte.</b>
+      </div>
+    </section>
+
+    <section class="level l3">
+      <div class="tag"><b>3</b><span>Esborrany</span></div>
+      <div>
+        <p class="split">La IA crea un esborrany, la persona construeix.</p>
+        <p class="desc">La IA genera contingut nou que serveix de punt de partida i la persona el reconstrueix de manera significativa: reescriu, reorganitza i hi aporta el seu. El flux va en una sola direcció.</p>
+        <ul class="eg"><li>Secció redactada per IA i reescrita</li><li>Anàlisi de dades reelaborada</li><li>Preguntes d&#39;examen seleccionades i reformulades</li><li>Presentació reorganitzada amb arguments propis</li></ul>
+      </div>
+    </section>
+
+    <section class="level l4">
+      <div class="tag"><b>4</b><span>Cocreació</span></div>
+      <div>
+        <p class="split">La persona i la IA cocreen.</p>
+        <p class="desc">Diàleg en les dues direccions: totes dues parts desenvolupen el contingut mentre s’elabora. La persona dirigeix, contrasta i valida. La idea inicial pot ser enterament humana.</p>
+        <ul class="eg"><li>Recerca desenvolupada conversant</li><li>Text ajustat demanant canvis d&#39;enfocament</li><li>Material didàctic afinat en diverses voltes</li></ul>
+        <b class="warn">El nombre de missatges no determina la cocreació; ho fa l&#39;aportació de cada part.</b>
+      </div>
+    </section>
+
+    <section class="level l5">
+      <div class="tag"><b>5</b><span>Supervisió</span></div>
+      <div>
+        <p class="split">La IA crea, la persona supervisa.</p>
+        <p class="desc">La IA elabora el producte final a partir dels paràmetres que rep. La persona en revisa la qualitat i el valida abans d&#39;usar-lo, sense reconstruir-ne el contingut.</p>
+        <ul class="eg"><li>Il·lustració generada i validada</li><li>Text generat que es comprova i s&#39;usa</li><li>Resum automàtic revisat abans de publicar</li></ul>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>Marc complet: <a href="https://jjdeharo.github.io/miae/v2.1/ca/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+
+<div class="sheet back">
+
+  <header class="masthead">
+    <h2><small>MIAE v2.1 · Guia ràpida</small>Com classificar una tasca i els canvis</h2>
+  </header>
+
+  <div class="rules">
+
+    <section class="rule">
+      <span class="n">1</span>
+      <div>
+        <h3>Què es classifica</h3>
+        <p>Primer es delimita <b>quina tasca o component es classifica i qui la fa</b>. Generar un text per analitzar-lo i elaborar-ne l'anàlisi són processos diferents. També es poden distingir el text, les imatges o el codi d'un mateix projecte quan la seva elaboració segueix processos diferents. Es distingeixen unitats amb una funció reconeixible a la feina, i se'n fa explícita la relació amb el conjunt.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">2</span>
+      <div>
+        <h3>El procés complet</h3>
+        <p>El nivell es determina per la contribució de la IA i el paper de la persona al desenvolupament del resultat, considerant el procés complet. No és fixat per la primera petició ni per l'origen de la idea. Una activitat pot començar com a reformulació de nivell 1 i esdevenir cocreació de nivell 4. De la mateixa manera, un text generat autònomament pot acabar sent un esborrany que la persona reconstrueix significativament, donant lloc a un procés de nivell 3. La classificació provisional pot canviar en conèixer el treball posterior.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">3</span>
+      <div>
+        <h3>Processos mixtos</h3>
+        <p>En els processos mixtos cal indicar els nivells <b>per fases o components</b>. Per exemple, «nivell 2 a la planificació i nivell 1 a la reformulació d'un desenvolupament humà», o «text sense IA i il·lustració de nivell 5». Si cal una sola xifra, s'indica el nivell que caracteritza el desenvolupament del producte principal, acompanyat de les diferències rellevants. Quan cap nivell no ho descriu prou, es declara el procés mixt i s'especifiquen els nivells que intervenen.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">4</span>
+      <div>
+        <h3>L&#39;aportació</h3>
+        <p>No s'assignarà automàticament el nivell més alt de qualsevol interacció. Per valorar una aportació se n'observa la funció, l'abast i com s'hi incorpora o es transforma. Una aportació <b>substantiva</b> modifica el contingut, el raonament, l'organització conceptual o el funcionament del producte. Pot ser breu i decisiva, com una distinció que en canvia la conclusió. La seva importància no és suficient per determinar el nivell: també compta si la persona la desenvolupa, la reconstrueix, cocrea amb la IA o l'accepta després de supervisar-la.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">5</span>
+      <div>
+        <h3>Consultes descartades</h3>
+        <p>Una resposta descartada sense influència a la feina no obliga a elevar el nivell del producte. Convé registrar la consulta; no seria correcte afirmar que no es va utilitzar IA en cap etapa. Tampoc no n'hi ha prou de comprovar si es va copiar una resposta: un suggeriment pot influir en un argument encara que s'expressi després amb altres paraules. Les correccions d'estil continuen sent nivell 1, fins i tot quan milloren molt la claredat.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>Marc complet: <a href="https://jjdeharo.github.io/miae/v2.1/ca/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+</body>
+</html>

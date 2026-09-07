@@ -29,6 +29,14 @@ for lang in LANGUAGES:
     require(len(soup.select("h3[id^='nivel-']")) == 6, f"{lang}: missing level anchors")
     require(len(soup.select("link[rel='alternate']")) == 6, f"{lang}: incomplete hreflang set")
 
+    quick = ROOT / "output" / "pdf" / f"miae-v2.1-guia-{lang}.pdf"
+    require(quick.exists(), f"{lang}: quick guide PDF missing")
+    if quick.exists():
+        quick_info = subprocess.run(["pdfinfo", str(quick)], check=True, text=True, capture_output=True).stdout
+        quick_pages = re.search(r"^Pages:\s+(\d+)", quick_info, re.M)
+        # The quick guide must stay a single printed sheet, front and back.
+        require(quick_pages and int(quick_pages.group(1)) == 2, f"{lang}: quick guide is not two pages")
+
     pdf = ROOT / "output" / "pdf" / f"miae-v2.1-{lang}.pdf"
     require(pdf.exists() and pdf.stat().st_size > 40_000, f"{lang}: PDF missing or too small")
     if pdf.exists():
@@ -47,4 +55,4 @@ if errors:
         print(f"- {error}", file=sys.stderr)
     raise SystemExit(1)
 
-print("Validated five sources, five web editions and five PDF editions.")
+print("Validated five sources, five web editions, five PDF editions and five quick guides.")

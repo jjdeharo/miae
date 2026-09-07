@@ -7,7 +7,13 @@
     "article_note": "Presentación de la versión 2.1 · español",
     "automatic": "Automático (navegador)",
     "previous_version": "Versión anterior: 2 revisada",
-    "infographic_link": "Infografía · castellano"
+    "infographic_link": "Infografía",
+    "template_note": "Declarar el uso de IA en una tarea",
+    "framework_note": "Marco completo · web",
+    "pdf_note": "Documento completo para descargar",
+    "infographic_note": "Los seis niveles en una imagen",
+    "quickref_link": "Guía rápida",
+    "quickref_note": "Los seis niveles en un folio"
   },
   "ca": {
     "home_title": "Sis maneres de repartir el treball entre la persona i la IA",
@@ -17,7 +23,13 @@
     "article_note": "Presentació de la versió 2.1 · castellà",
     "automatic": "Automàtic (navegador)",
     "previous_version": "Versió anterior: 2 revisada",
-    "infographic_link": "Infografia · castellà"
+    "infographic_link": "Infografia",
+    "template_note": "Declarar l’ús d’IA en una tasca",
+    "framework_note": "Marc complet · web",
+    "pdf_note": "Document complet per descarregar",
+    "infographic_note": "Els sis nivells en una imatge",
+    "quickref_link": "Guia ràpida",
+    "quickref_note": "Els sis nivells en un full"
   },
   "eu": {
     "home_title": "Pertsonaren eta IAren artean lana banatzeko sei modu",
@@ -27,7 +39,13 @@
     "article_note": "2.1 bertsioaren aurkezpena · gaztelaniaz",
     "automatic": "Automatikoa (nabigatzailea)",
     "previous_version": "Aurreko bertsioa: 2 berrikusia",
-    "infographic_link": "Infografia · gaztelaniaz"
+    "infographic_link": "Infografia",
+    "template_note": "Zeregin batean IAren erabilera adieraztea",
+    "framework_note": "Esparru osoa · weba",
+    "pdf_note": "Dokumentu osoa deskargatzeko",
+    "infographic_note": "Sei mailak irudi batean",
+    "quickref_link": "Gida azkarra",
+    "quickref_note": "Sei mailak orri batean"
   },
   "gl": {
     "home_title": "Seis formas de repartir o traballo entre a persoa e a IA",
@@ -37,7 +55,13 @@
     "article_note": "Presentación da versión 2.1 · castelán",
     "automatic": "Automático (navegador)",
     "previous_version": "Versión anterior: 2 revisada",
-    "infographic_link": "Infografía · castelán"
+    "infographic_link": "Infografía",
+    "template_note": "Declarar o uso de IA nunha tarefa",
+    "framework_note": "Marco completo · web",
+    "pdf_note": "Documento completo para descargar",
+    "infographic_note": "Os seis niveis nunha imaxe",
+    "quickref_link": "Guía rápida",
+    "quickref_note": "Os seis niveis nunha folla"
   },
   "en": {
     "home_title": "Six ways to share work between people and AI",
@@ -47,6 +71,12 @@
     "article_note": "Introducing version 2.1 · Spanish",
     "automatic": "Automatic (browser)",
     "previous_version": "Previous version: revised 2",
-    "infographic_link": "Infographic · Spanish"
+    "infographic_link": "Infographic",
+    "template_note": "Declare AI use in a task",
+    "framework_note": "Full framework · web",
+    "pdf_note": "Full document to download",
+    "infographic_note": "The six levels in one image",
+    "quickref_link": "Quick guide",
+    "quickref_note": "The six levels on one sheet"
   }
 }

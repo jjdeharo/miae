@@ -67,7 +67,7 @@ A continuación detállase cada un dos niveis e indícanse algúns dos aspectos 
 
 Non hai uso da IA en ningún momento. Todos os contidos, ideas e estruturas son xerados exclusivamente por humanos utilizando recursos tradicionais.
 
-Neste marco, ningunha IA fai referencia á IA xerativa utilizada para realizar a tarefa. Usar Internet ou unha ferramenta dixital non implica por si só recorrer a ela. Os seguintes exemplos supoñen que a persoa realiza a actividade sen axuda xenerativa.
+Neste marco, ningunha IA fai referencia á IA xerativa utilizada para realizar a tarefa. Usar Internet ou unha ferramenta dixital non implica por si só recorrer a ela. Os seguintes exemplos supoñen que a persoa realiza a actividade sen axuda xerativa.
 
 #### Características clave
 

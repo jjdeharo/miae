@@ -1,0 +1,102 @@
+{
+  "kicker": "MIAE v2.1 · Guía rápida",
+  "title": "Marco para la integración de la IA generativa en las tareas educativas",
+  "lead": "La escala describe <b>cómo se reparte el trabajo</b> en una tarea educativa: no mide la calidad, el esfuerzo ni el aprendizaje. Los niveles no son acumulativos y un nivel más alto no es mejor.",
+  "levels": [
+    {
+      "name": "Sin IA",
+      "split": "La persona crea.",
+      "desc": "No se usa IA generativa en ninguna etapa: el contenido, las ideas y la estructura son de la persona. Buscar en Internet o usar una herramienta digital no cuenta por sí solo como IA generativa.",
+      "examples": [
+        "Examen escrito en clase",
+        "Debate o prueba oral",
+        "Trabajo hecho con libros y apuntes",
+        "Rúbrica redactada por el docente"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Reformulación",
+      "split": "La persona crea, la IA reformula.",
+      "desc": "La IA reexpresa material que ya existe. No aporta ideas, análisis ni conclusiones: el contenido sigue siendo íntegramente de la persona.",
+      "examples": [
+        "Corregir ortografía y estilo",
+        "Resumir un texto propio",
+        "Traducir comprobando el sentido",
+        "Redactar a partir de notas propias",
+        "Pasar datos a una tabla"
+      ],
+      "warn": "Corregir el estilo sigue siendo nivel 1, aunque mejore mucho la claridad."
+    },
+    {
+      "name": "Planificación",
+      "split": "La persona crea, la IA planifica.",
+      "desc": "La IA sugiere ideas, enfoques o una estructura para preparar el trabajo. La persona desarrolla y redacta después todo el contenido final.",
+      "examples": [
+        "Lluvia de ideas inicial",
+        "Índice o esquema de un ensayo",
+        "Sugerencia de temas o fuentes",
+        "Ideas para actividades de clase"
+      ],
+      "warn": "Si lo que se entrega es el esquema mismo, ya no es planificación: clasifícalo como producto."
+    },
+    {
+      "name": "Borrador",
+      "split": "La IA crea un borrador, la persona construye.",
+      "desc": "La IA genera contenido nuevo que sirve de punto de partida y la persona lo reconstruye de forma significativa: reescribe, reorganiza y aporta lo suyo. El flujo va en una sola dirección.",
+      "examples": [
+        "Sección redactada por IA y reescrita",
+        "Análisis de datos reelaborado",
+        "Preguntas de examen seleccionadas y reformuladas",
+        "Presentación reorganizada con argumentos propios"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Cocreación",
+      "split": "La persona y la IA cocrean.",
+      "desc": "Diálogo en las dos direcciones: ambas partes desarrollan el contenido mientras se elabora. La persona dirige, contrasta y valida. La idea inicial puede ser enteramente humana.",
+      "examples": [
+        "Investigación desarrollada conversando",
+        "Texto ajustado pidiendo cambios de enfoque",
+        "Material didáctico afinado en varias vueltas"
+      ],
+      "warn": "El número de mensajes no determina la cocreación; lo hace la aportación de cada parte."
+    },
+    {
+      "name": "Supervisión",
+      "split": "La IA crea, la persona supervisa.",
+      "desc": "La IA elabora el producto final a partir de los parámetros que recibe. La persona revisa la calidad y lo valida antes de usarlo, sin reconstruir su contenido.",
+      "examples": [
+        "Ilustración generada y validada",
+        "Texto generado que se comprueba y se usa",
+        "Resumen automático revisado antes de publicar"
+      ],
+      "warn": ""
+    }
+  ],
+  "back_title": "Cómo clasificar una tarea y sus cambios",
+  "rules": [
+    {
+      "label": "Qué se clasifica",
+      "text": "Primero se delimita <b>qué tarea o componente se clasifica y quién la realiza</b>. Generar un texto para analizarlo y elaborar su análisis son procesos distintos. También pueden distinguirse el texto, las imágenes o el código de un mismo proyecto cuando su elaboración sigue procesos diferentes. Se distinguen unidades con una función reconocible en el trabajo, y se hace explícita su relación con el conjunto."
+    },
+    {
+      "label": "El proceso completo",
+      "text": "El nivel se determina por la contribución de la IA y el papel de la persona en el desarrollo del resultado, considerando el proceso completo. No queda fijado por la primera petición ni por el origen de la idea. Una actividad puede comenzar como reformulación de nivel 1 y convertirse en cocreación de nivel 4. Del mismo modo, un texto generado autónomamente puede acabar siendo un borrador que la persona reconstruye significativamente, dando lugar a un proceso de nivel 3. La clasificación provisional puede cambiar al conocer el trabajo posterior."
+    },
+    {
+      "label": "Procesos mixtos",
+      "text": "En los procesos mixtos conviene indicar los niveles <b>por fases o componentes</b>. Por ejemplo, «nivel 2 en la planificación y nivel 1 en la reformulación de un desarrollo humano», o «texto sin IA e ilustración de nivel 5». Si se necesita una sola cifra, se indica el nivel que caracteriza el desarrollo del producto principal, acompañado de las diferencias relevantes. Cuando ningún nivel lo describe suficientemente, se declara el proceso mixto y se especifican los niveles que intervienen."
+    },
+    {
+      "label": "La aportación",
+      "text": "No se asigna automáticamente el nivel más alto de cualquier interacción. Para valorar una aportación se observa su función, su alcance y cómo se incorpora o transforma. Una aportación <b>sustantiva</b> modifica el contenido, el razonamiento, la organización conceptual o el funcionamiento del producto. Puede ser breve y decisiva, como una distinción que cambia la conclusión. Su importancia no basta para determinar el nivel: también cuenta si la persona la desarrolla, la reconstruye, cocrea con la IA o la acepta tras supervisarla."
+    },
+    {
+      "label": "Consultas descartadas",
+      "text": "Una respuesta descartada sin influencia en el trabajo no obliga a elevar el nivel del producto. Conviene registrar la consulta; no sería correcto afirmar que no se utilizó IA en ninguna etapa. Tampoco basta con comprobar si se copió una respuesta: una sugerencia puede influir en un argumento aunque se exprese después con otras palabras. Las correcciones de estilo siguen siendo nivel 1, incluso cuando mejoran mucho la claridad."
+    }
+  ],
+  "full_framework": "Marco completo:"
+}

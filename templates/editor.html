@@ -1,0 +1,14 @@
+{% macro editor(id, title, fields, intro) -%}
+<div class="template-editor" data-editor data-copied="{{ guide.copied }}" data-copy-failed="{{ guide.copy_failed }}">
+  <p>{{ intro }}</p>
+  <label class="eyebrow" for="{{ id }}">{{ title }}</label>
+  <textarea id="{{ id }}" rows="14" spellcheck="true">{% for field in fields %}{{ field }}:
+
+{% endfor %}</textarea>
+  <div class="home-actions interactive-only">
+    <button class="button primary" type="button" data-copy>{{ guide['copy'] }}</button>
+    <button class="button" type="button" data-download="miae-{{ id }}-{{ lang }}.txt">{{ guide.download }}</button>
+  </div>
+  <p class="editor-status" role="status"></p>
+</div>
+{%- endmacro %}

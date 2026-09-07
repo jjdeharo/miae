@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="gl">
+<head>
+    <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIAE v2.1 · Guía rápida · MIAE</title>
+  <meta name="description" content="Marco para describir como se reparte o traballo entre a persoa e a IA xerativa nas tarefas educativas.">
+  <link rel="canonical" href="https://jjdeharo.github.io/miae/gl/guia/">
+  <link rel="alternate" hreflang="es" href="https://jjdeharo.github.io/miae/es/guia/">
+  <link rel="alternate" hreflang="ca" href="https://jjdeharo.github.io/miae/ca/guia/">
+  <link rel="alternate" hreflang="eu" href="https://jjdeharo.github.io/miae/eu/guia/">
+  <link rel="alternate" hreflang="gl" href="https://jjdeharo.github.io/miae/gl/guia/">
+  <link rel="alternate" hreflang="en" href="https://jjdeharo.github.io/miae/en/guia/">
+  <link rel="alternate" hreflang="x-default" href="https://jjdeharo.github.io/miae/es/guia/">
+  <script src="../../assets/site.js" defer></script>
+<style>
+:root {
+  --font-sans: "Noto Sans", "Segoe UI", sans-serif;
+  --ink: #172033; --muted: #5f6979; --line: #d8dde6; --wash: #f3f6fa;
+  --accent: #0b6e75; --accent-dark: #075158;
+  --l0: #65758b; --l1: #4263a3; --l2: #376f9e; --l3: #16828d; --l4: #258763; --l5: #547a35;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
+       font: 400 15px/1.5 var(--font-sans); }
+.sheet { width: min(210mm, 100%); margin: 0 auto; padding: 12mm 11mm 10mm; background: #fff;
+         box-shadow: 0 20px 50px rgba(25,35,55,.10); }
+
+.masthead { padding-bottom: .5rem; border-bottom: 2.5px solid var(--ink); }
+.masthead h1 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.masthead h1 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                     font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.masthead p { max-width: 118ch; margin: 1.8mm 0 0; color: var(--muted); font-size: .82rem; line-height: 1.4; }
+
+.scale { margin-top: .4rem; }
+.level { display: grid; grid-template-columns: 34mm 1fr; gap: 0 5mm;
+         padding: 1.7mm 0; border-bottom: 1px solid var(--line); }
+.level:last-child { border-bottom: 0; }
+.tag { display: flex; align-items: baseline; gap: 2.2mm; padding: 1.8mm 2.4mm; color: #fff; align-self: start; }
+.tag b { font: 800 1.38rem/1 var(--font-sans); }
+.tag span { font: 700 .76rem/1.15 var(--font-sans); }
+.l0 .tag { background: var(--l0); } .l1 .tag { background: var(--l1); } .l2 .tag { background: var(--l2); }
+.l3 .tag { background: var(--l3); } .l4 .tag { background: var(--l4); } .l5 .tag { background: var(--l5); }
+
+.split { font: 700 .93rem/1.3 var(--font-sans); margin: 0 0 1mm; }
+.desc { margin: 0; font-size: .83rem; line-height: 1.40; color: #2c3547; }
+.eg { margin: 1.2mm 0 0; padding: 0; list-style: none;
+      display: flex; flex-wrap: wrap; gap: 1mm 4mm; font-size: .80rem; color: #3d4757; }
+.eg li::before { content: "▪"; margin-right: 1.1mm; opacity: .5; }
+.warn { display: block; margin-top: 1mm; font-size: .78rem; color: var(--accent-dark); font-style: italic; }
+
+
+.colophon { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+            margin-top: 3.5mm; padding-top: 2mm; border-top: 2.5px solid var(--ink);
+            font-size: .72rem; color: var(--muted); }
+.colophon a { color: var(--muted); }
+
+/* ---- reverso ---- */
+.sheet + .sheet { margin-top: 1.5rem; }
+.back h2 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.back h2 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                 font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.rules { margin-top: 1.5mm; }
+.rule { display: grid; grid-template-columns: 7mm 1fr; gap: 0 4mm;
+        padding: 3.1mm 0; border-bottom: 1px solid var(--line); }
+.rule .n { width: 7mm; height: 7mm; display: grid; place-items: center; align-self: start;
+           background: var(--ink); color: #fff; font: 800 .92rem/1 var(--font-sans); }
+.rule h3 { margin: 0 0 1mm; font: 700 .93rem/1.3 var(--font-sans); }
+.rule p { margin: 0; font-size: .83rem; line-height: 1.45; color: #2c3547; }
+.rule p + p { margin-top: 1.4mm; }
+.rule em { color: var(--accent-dark); font-style: italic; }
+
+/* ---- barra de navegación (solo pantalla) ---- */
+.qr-bar { display: flex; align-items: center; gap: 1rem; margin: -1.5rem -1.5rem 1.5rem;
+          padding: .65rem 1.1rem; background: var(--ink); color: #fff; font-size: .82rem; }
+.qr-bar a { color: #fff; }
+.qr-bar .qr-pdf { margin-left: auto; font-weight: 700; }
+.qr-bar .language-picker { display: flex; align-items: center; gap: .45rem; }
+.qr-bar select { font: inherit; padding: .15rem .3rem; }
+@media print { .qr-bar { display: none !important; } }
+
+@page { size: A4; margin: 10mm 9mm; }
+@media print {
+  body { padding: 0; background: #fff; font-size: 10pt; }
+  .sheet { width: auto; padding: 0; box-shadow: none; }
+  .level, .rule { break-inside: avoid; }
+  .sheet + .sheet { break-before: page; margin-top: 0; }
+  a { text-decoration: none; }
+}
+@media (max-width: 700px) {
+  body { padding: .75rem; }
+  .sheet { padding: 7mm 5mm; }
+  .qr-bar { margin: -.75rem -.75rem .75rem; gap: .7rem; }
+  .level { grid-template-columns: 1fr; gap: 1.5mm; }
+  .sheet + .sheet { margin-top: .75rem; }
+  .tag { justify-self: start; }
+}
+</style>
+</head>
+<body data-page="quickref" data-root="../../">
+  <nav class="qr-bar" aria-label="Navegación principal">
+    <a href="../../gl/">Inicio</a>
+    <a class="qr-pdf" href="../../output/pdf/miae-v2.1-guia-gl.pdf" download>Descargar PDF</a>
+    <label class="language-picker"><span>Idioma</span>
+      <select data-language-select aria-label="Idioma">
+        <option value="auto">Automático (navegador)</option>
+        <option value="es">Castellano</option><option value="ca">Català</option><option value="eu">Euskara</option><option value="gl" selected>Galego</option><option value="en">English</option>
+      </select>
+    </label>
+  </nav>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1><small>MIAE v2.1 · Guía rápida</small>Marco para a integración da IA xerativa nas tarefas educativas</h1>
+    <p>A escala describe <b>como se reparte o traballo</b> nunha tarefa educativa: non mide a calidade, o esforzo nin a aprendizaxe. Os niveis non son acumulativos e un nivel máis alto non é mellor.</p>
+  </header>
+
+  <div class="scale">
+
+    <section class="level l0">
+      <div class="tag"><b>0</b><span>Sen IA</span></div>
+      <div>
+        <p class="split">A persoa crea.</p>
+        <p class="desc">Non se usa IA xerativa en ningunha etapa: o contido, as ideas e a estrutura son da persoa. Buscar en Internet ou usar unha ferramenta dixital non conta por si só como IA xerativa.</p>
+        <ul class="eg"><li>Exame escrito na clase</li><li>Debate ou proba oral</li><li>Traballo feito con libros e apuntamentos</li><li>Rúbrica redactada polo docente</li></ul>
+      </div>
+    </section>
+
+    <section class="level l1">
+      <div class="tag"><b>1</b><span>Reformulación</span></div>
+      <div>
+        <p class="split">A persoa crea, a IA reformula.</p>
+        <p class="desc">A IA reexpresa material que xa existe. Non achega ideas, análises nin conclusións: o contido segue sendo integramente da persoa.</p>
+        <ul class="eg"><li>Corrixir ortografía e estilo</li><li>Resumir un texto propio</li><li>Traducir comprobando o sentido</li><li>Redactar a partir de notas propias</li><li>Pasar datos a unha táboa</li></ul>
+        <b class="warn">Corrixir o estilo segue sendo nivel 1, aínda que mellore moito a claridade.</b>
+      </div>
+    </section>
+
+    <section class="level l2">
+      <div class="tag"><b>2</b><span>Planificación</span></div>
+      <div>
+        <p class="split">A persoa crea, a IA planea.</p>
+        <p class="desc">A IA suxire ideas, enfoques ou unha estrutura para preparar o traballo. A persoa desenvolve e redacta despois todo o contido final.</p>
+        <ul class="eg"><li>Chuvia de ideas inicial</li><li>Índice ou esquema dun ensaio</li><li>Suxestión de temas ou fontes</li><li>Ideas para actividades de clase</li></ul>
+        <b class="warn">Se o que se entrega é o propio esquema, xa non é planificación: clasifícao como produto.</b>
+      </div>
+    </section>
+
+    <section class="level l3">
+      <div class="tag"><b>3</b><span>Borrador</span></div>
+      <div>
+        <p class="split">A IA crea un borrador, a persoa constrúe.</p>
+        <p class="desc">A IA xera contido novo que serve de punto de partida e a persoa reconstrúeo de forma significativa: reescribe, reorganiza e achega o seu. O fluxo vai nunha soa dirección.</p>
+        <ul class="eg"><li>Sección redactada pola IA e reescrita</li><li>Análise de datos reelaborada</li><li>Preguntas de exame seleccionadas e reformuladas</li><li>Presentación reorganizada con argumentos propios</li></ul>
+      </div>
+    </section>
+
+    <section class="level l4">
+      <div class="tag"><b>4</b><span>Cocreación</span></div>
+      <div>
+        <p class="split">A persoa e a IA cocrean.</p>
+        <p class="desc">Diálogo nas dúas direccións: ambas as partes desenvolven o contido mentres se elabora. A persoa dirixe, contrasta e valida. A idea inicial pode ser enteiramente humana.</p>
+        <ul class="eg"><li>Investigación desenvolvida conversando</li><li>Texto axustado pedindo cambios de enfoque</li><li>Material didáctico afinado en varias voltas</li></ul>
+        <b class="warn">O número de mensaxes non determina a cocreación; faino a achega de cada parte.</b>
+      </div>
+    </section>
+
+    <section class="level l5">
+      <div class="tag"><b>5</b><span>Supervisión</span></div>
+      <div>
+        <p class="split">A IA crea, a persoa supervisa.</p>
+        <p class="desc">A IA elabora o produto final a partir dos parámetros que recibe. A persoa revisa a calidade e valídao antes de usalo, sen reconstruír o seu contido.</p>
+        <ul class="eg"><li>Ilustración xerada e validada</li><li>Texto xerado que se comproba e se usa</li><li>Resumo automático revisado antes de publicar</li></ul>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>Marco completo: <a href="https://jjdeharo.github.io/miae/v2.1/gl/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+
+<div class="sheet back">
+
+  <header class="masthead">
+    <h2><small>MIAE v2.1 · Guía rápida</small>Como clasificar unha tarefa e os seus cambios</h2>
+  </header>
+
+  <div class="rules">
+
+    <section class="rule">
+      <span class="n">1</span>
+      <div>
+        <h3>Que se clasifica</h3>
+        <p>En primeiro lugar, delimitase <b>que tarefa ou compoñente se clasifica e quen a realiza</b>. Xerar un texto para analizalo e preparar a súa análise son procesos diferentes. Tamén se poden distinguir textos, imaxes ou código dun mesmo proxecto cando o seu desenvolvemento segue procesos diferentes. Distínguense unidades cunha función recoñecible na obra, e explícita a súa relación co conxunto.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">2</span>
+      <div>
+        <h3>O proceso completo</h3>
+        <p>O nivel está determinado pola contribución da IA e o papel da persoa no desenvolvemento do resultado, tendo en conta todo o proceso. Non se fixa pola primeira solicitude nin pola orixe da idea. Unha actividade pode comezar como unha reformulación de nivel 1 e converterse nunha co-creación de nivel 4. Do mesmo xeito, un texto xerado de forma autónoma pode acabar sendo un borrador que a persoa reconstrúe significativamente, dando lugar a un proceso de nivel 3. A clasificación provisional pode modificarse ao coñecer traballos posteriores.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">3</span>
+      <div>
+        <h3>Procesos mixtos</h3>
+        <p>Nos procesos mixtos convén indicar os niveis <b>por fases ou compoñentes</b>. Por exemplo, "nivel 2 en planificación e nivel 1 na reformulación dun desenvolvemento humano", ou "texto sen IA e ilustración de nivel 5". Se se precisa unha única cifra, indícase o nivel que caracteriza o desenvolvemento do produto principal, acompañado das diferenzas relevantes. Cando ningún nivel o describe suficientemente, declárase o proceso mixto e especifícanse os niveis implicados.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">4</span>
+      <div>
+        <h3>A achega</h3>
+        <p>O nivel máis alto de calquera interacción non se asigna automaticamente. Para valorar unha achega obsérvase a súa función, o seu alcance e como se incorpora ou transforma. Unha contribución <b>substantiva</b> modifica o contido, o razoamento, a organización conceptual ou o funcionamento do produto. Pode ser breve e decisivo, como unha distinción que cambia a conclusión. A súa importancia non é suficiente para determinar o nivel: tamén conta se a persoa o desenvolve, o reconstrúe, o crea co IA ou o acepta despois de supervisalo.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">5</span>
+      <div>
+        <h3>Consultas descartadas</h3>
+        <p>Unha resposta descartada sen influencia no traballo non require elevar o nivel do produto. É recomendable rexistrar a consulta; Non sería correcto afirmar que a IA non se utilizou en ningún momento. Tampouco abonda con comprobar se unha resposta foi copiada: unha suxestión pode influír nun argumento aínda que despois se exprese noutras palabras. As correccións de estilo seguen sendo de nivel 1, aínda que melloran moito a claridade.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>Marco completo: <a href="https://jjdeharo.github.io/miae/v2.1/gl/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+</body>
+</html>

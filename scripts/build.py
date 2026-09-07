@@ -99,6 +99,7 @@ DESCRIPTIONS = {
 }
 
 GUIDES = {lang: json.loads((ROOT / "data" / "guide" / f"{lang}.json").read_text()) for lang in LANGUAGES}
+QUICKREF = {lang: json.loads((ROOT / "data" / "quickref" / f"{lang}.json").read_text()) for lang in LANGUAGES}
 
 env = Environment(undefined=StrictUndefined, loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
 
@@ -141,11 +142,33 @@ def main() -> None:
             base_url=BASE_URL, automatic=automatic,
             license_lang=lang if lang in {"es", "ca"} else "en",
         )
+    def build_quickref(lang):
+        return env.get_template("quickref.html").render(
+            lang=lang, ui=UI[lang], qr=QUICKREF[lang], languages=LANGUAGES,
+            description=DESCRIPTIONS[lang], root="../../", base_url=BASE_URL,
+        )
+    def build_tools(lang):
+        return env.get_template("tools.html").render(
+            lang=lang, ui=UI[lang], guide=GUIDES[lang], languages=LANGUAGES,
+            root="../../", base_url=BASE_URL,
+            license_lang=lang if lang in {"es", "ca"} else "en",
+        )
     (ROOT / "index.html").write_text(build_home("es", "./", True), encoding="utf-8")
     for lang in LANGUAGES:
         home_dir = ROOT / lang
         home_dir.mkdir(exist_ok=True)
         (home_dir / "index.html").write_text(build_home(lang, "../"), encoding="utf-8")
+        tools_dir = home_dir / "ficha"
+        tools_dir.mkdir(exist_ok=True)
+        (tools_dir / "index.html").write_text(build_tools(lang), encoding="utf-8")
+        quickref_dir = home_dir / "guia"
+        quickref_dir.mkdir(exist_ok=True)
+        quickref_page = quickref_dir / "index.html"
+        quickref_page.write_text(build_quickref(lang), encoding="utf-8")
+        if args.pdf:
+            pdf_dir = ROOT / "output" / "pdf"
+            pdf_dir.mkdir(parents=True, exist_ok=True)
+            HTML(filename=str(quickref_page)).write_pdf(pdf_dir / f"miae-v2.1-guia-{lang}.pdf")
     available = []
     for lang in LANGUAGES:
         if not (ROOT / "content" / "v2.1" / f"{lang}.md").exists():

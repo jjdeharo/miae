@@ -1,0 +1,54 @@
+{% from "editor.html" import editor with context %}<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  {% include "icons.html" %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ guide.template_title }} · MIAE</title>
+  <meta name="description" content="{{ ui.template_note }}">
+  <link rel="canonical" href="{{ base_url }}/{{ lang }}/ficha/">
+  {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ base_url }}/{{ code }}/ficha/">
+  {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base_url }}/es/ficha/">
+  <link rel="stylesheet" href="{{ root }}assets/site.css">
+  <script src="{{ root }}assets/site.js" defer></script>
+  <script src="{{ root }}assets/guide.js" defer></script>
+</head>
+<body class="home-page" data-page="tools" data-root="{{ root }}">
+  <a class="skip-link" href="#contenido">{{ ui.skip }}</a>
+  <header class="site-header">
+    <a class="brand" href="{{ root }}{{ lang }}/" aria-label="MIAE"><span class="brand-mark" aria-hidden="true">M</span><span><strong>MIAE</strong><small>{{ ui.brand_subtitle }}</small></span></a>
+    <nav class="header-actions" aria-label="{{ ui.navigation }}">
+      <a href="{{ root }}{{ lang }}/">{{ ui.home }}</a>
+      <label class="language-picker"><span>{{ ui.language }}</span>
+        <select data-language-select aria-label="{{ ui.language }}">
+          <option value="auto">{{ ui.automatic }}</option>
+          {% for code, item in languages.items() %}<option value="{{ code }}"{% if code == lang %} selected{% endif %}>{{ item.native }}</option>{% endfor %}
+        </select>
+      </label>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="home-intro">
+      <p class="eyebrow">MIAE 2.1</p>
+      <h1>{{ guide.template_title }}</h1>
+      <p class="home-lead">{{ ui.template_note }}</p>
+      <div class="home-actions">
+        <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
+      </div>
+    </section>
+    <section class="guide-section" id="declaracion" aria-label="{{ guide.template_title }}">
+      {{ editor('ficha', guide.template_title, guide.fields, guide.template_intro) }}
+      <details>
+        <summary>{{ guide.filled_title }}</summary>
+        <dl class="filled-example">{% for field in guide.fields %}<dt>{{ field }}</dt><dd>{{ guide.filled[loop.index0] }}</dd>{% endfor %}</dl>
+      </details>
+    </section>
+    <section class="guide-section" id="plantilla-docente" aria-labelledby="docente-title">
+      <h2 id="docente-title">{{ guide.teacher_title }}</h2>
+      {{ editor('docente', guide.teacher_title, guide.teacher_fields, guide.teacher_intro) }}
+    </section>
+    <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/ficha/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
+  </main>
+  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a></footer>
+</body>
+</html>

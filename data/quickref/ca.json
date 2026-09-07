@@ -1,0 +1,102 @@
+{
+  "kicker": "MIAE v2.1 · Guia ràpida",
+  "title": "Marc per a la integració de la IA generativa en les tasques educatives",
+  "lead": "L'escala descriu <b>com es reparteix el treball</b> en una tasca educativa: no mesura la qualitat, l'esforç ni l'aprenentatge. Els nivells no són acumulatius i un nivell més alt no és millor.",
+  "levels": [
+    {
+      "name": "Sense IA",
+      "split": "La persona crea.",
+      "desc": "No s'utilitza IA generativa en cap etapa: el contingut, les idees i l'estructura són de la persona. Cercar a Internet o fer servir una eina digital no compta per si sol com a IA generativa.",
+      "examples": [
+        "Examen escrit a classe",
+        "Debat o prova oral",
+        "Treball fet amb llibres i apunts",
+        "Rúbrica redactada pel docent"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Reformulació",
+      "split": "La persona crea, la IA reformula.",
+      "desc": "La IA reexpressa material que ja existeix. No aporta idees, anàlisis ni conclusions: el contingut continua sent íntegrament de la persona.",
+      "examples": [
+        "Corregir ortografia i estil",
+        "Resumir un text propi",
+        "Traduir comprovant el sentit",
+        "Redactar a partir de notes pròpies",
+        "Passar dades a una taula"
+      ],
+      "warn": "Corregir l'estil continua sent nivell 1, encara que millori molt la claredat."
+    },
+    {
+      "name": "Planificació",
+      "split": "La persona crea, la IA planifica.",
+      "desc": "La IA suggereix idees, enfocaments o una estructura per preparar el treball. La persona desenvolupa i redacta després tot el contingut final.",
+      "examples": [
+        "Pluja d'idees inicial",
+        "Índex o esquema d'un assaig",
+        "Suggeriment de temes o fonts",
+        "Idees per a activitats de classe"
+      ],
+      "warn": "Si el que es lliura és l'esquema mateix, ja no és planificació: classifica'l com a producte."
+    },
+    {
+      "name": "Esborrany",
+      "split": "La IA crea un esborrany, la persona construeix.",
+      "desc": "La IA genera contingut nou que serveix de punt de partida i la persona el reconstrueix de manera significativa: reescriu, reorganitza i hi aporta el seu. El flux va en una sola direcció.",
+      "examples": [
+        "Secció redactada per IA i reescrita",
+        "Anàlisi de dades reelaborada",
+        "Preguntes d'examen seleccionades i reformulades",
+        "Presentació reorganitzada amb arguments propis"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Cocreació",
+      "split": "La persona i la IA cocreen.",
+      "desc": "Diàleg en les dues direccions: totes dues parts desenvolupen el contingut mentre s’elabora. La persona dirigeix, contrasta i valida. La idea inicial pot ser enterament humana.",
+      "examples": [
+        "Recerca desenvolupada conversant",
+        "Text ajustat demanant canvis d'enfocament",
+        "Material didàctic afinat en diverses voltes"
+      ],
+      "warn": "El nombre de missatges no determina la cocreació; ho fa l'aportació de cada part."
+    },
+    {
+      "name": "Supervisió",
+      "split": "La IA crea, la persona supervisa.",
+      "desc": "La IA elabora el producte final a partir dels paràmetres que rep. La persona en revisa la qualitat i el valida abans d'usar-lo, sense reconstruir-ne el contingut.",
+      "examples": [
+        "Il·lustració generada i validada",
+        "Text generat que es comprova i s'usa",
+        "Resum automàtic revisat abans de publicar"
+      ],
+      "warn": ""
+    }
+  ],
+  "back_title": "Com classificar una tasca i els canvis",
+  "rules": [
+    {
+      "label": "Què es classifica",
+      "text": "Primer es delimita <b>quina tasca o component es classifica i qui la fa</b>. Generar un text per analitzar-lo i elaborar-ne l'anàlisi són processos diferents. També es poden distingir el text, les imatges o el codi d'un mateix projecte quan la seva elaboració segueix processos diferents. Es distingeixen unitats amb una funció reconeixible a la feina, i se'n fa explícita la relació amb el conjunt."
+    },
+    {
+      "label": "El procés complet",
+      "text": "El nivell es determina per la contribució de la IA i el paper de la persona al desenvolupament del resultat, considerant el procés complet. No és fixat per la primera petició ni per l'origen de la idea. Una activitat pot començar com a reformulació de nivell 1 i esdevenir cocreació de nivell 4. De la mateixa manera, un text generat autònomament pot acabar sent un esborrany que la persona reconstrueix significativament, donant lloc a un procés de nivell 3. La classificació provisional pot canviar en conèixer el treball posterior."
+    },
+    {
+      "label": "Processos mixtos",
+      "text": "En els processos mixtos cal indicar els nivells <b>per fases o components</b>. Per exemple, «nivell 2 a la planificació i nivell 1 a la reformulació d'un desenvolupament humà», o «text sense IA i il·lustració de nivell 5». Si cal una sola xifra, s'indica el nivell que caracteritza el desenvolupament del producte principal, acompanyat de les diferències rellevants. Quan cap nivell no ho descriu prou, es declara el procés mixt i s'especifiquen els nivells que intervenen."
+    },
+    {
+      "label": "L'aportació",
+      "text": "No s'assignarà automàticament el nivell més alt de qualsevol interacció. Per valorar una aportació se n'observa la funció, l'abast i com s'hi incorpora o es transforma. Una aportació <b>substantiva</b> modifica el contingut, el raonament, l'organització conceptual o el funcionament del producte. Pot ser breu i decisiva, com una distinció que en canvia la conclusió. La seva importància no és suficient per determinar el nivell: també compta si la persona la desenvolupa, la reconstrueix, cocrea amb la IA o l'accepta després de supervisar-la."
+    },
+    {
+      "label": "Consultes descartades",
+      "text": "Una resposta descartada sense influència a la feina no obliga a elevar el nivell del producte. Convé registrar la consulta; no seria correcte afirmar que no es va utilitzar IA en cap etapa. Tampoc no n'hi ha prou de comprovar si es va copiar una resposta: un suggeriment pot influir en un argument encara que s'expressi després amb altres paraules. Les correccions d'estil continuen sent nivell 1, fins i tot quan milloren molt la claredat."
+    }
+  ],
+  "full_framework": "Marc complet:"
+}

@@ -13,8 +13,10 @@
   let saved;
   try { saved = localStorage.getItem(key); } catch (_) { /* Storage may be disabled. */ }
   const preferred = supported.includes(saved) ? saved : browserLanguage();
+  const paths = {document: (lang) => `v2.1/${lang}/`, tools: (lang) => `${lang}/ficha/`,
+                 quickref: (lang) => `${lang}/guia/`};
   const destination = (lang) => {
-    const path = body.dataset.page === 'document' ? `v2.1/${lang}/` : `${lang}/`;
+    const path = (paths[body.dataset.page] || ((code) => `${code}/`))(lang);
     const url = new URL(path, root);
     url.search = window.location.search;
     url.hash = window.location.hash;

@@ -1,0 +1,102 @@
+{
+  "kicker": "MIAE v2.1 · Guía rápida",
+  "title": "Marco para a integración da IA xerativa nas tarefas educativas",
+  "lead": "A escala describe <b>como se reparte o traballo</b> nunha tarefa educativa: non mide a calidade, o esforzo nin a aprendizaxe. Os niveis non son acumulativos e un nivel máis alto non é mellor.",
+  "levels": [
+    {
+      "name": "Sen IA",
+      "split": "A persoa crea.",
+      "desc": "Non se usa IA xerativa en ningunha etapa: o contido, as ideas e a estrutura son da persoa. Buscar en Internet ou usar unha ferramenta dixital non conta por si só como IA xerativa.",
+      "examples": [
+        "Exame escrito na clase",
+        "Debate ou proba oral",
+        "Traballo feito con libros e apuntamentos",
+        "Rúbrica redactada polo docente"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Reformulación",
+      "split": "A persoa crea, a IA reformula.",
+      "desc": "A IA reexpresa material que xa existe. Non achega ideas, análises nin conclusións: o contido segue sendo integramente da persoa.",
+      "examples": [
+        "Corrixir ortografía e estilo",
+        "Resumir un texto propio",
+        "Traducir comprobando o sentido",
+        "Redactar a partir de notas propias",
+        "Pasar datos a unha táboa"
+      ],
+      "warn": "Corrixir o estilo segue sendo nivel 1, aínda que mellore moito a claridade."
+    },
+    {
+      "name": "Planificación",
+      "split": "A persoa crea, a IA planea.",
+      "desc": "A IA suxire ideas, enfoques ou unha estrutura para preparar o traballo. A persoa desenvolve e redacta despois todo o contido final.",
+      "examples": [
+        "Chuvia de ideas inicial",
+        "Índice ou esquema dun ensaio",
+        "Suxestión de temas ou fontes",
+        "Ideas para actividades de clase"
+      ],
+      "warn": "Se o que se entrega é o propio esquema, xa non é planificación: clasifícao como produto."
+    },
+    {
+      "name": "Borrador",
+      "split": "A IA crea un borrador, a persoa constrúe.",
+      "desc": "A IA xera contido novo que serve de punto de partida e a persoa reconstrúeo de forma significativa: reescribe, reorganiza e achega o seu. O fluxo vai nunha soa dirección.",
+      "examples": [
+        "Sección redactada pola IA e reescrita",
+        "Análise de datos reelaborada",
+        "Preguntas de exame seleccionadas e reformuladas",
+        "Presentación reorganizada con argumentos propios"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Cocreación",
+      "split": "A persoa e a IA cocrean.",
+      "desc": "Diálogo nas dúas direccións: ambas as partes desenvolven o contido mentres se elabora. A persoa dirixe, contrasta e valida. A idea inicial pode ser enteiramente humana.",
+      "examples": [
+        "Investigación desenvolvida conversando",
+        "Texto axustado pedindo cambios de enfoque",
+        "Material didáctico afinado en varias voltas"
+      ],
+      "warn": "O número de mensaxes non determina a cocreación; faino a achega de cada parte."
+    },
+    {
+      "name": "Supervisión",
+      "split": "A IA crea, a persoa supervisa.",
+      "desc": "A IA elabora o produto final a partir dos parámetros que recibe. A persoa revisa a calidade e valídao antes de usalo, sen reconstruír o seu contido.",
+      "examples": [
+        "Ilustración xerada e validada",
+        "Texto xerado que se comproba e se usa",
+        "Resumo automático revisado antes de publicar"
+      ],
+      "warn": ""
+    }
+  ],
+  "back_title": "Como clasificar unha tarefa e os seus cambios",
+  "rules": [
+    {
+      "label": "Que se clasifica",
+      "text": "En primeiro lugar, delimitase <b>que tarefa ou compoñente se clasifica e quen a realiza</b>. Xerar un texto para analizalo e preparar a súa análise son procesos diferentes. Tamén se poden distinguir textos, imaxes ou código dun mesmo proxecto cando o seu desenvolvemento segue procesos diferentes. Distínguense unidades cunha función recoñecible na obra, e explícita a súa relación co conxunto."
+    },
+    {
+      "label": "O proceso completo",
+      "text": "O nivel está determinado pola contribución da IA e o papel da persoa no desenvolvemento do resultado, tendo en conta todo o proceso. Non se fixa pola primeira solicitude nin pola orixe da idea. Unha actividade pode comezar como unha reformulación de nivel 1 e converterse nunha co-creación de nivel 4. Do mesmo xeito, un texto xerado de forma autónoma pode acabar sendo un borrador que a persoa reconstrúe significativamente, dando lugar a un proceso de nivel 3. A clasificación provisional pode modificarse ao coñecer traballos posteriores."
+    },
+    {
+      "label": "Procesos mixtos",
+      "text": "Nos procesos mixtos convén indicar os niveis <b>por fases ou compoñentes</b>. Por exemplo, \"nivel 2 en planificación e nivel 1 na reformulación dun desenvolvemento humano\", ou \"texto sen IA e ilustración de nivel 5\". Se se precisa unha única cifra, indícase o nivel que caracteriza o desenvolvemento do produto principal, acompañado das diferenzas relevantes. Cando ningún nivel o describe suficientemente, declárase o proceso mixto e especifícanse os niveis implicados."
+    },
+    {
+      "label": "A achega",
+      "text": "O nivel máis alto de calquera interacción non se asigna automaticamente. Para valorar unha achega obsérvase a súa función, o seu alcance e como se incorpora ou transforma. Unha contribución <b>substantiva</b> modifica o contido, o razoamento, a organización conceptual ou o funcionamento do produto. Pode ser breve e decisivo, como unha distinción que cambia a conclusión. A súa importancia non é suficiente para determinar o nivel: tamén conta se a persoa o desenvolve, o reconstrúe, o crea co IA ou o acepta despois de supervisalo."
+    },
+    {
+      "label": "Consultas descartadas",
+      "text": "Unha resposta descartada sen influencia no traballo non require elevar o nivel do produto. É recomendable rexistrar a consulta; Non sería correcto afirmar que a IA non se utilizou en ningún momento. Tampouco abonda con comprobar se unha resposta foi copiada: unha suxestión pode influír nun argumento aínda que despois se exprese noutras palabras. As correccións de estilo seguen sendo de nivel 1, aínda que melloran moito a claridade."
+    }
+  ],
+  "full_framework": "Marco completo:"
+}

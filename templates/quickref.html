@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  {% include "icons.html" %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ qr.kicker }} · MIAE</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ base_url }}/{{ lang }}/guia/">
+  {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ base_url }}/{{ code }}/guia/">
+  {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base_url }}/es/guia/">
+  <script src="{{ root }}assets/site.js" defer></script>
+<style>
+:root {
+  --font-sans: "Noto Sans", "Segoe UI", sans-serif;
+  --ink: #172033; --muted: #5f6979; --line: #d8dde6; --wash: #f3f6fa;
+  --accent: #0b6e75; --accent-dark: #075158;
+  --l0: #65758b; --l1: #4263a3; --l2: #376f9e; --l3: #16828d; --l4: #258763; --l5: #547a35;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
+       font: 400 15px/1.5 var(--font-sans); }
+.sheet { width: min(210mm, 100%); margin: 0 auto; padding: 12mm 11mm 10mm; background: #fff;
+         box-shadow: 0 20px 50px rgba(25,35,55,.10); }
+
+.masthead { padding-bottom: .5rem; border-bottom: 2.5px solid var(--ink); }
+.masthead h1 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.masthead h1 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                     font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.masthead p { max-width: 118ch; margin: 1.8mm 0 0; color: var(--muted); font-size: .82rem; line-height: 1.4; }
+
+.scale { margin-top: .4rem; }
+.level { display: grid; grid-template-columns: 34mm 1fr; gap: 0 5mm;
+         padding: 1.7mm 0; border-bottom: 1px solid var(--line); }
+.level:last-child { border-bottom: 0; }
+.tag { display: flex; align-items: baseline; gap: 2.2mm; padding: 1.8mm 2.4mm; color: #fff; align-self: start; }
+.tag b { font: 800 1.38rem/1 var(--font-sans); }
+.tag span { font: 700 .76rem/1.15 var(--font-sans); }
+.l0 .tag { background: var(--l0); } .l1 .tag { background: var(--l1); } .l2 .tag { background: var(--l2); }
+.l3 .tag { background: var(--l3); } .l4 .tag { background: var(--l4); } .l5 .tag { background: var(--l5); }
+
+.split { font: 700 .93rem/1.3 var(--font-sans); margin: 0 0 1mm; }
+.desc { margin: 0; font-size: .83rem; line-height: 1.40; color: #2c3547; }
+.eg { margin: 1.2mm 0 0; padding: 0; list-style: none;
+      display: flex; flex-wrap: wrap; gap: 1mm 4mm; font-size: .80rem; color: #3d4757; }
+.eg li::before { content: "▪"; margin-right: 1.1mm; opacity: .5; }
+.warn { display: block; margin-top: 1mm; font-size: .78rem; color: var(--accent-dark); font-style: italic; }
+
+
+.colophon { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+            margin-top: 3.5mm; padding-top: 2mm; border-top: 2.5px solid var(--ink);
+            font-size: .72rem; color: var(--muted); }
+.colophon a { color: var(--muted); }
+
+/* ---- reverso ---- */
+.sheet + .sheet { margin-top: 1.5rem; }
+.back h2 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.back h2 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                 font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.rules { margin-top: 1.5mm; }
+.rule { display: grid; grid-template-columns: 7mm 1fr; gap: 0 4mm;
+        padding: 3.1mm 0; border-bottom: 1px solid var(--line); }
+.rule .n { width: 7mm; height: 7mm; display: grid; place-items: center; align-self: start;
+           background: var(--ink); color: #fff; font: 800 .92rem/1 var(--font-sans); }
+.rule h3 { margin: 0 0 1mm; font: 700 .93rem/1.3 var(--font-sans); }
+.rule p { margin: 0; font-size: .83rem; line-height: 1.45; color: #2c3547; }
+.rule p + p { margin-top: 1.4mm; }
+.rule em { color: var(--accent-dark); font-style: italic; }
+
+/* ---- barra de navegación (solo pantalla) ---- */
+.qr-bar { display: flex; align-items: center; gap: 1rem; margin: -1.5rem -1.5rem 1.5rem;
+          padding: .65rem 1.1rem; background: var(--ink); color: #fff; font-size: .82rem; }
+.qr-bar a { color: #fff; }
+.qr-bar .qr-pdf { margin-left: auto; font-weight: 700; }
+.qr-bar .language-picker { display: flex; align-items: center; gap: .45rem; }
+.qr-bar select { font: inherit; padding: .15rem .3rem; }
+@media print { .qr-bar { display: none !important; } }
+
+@page { size: A4; margin: 10mm 9mm; }
+@media print {
+  body { padding: 0; background: #fff; font-size: 10pt; }
+  .sheet { width: auto; padding: 0; box-shadow: none; }
+  .level, .rule { break-inside: avoid; }
+  .sheet + .sheet { break-before: page; margin-top: 0; }
+  a { text-decoration: none; }
+}
+@media (max-width: 700px) {
+  body { padding: .75rem; }
+  .sheet { padding: 7mm 5mm; }
+  .qr-bar { margin: -.75rem -.75rem .75rem; gap: .7rem; }
+  .level { grid-template-columns: 1fr; gap: 1.5mm; }
+  .sheet + .sheet { margin-top: .75rem; }
+  .tag { justify-self: start; }
+}
+</style>
+</head>
+<body data-page="quickref" data-root="{{ root }}">
+  <nav class="qr-bar" aria-label="{{ ui.navigation }}">
+    <a href="{{ root }}{{ lang }}/">{{ ui.home }}</a>
+    <a class="qr-pdf" href="{{ root }}output/pdf/miae-v2.1-guia-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
+    <label class="language-picker"><span>{{ ui.language }}</span>
+      <select data-language-select aria-label="{{ ui.language }}">
+        <option value="auto">{{ ui.automatic }}</option>
+        {% for code, item in languages.items() %}<option value="{{ code }}"{% if code == lang %} selected{% endif %}>{{ item.native }}</option>{% endfor %}
+      </select>
+    </label>
+  </nav>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1><small>{{ qr.kicker }}</small>{{ qr.title }}</h1>
+    <p>{{ qr.lead | safe }}</p>
+  </header>
+
+  <div class="scale">
+{% for level in qr.levels %}
+    <section class="level l{{ loop.index0 }}">
+      <div class="tag"><b>{{ loop.index0 }}</b><span>{{ level.name }}</span></div>
+      <div>
+        <p class="split">{{ level.split }}</p>
+        <p class="desc">{{ level.desc }}</p>
+        <ul class="eg">{% for example in level.examples %}<li>{{ example }}</li>{% endfor %}</ul>
+        {%- if level.warn %}
+        <b class="warn">{{ level.warn }}</b>
+        {%- endif %}
+      </div>
+    </section>
+{% endfor %}
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>{{ qr.full_framework }} <a href="{{ base_url }}/v2.1/{{ lang }}/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+
+<div class="sheet back">
+
+  <header class="masthead">
+    <h2><small>{{ qr.kicker }}</small>{{ qr.back_title }}</h2>
+  </header>
+
+  <div class="rules">
+{% for rule in qr.rules %}
+    <section class="rule">
+      <span class="n">{{ loop.index }}</span>
+      <div>
+        <h3>{{ rule.label }}</h3>
+        <p>{{ rule.text | safe }}</p>
+      </div>
+    </section>
+{% endfor %}
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>{{ qr.full_framework }} <a href="{{ base_url }}/v2.1/{{ lang }}/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+</body>
+</html>

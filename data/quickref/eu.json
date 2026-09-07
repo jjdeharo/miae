@@ -1,0 +1,102 @@
+{
+  "kicker": "MIAE 2.1 · Gida azkarra",
+  "title": "Hezkuntza-zereginetan IA sortzailea integratzeko esparrua",
+  "lead": "Eskalak <b>lana nola banatzen den</b> deskribatzen du hezkuntza-zeregin batean: ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen. Mailak ez dira metagarriak eta maila altuago bat ez da hobea.",
+  "levels": [
+    {
+      "name": "IArik gabe",
+      "split": "Pertsonak sortzen du.",
+      "desc": "Ez da IA sortzailerik erabiltzen inongo etapatan: edukia, ideiak eta egitura pertsonarenak dira. Interneten bilatzeak edo tresna digital bat erabiltzeak ez du berez IA sortzailea erabiltzea esan nahi.",
+      "examples": [
+        "Klaseko azterketa idatzia",
+        "Eztabaida edo ahozko proba",
+        "Liburuekin eta apunteekin egindako lana",
+        "Irakasleak idatzitako errubrika"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Birformulazioa",
+      "split": "Pertsonak sortzen du, IAk birformulatzen du.",
+      "desc": "IAk lehendik dagoen materiala berradierazten du. Ez du ideiarik, analisirik edo ondoriorik gehitzen: edukia oso-osorik pertsonarena da.",
+      "examples": [
+        "Ortografia eta estiloa zuzentzea",
+        "Norberaren testu bat laburtzea",
+        "Itzultzea, zentzua egiaztatuz",
+        "Norberaren oharretatik idaztea",
+        "Datuak taula batera pasatzea"
+      ],
+      "warn": "Estiloa zuzentzea 1. maila da oraindik, argitasuna asko hobetzen badu ere."
+    },
+    {
+      "name": "Plangintza",
+      "split": "Pertsonak sortzen du, IAk planifikatzen du.",
+      "desc": "IAk ideiak, ikuspegiak edo egitura bat proposatzen ditu lana prestatzeko. Pertsonak garatzen eta idazten du gero azken eduki guztia.",
+      "examples": [
+        "Hasierako ideia-jasa",
+        "Saiakera baten aurkibidea edo eskema",
+        "Gaien edo iturrien iradokizuna",
+        "Klaseko jardueretarako ideiak"
+      ],
+      "warn": "Entregatzen dena eskema bera bada, jada ez da plangintza: produktu gisa sailkatu."
+    },
+    {
+      "name": "Zirriborroa",
+      "split": "IAk zirriborroa sortzen du, pertsonak eraikitzen du.",
+      "desc": "IAk eduki berria sortzen du abiapuntu gisa, eta pertsonak nabarmen berreraikitzen du: berridatzi, berrantolatu eta berea gehitzen du. Fluxua norabide bakarrean doa.",
+      "examples": [
+        "IAk idatzitako atala, gero berridatzia",
+        "Berrlandutako datu-analisia",
+        "Azterketa-galderak hautatuak eta birformulatuak",
+        "Aurkezpena berrantolatua argudio propioekin"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Sorkidetza",
+      "split": "Pertsonak eta IAk elkarrekin sortzen dute.",
+      "desc": "Elkarrizketa bi norabidetan: bi aldeek garatzen dute edukia lantzen den bitartean. Pertsonak gidatu, kontrastatu eta baliozkotzen du. Hasierako ideia erabat gizakiarena izan daiteke.",
+      "examples": [
+        "Elkarrizketan garatutako ikerketa",
+        "Ikuspegi-aldaketak eskatuz doitutako testua",
+        "Hainbat itzulitan findutako material didaktikoa"
+      ],
+      "warn": "Mezu kopuruak ez du sorkidetza zehazten; alde bakoitzaren ekarpenak egiten du."
+    },
+    {
+      "name": "Gainbegiratzea",
+      "split": "IAk sortzen du, pertsonak gainbegiratzen du.",
+      "desc": "IAk azken produktua lantzen du jasotzen dituen parametroetatik abiatuta. Pertsonak kalitatea berrikusi eta baliozkotzen du erabili aurretik, edukia berreraiki gabe.",
+      "examples": [
+        "Sortutako ilustrazioa, gero baliozkotua",
+        "Sortutako testua, egiaztatu eta erabilia",
+        "Laburpen automatikoa, argitaratu aurretik berrikusia"
+      ],
+      "warn": ""
+    }
+  ],
+  "back_title": "Zeregin bat eta bere aldaketak nola sailkatu",
+  "rules": [
+    {
+      "label": "Zer sailkatzen den",
+      "text": "Lehenik eta behin, <b>zer zeregin edo osagai sailkatzen den eta nork egiten duen</b> mugatzen da. Testu bat sortzea hura aztertzeko eta haren azterketa prestatzea prozesu desberdinak dira. Proiektu bereko testua, irudiak edo kodea ere bereiz daitezke haien garapenak prozesu desberdinak jarraitzen dituenean. Obran funtzio antzemangarria duten unitateak bereizten dira, eta osotasunarekin duten harremana esplizitu egiten da."
+    },
+    {
+      "label": "Prozesu osoa",
+      "text": "Maila IAren ekarpenak eta emaitza garatzeko pertsonaren rolak zehazten du, prozesu osoa kontuan hartuta. Ez da lehen eskaerarekin edo ideiaren jatorriarekin finkatzen. Jarduera bat 1. mailako birformulazio gisa hasi eta 4. mailako ko-sorkuntza bihur daiteke. Era berean, modu autonomoan sortutako testu bat pertsonak nabarmen berreraikitzen duen zirriborro bat izaten amai daiteke, 3. mailako prozesu bat sortuz. Behin-behineko sailkapena alda daiteke ondorengo lanari buruz jakitean."
+    },
+    {
+      "label": "Prozesu mistoak",
+      "text": "Prozesu mistoetan mailak <b>fase edo osagaien arabera</b> adieraztea komeni da. Adibidez, \"2. maila plangintzan eta 1. maila giza garapen baten birformulazioan\", edo \"IA gabeko testua eta 5. mailako ilustrazioa\". Zifra bakarra behar izanez gero, produktu nagusiaren garapena ezaugarritzen duen maila adierazten da, alde garrantzitsuekin batera. Mailarik behar bezala deskribatzen ez duenean, prozesu mistoa deklaratu eta inplikatutako mailak zehazten dira."
+    },
+    {
+      "label": "Ekarpena",
+      "text": "Edozein interakzioren mailarik altuena ez da automatikoki esleitzen. Ekarpen bat balioesteko, haren funtzioa, bere irismena eta nola txertatu edo eraldatzen den behatzen dira. Ekarpen <b>substantiboak</b> produktuaren edukia, arrazoibidea, antolaketa kontzeptuala edo funtzionamendua aldatzen du. Laburra eta erabakigarria izan daiteke, ondorioa aldatzen duen bereizketa bat bezala. Bere garrantzia ez da nahikoa maila zehazteko: pertsonak garatzen duen, berreraikitzen duen, IArekin batera sortzen duen edo gainbegiratu ondoren onartzen badu ere balio du."
+    },
+    {
+      "label": "Baztertutako kontsultak",
+      "text": "Lanean eraginik ez duen baztertutako erantzunak ez du produktuaren maila igotzea eskatzen. Kontsulta erregistratzea komeni da; Ez litzateke zuzena IA inongo faserik erabili ez dela esatea. Erantzun bat kopiatu ote den egiaztatzea ere ez da nahikoa: iradokizun batek argudio batean eragin dezake gero beste hitz batzuekin adierazi arren. Estilo-zuzenketak 1. mailakoak dira oraindik, argitasuna asko hobetzen duten arren."
+    }
+  ],
+  "full_framework": "Esparru osoa:"
+}

@@ -1,27 +1,64 @@
 {
-  "start": "Understand MIAE in 3 minutes", "index": "On this page",
-  "guide_title": "A guide to getting started", "guide_intro": "MIAE helps students and teachers describe generative AI use, agree how it may be used in a task and explain the process they followed.",
+  "start": "Understand MIAE in 3 minutes",
+  "index": "On this page",
+  "guide_title": "A guide to getting started",
+  "guide_intro": "MIAE helps students and teachers describe generative AI use, agree how it may be used in a task and explain the process they followed.",
   "principle": "Levels describe how work is shared. A higher level does not mean better quality or more learning, and there is no need to go through the earlier levels.",
-  "steps": [["Define the task", "Identify who performs it and which product or component you are classifying: a report, its illustration or the analysis of a text."], ["Consider the whole process", "Describe what AI contributed and what the person did with it. The first prompt, the amount of text and the number of messages do not determine the level."], ["Explain the classification", "Justify the level through the division of work. If phases or components differ, declare their respective levels rather than automatically choosing the highest."]],
-  "compare_title": "One ecosystem report, six processes", "compare_intro": "In every case the product is a report. What changes is how it is developed. Select a level to read its full definition.",
-  "examples": ["The person observes the ecosystem, consults sources and writes the report without generative AI at any stage.", "The person provides fully developed observations, explanations and conclusions. AI improves their expression without adding content or changing the relationships between ideas.", "AI suggests questions and an outline to guide the work. The person researches and independently develops all the explanations and the final wording.", "AI writes an initial report. The person reconstructs its content: revises the ecological relationships, incorporates their own data and develops new explanations and conclusions of their own.", "The person and AI develop the report through dialogue. The person contributes observations, challenges an explanation and proposes another; both contributions shape the content as it is developed.", "The person provides the topic, data and requirements. AI develops the entire report; the person checks its accuracy and approves it without reconstructing or co-creating its content."],
-  "template_title": "Declare how you used AI", "template_intro": "Complete this form and attach it to your work. You can edit it here, copy it or download it as text. Also describe any consultations you discarded.",
-  "fields": ["Task or component and who performs it", "What I developed myself", "AI tool and what I used it for", "How I reviewed or transformed its contributions", "MIAE level or levels and justification"],
-  "copy": "Copy text", "download": "Download form (.txt)", "copied": "Text copied.", "copy_failed": "Could not copy. Select the form text and copy it manually.",
-  "filled_title": "View a completed declaration", "filled": ["Ecosystem report; prepared by a student.", "I developed the ecological explanations and conclusions from my observations and the sources I consulted.", "ChatGPT: suggesting an outline and correcting the language of the text I wrote.", "I chose the sections of the outline and checked that the language corrections did not add ideas or alter my conclusions.", "Level 2 for planning and level 1 for reformulating human-developed content. AI did not develop the report’s content."],
-  "teacher_title": "For teachers: communicate permitted uses", "teacher_intro": "Adapt this template to the learning objective. The level describes the process; assessment criteria should address learning and the quality of the work.",
-  "teacher_fields": ["Task and learning objective", "AI uses permitted by phase or component", "AI uses that are not permitted in this activity", "Work students must carry out and evidence they will submit", "How AI use will be declared and which criteria will be used to assess the work"],
-  "faq_title": "Frequently asked questions",
-  "faqs": [["Is writing with AI always level 5?", "No. If the person provides fully developed content and AI only expresses or faithfully reformulates it, it is level 1. Giving only a topic is not the same as providing that development."], ["What distinguishes level 2 from level 3?", "At level 2, AI prepares ideas or structure and the person develops the content. At level 3, there is already a draft containing AI-developed content which the person substantially reconstructs. If the requested product is the outline itself, its creation must be classified as a product."], ["Do many requests for changes imply level 4?", "No. There must be shared content development with human contributions and judgment. Requests for stylistic changes or acceptance of suggestions are not enough. At level 5, the person supervises the product; at level 3, they mainly reconstruct it themselves."], ["What if the text and images have different levels?", "Declare them separately and explain their relationship to the whole. For example: text without AI and a level 5 illustration. The highest level is not automatically assigned to the entire project."], ["Does the level determine what is permitted or what grade the work deserves?", "Not on its own. The teacher must specify permitted uses according to the task’s objective. The level does not measure learning, quality or effort."], ["Is analysing an AI-generated text level 5?", "Generating the text may be level 5. If the teacher supplies it and students analyse it without AI, the analysis may be level 0. If a student commissions the text and then analyses it, both parts should be described."]],
-  "practice_title": "Try four cases", "practice_intro": "Choose a classification and check the reasoning. You are classifying the described process, not the quality of its result.",
-  "mixed": "Mixed process", "check": "Check answer", "choose": "Select an answer before checking.", "correct": "Correct.", "retry": "Review the classification.", "answer": "View explanation", "level": "Level",
-  "cases": [
-    {"question": "A student gives AI her complete arguments and conclusions. AI writes them clearly without adding ideas. Which level describes this help?", "correct": "1", "explanation": "Level 1: AI reformulates human-developed content. The amount of text it writes does not make this level 5."},
-    {"question": "A teacher asks AI for a complete report, checks the data and accepts the result with minor stylistic edits. Which level describes how the report was developed?", "correct": "5", "explanation": "Level 5: autonomous generation and supervision. Minor edits are neither substantial reconstruction at level 3 nor co-creation at level 4."},
-    {"question": "AI proposes an ecological explanation; a student spots a contradiction, contributes her data and an alternative hypothesis, and both parties develop a new explanation through dialogue. Which level applies?", "correct": "4", "explanation": "Level 4: the person and AI contribute to content development. Shared development is decisive, not the number of messages."},
-    {"question": "AI suggests an outline. A student writes all the content without AI. AI then corrects the expression without adding ideas. How is the process best described?", "correct": "mixed", "explanation": "Mixed process: level 2 for planning and level 1 for reformulating human-developed content. Both phases should be declared."}
+  "steps": [
+    [
+      "Define the task",
+      "Identify who performs it and which product or component you are classifying: a report, its illustration or the analysis of a text."
+    ],
+    [
+      "Consider the whole process",
+      "Describe what AI contributed and what the person did with it. The first prompt, the amount of text and the number of messages do not determine the level."
+    ],
+    [
+      "Explain the classification",
+      "Justify the level through the division of work. If phases or components differ, declare their respective levels rather than automatically choosing the highest."
+    ]
   ],
-  "changes_title": "What version 2.1 clarifies", "changes_intro": "It retains the six levels of revised version 2 and specifies how to apply them:",
-  "changes": ["Reformulation can start from fully developed notes and arguments, even if they have not been written as a final text.", "Classification considers the whole process and may change if reconstruction or co-creation follows.", "Mixed processes are described by phase or component, without automatically taking the highest level.", "The boundaries between planning, reconstruction, co-creation and supervision are made more explicit."],
-  "summary": "Level summary", "classify": "How to classify a task", "full_details": "Read the full definition"
+  "compare_title": "One ecosystem report, six processes",
+  "compare_intro": "In every case the product is a report. What changes is how it is developed. Select a level to read its full definition.",
+  "examples": [
+    "The person observes the ecosystem, consults sources and writes the report without generative AI at any stage.",
+    "The person provides fully developed observations, explanations and conclusions. AI improves their expression without adding content or changing the relationships between ideas.",
+    "AI suggests questions and an outline to guide the work. The person researches and independently develops all the explanations and the final wording.",
+    "AI writes an initial report. The person reconstructs its content: revises the ecological relationships, incorporates their own data and develops new explanations and conclusions of their own.",
+    "The person and AI develop the report through dialogue. The person contributes observations, challenges an explanation and proposes another; both contributions shape the content as it is developed.",
+    "The person provides the topic, data and requirements. AI develops the entire report; the person checks its accuracy and approves it without reconstructing or co-creating its content."
+  ],
+  "template_title": "Declare how you used AI",
+  "template_intro": "Complete this form and attach it to your work. You can edit it here, copy it or download it as text. Also describe any consultations you discarded.",
+  "fields": [
+    "Task or component and who performs it",
+    "What I developed myself",
+    "AI tool and what I used it for",
+    "How I reviewed or transformed its contributions",
+    "MIAE level or levels and justification"
+  ],
+  "copy": "Copy text",
+  "download": "Download form (.txt)",
+  "copied": "Text copied.",
+  "copy_failed": "Could not copy. Select the form text and copy it manually.",
+  "filled_title": "View a completed declaration",
+  "filled": [
+    "Ecosystem report; prepared by a student.",
+    "I developed the ecological explanations and conclusions from my observations and the sources I consulted.",
+    "ChatGPT: suggesting an outline and correcting the language of the text I wrote.",
+    "I chose the sections of the outline and checked that the language corrections did not add ideas or alter my conclusions.",
+    "Level 2 for planning and level 1 for reformulating human-developed content. AI did not develop the report’s content."
+  ],
+  "teacher_title": "For teachers: communicate permitted uses",
+  "teacher_intro": "Adapt this template to the learning objective. The level describes the process; assessment criteria should address learning and the quality of the work.",
+  "teacher_fields": [
+    "Task and learning objective",
+    "AI uses permitted by phase or component",
+    "AI uses that are not permitted in this activity",
+    "Work students must carry out and evidence they will submit",
+    "How AI use will be declared and which criteria will be used to assess the work"
+  ],
+  "summary": "Level summary",
+  "classify": "How to classify a task",
+  "full_details": "Read the full definition"
 }

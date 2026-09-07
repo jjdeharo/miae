@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="eu">
+<head>
+    <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIAE 2.1 · Gida azkarra · MIAE</title>
+  <meta name="description" content="Hezkuntza-zereginetan pertsonaren eta IA sortzailearen arteko lan-banaketa deskribatzeko esparrua.">
+  <link rel="canonical" href="https://jjdeharo.github.io/miae/eu/guia/">
+  <link rel="alternate" hreflang="es" href="https://jjdeharo.github.io/miae/es/guia/">
+  <link rel="alternate" hreflang="ca" href="https://jjdeharo.github.io/miae/ca/guia/">
+  <link rel="alternate" hreflang="eu" href="https://jjdeharo.github.io/miae/eu/guia/">
+  <link rel="alternate" hreflang="gl" href="https://jjdeharo.github.io/miae/gl/guia/">
+  <link rel="alternate" hreflang="en" href="https://jjdeharo.github.io/miae/en/guia/">
+  <link rel="alternate" hreflang="x-default" href="https://jjdeharo.github.io/miae/es/guia/">
+  <script src="../../assets/site.js" defer></script>
+<style>
+:root {
+  --font-sans: "Noto Sans", "Segoe UI", sans-serif;
+  --ink: #172033; --muted: #5f6979; --line: #d8dde6; --wash: #f3f6fa;
+  --accent: #0b6e75; --accent-dark: #075158;
+  --l0: #65758b; --l1: #4263a3; --l2: #376f9e; --l3: #16828d; --l4: #258763; --l5: #547a35;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
+       font: 400 15px/1.5 var(--font-sans); }
+.sheet { width: min(210mm, 100%); margin: 0 auto; padding: 12mm 11mm 10mm; background: #fff;
+         box-shadow: 0 20px 50px rgba(25,35,55,.10); }
+
+.masthead { padding-bottom: .5rem; border-bottom: 2.5px solid var(--ink); }
+.masthead h1 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.masthead h1 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                     font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.masthead p { max-width: 118ch; margin: 1.8mm 0 0; color: var(--muted); font-size: .82rem; line-height: 1.4; }
+
+.scale { margin-top: .4rem; }
+.level { display: grid; grid-template-columns: 34mm 1fr; gap: 0 5mm;
+         padding: 1.7mm 0; border-bottom: 1px solid var(--line); }
+.level:last-child { border-bottom: 0; }
+.tag { display: flex; align-items: baseline; gap: 2.2mm; padding: 1.8mm 2.4mm; color: #fff; align-self: start; }
+.tag b { font: 800 1.38rem/1 var(--font-sans); }
+.tag span { font: 700 .76rem/1.15 var(--font-sans); }
+.l0 .tag { background: var(--l0); } .l1 .tag { background: var(--l1); } .l2 .tag { background: var(--l2); }
+.l3 .tag { background: var(--l3); } .l4 .tag { background: var(--l4); } .l5 .tag { background: var(--l5); }
+
+.split { font: 700 .93rem/1.3 var(--font-sans); margin: 0 0 1mm; }
+.desc { margin: 0; font-size: .83rem; line-height: 1.40; color: #2c3547; }
+.eg { margin: 1.2mm 0 0; padding: 0; list-style: none;
+      display: flex; flex-wrap: wrap; gap: 1mm 4mm; font-size: .80rem; color: #3d4757; }
+.eg li::before { content: "▪"; margin-right: 1.1mm; opacity: .5; }
+.warn { display: block; margin-top: 1mm; font-size: .78rem; color: var(--accent-dark); font-style: italic; }
+
+
+.colophon { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+            margin-top: 3.5mm; padding-top: 2mm; border-top: 2.5px solid var(--ink);
+            font-size: .72rem; color: var(--muted); }
+.colophon a { color: var(--muted); }
+
+/* ---- reverso ---- */
+.sheet + .sheet { margin-top: 1.5rem; }
+.back h2 { margin: 0; font: 800 1.3rem/1.1 var(--font-sans); letter-spacing: -.02em; }
+.back h2 small { display: block; margin-top: .25rem; color: var(--accent-dark);
+                 font: 800 .62rem/1 var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
+.rules { margin-top: 1.5mm; }
+.rule { display: grid; grid-template-columns: 7mm 1fr; gap: 0 4mm;
+        padding: 3.1mm 0; border-bottom: 1px solid var(--line); }
+.rule .n { width: 7mm; height: 7mm; display: grid; place-items: center; align-self: start;
+           background: var(--ink); color: #fff; font: 800 .92rem/1 var(--font-sans); }
+.rule h3 { margin: 0 0 1mm; font: 700 .93rem/1.3 var(--font-sans); }
+.rule p { margin: 0; font-size: .83rem; line-height: 1.45; color: #2c3547; }
+.rule p + p { margin-top: 1.4mm; }
+.rule em { color: var(--accent-dark); font-style: italic; }
+
+/* ---- barra de navegación (solo pantalla) ---- */
+.qr-bar { display: flex; align-items: center; gap: 1rem; margin: -1.5rem -1.5rem 1.5rem;
+          padding: .65rem 1.1rem; background: var(--ink); color: #fff; font-size: .82rem; }
+.qr-bar a { color: #fff; }
+.qr-bar .qr-pdf { margin-left: auto; font-weight: 700; }
+.qr-bar .language-picker { display: flex; align-items: center; gap: .45rem; }
+.qr-bar select { font: inherit; padding: .15rem .3rem; }
+@media print { .qr-bar { display: none !important; } }
+
+@page { size: A4; margin: 10mm 9mm; }
+@media print {
+  body { padding: 0; background: #fff; font-size: 10pt; }
+  .sheet { width: auto; padding: 0; box-shadow: none; }
+  .level, .rule { break-inside: avoid; }
+  .sheet + .sheet { break-before: page; margin-top: 0; }
+  a { text-decoration: none; }
+}
+@media (max-width: 700px) {
+  body { padding: .75rem; }
+  .sheet { padding: 7mm 5mm; }
+  .qr-bar { margin: -.75rem -.75rem .75rem; gap: .7rem; }
+  .level { grid-template-columns: 1fr; gap: 1.5mm; }
+  .sheet + .sheet { margin-top: .75rem; }
+  .tag { justify-self: start; }
+}
+</style>
+</head>
+<body data-page="quickref" data-root="../../">
+  <nav class="qr-bar" aria-label="Nabigazio nagusia">
+    <a href="../../eu/">Hasiera</a>
+    <a class="qr-pdf" href="../../output/pdf/miae-v2.1-guia-eu.pdf" download>PDFa deskargatu</a>
+    <label class="language-picker"><span>Hizkuntza</span>
+      <select data-language-select aria-label="Hizkuntza">
+        <option value="auto">Automatikoa (nabigatzailea)</option>
+        <option value="es">Castellano</option><option value="ca">Català</option><option value="eu" selected>Euskara</option><option value="gl">Galego</option><option value="en">English</option>
+      </select>
+    </label>
+  </nav>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1><small>MIAE 2.1 · Gida azkarra</small>Hezkuntza-zereginetan IA sortzailea integratzeko esparrua</h1>
+    <p>Eskalak <b>lana nola banatzen den</b> deskribatzen du hezkuntza-zeregin batean: ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen. Mailak ez dira metagarriak eta maila altuago bat ez da hobea.</p>
+  </header>
+
+  <div class="scale">
+
+    <section class="level l0">
+      <div class="tag"><b>0</b><span>IArik gabe</span></div>
+      <div>
+        <p class="split">Pertsonak sortzen du.</p>
+        <p class="desc">Ez da IA sortzailerik erabiltzen inongo etapatan: edukia, ideiak eta egitura pertsonarenak dira. Interneten bilatzeak edo tresna digital bat erabiltzeak ez du berez IA sortzailea erabiltzea esan nahi.</p>
+        <ul class="eg"><li>Klaseko azterketa idatzia</li><li>Eztabaida edo ahozko proba</li><li>Liburuekin eta apunteekin egindako lana</li><li>Irakasleak idatzitako errubrika</li></ul>
+      </div>
+    </section>
+
+    <section class="level l1">
+      <div class="tag"><b>1</b><span>Birformulazioa</span></div>
+      <div>
+        <p class="split">Pertsonak sortzen du, IAk birformulatzen du.</p>
+        <p class="desc">IAk lehendik dagoen materiala berradierazten du. Ez du ideiarik, analisirik edo ondoriorik gehitzen: edukia oso-osorik pertsonarena da.</p>
+        <ul class="eg"><li>Ortografia eta estiloa zuzentzea</li><li>Norberaren testu bat laburtzea</li><li>Itzultzea, zentzua egiaztatuz</li><li>Norberaren oharretatik idaztea</li><li>Datuak taula batera pasatzea</li></ul>
+        <b class="warn">Estiloa zuzentzea 1. maila da oraindik, argitasuna asko hobetzen badu ere.</b>
+      </div>
+    </section>
+
+    <section class="level l2">
+      <div class="tag"><b>2</b><span>Plangintza</span></div>
+      <div>
+        <p class="split">Pertsonak sortzen du, IAk planifikatzen du.</p>
+        <p class="desc">IAk ideiak, ikuspegiak edo egitura bat proposatzen ditu lana prestatzeko. Pertsonak garatzen eta idazten du gero azken eduki guztia.</p>
+        <ul class="eg"><li>Hasierako ideia-jasa</li><li>Saiakera baten aurkibidea edo eskema</li><li>Gaien edo iturrien iradokizuna</li><li>Klaseko jardueretarako ideiak</li></ul>
+        <b class="warn">Entregatzen dena eskema bera bada, jada ez da plangintza: produktu gisa sailkatu.</b>
+      </div>
+    </section>
+
+    <section class="level l3">
+      <div class="tag"><b>3</b><span>Zirriborroa</span></div>
+      <div>
+        <p class="split">IAk zirriborroa sortzen du, pertsonak eraikitzen du.</p>
+        <p class="desc">IAk eduki berria sortzen du abiapuntu gisa, eta pertsonak nabarmen berreraikitzen du: berridatzi, berrantolatu eta berea gehitzen du. Fluxua norabide bakarrean doa.</p>
+        <ul class="eg"><li>IAk idatzitako atala, gero berridatzia</li><li>Berrlandutako datu-analisia</li><li>Azterketa-galderak hautatuak eta birformulatuak</li><li>Aurkezpena berrantolatua argudio propioekin</li></ul>
+      </div>
+    </section>
+
+    <section class="level l4">
+      <div class="tag"><b>4</b><span>Sorkidetza</span></div>
+      <div>
+        <p class="split">Pertsonak eta IAk elkarrekin sortzen dute.</p>
+        <p class="desc">Elkarrizketa bi norabidetan: bi aldeek garatzen dute edukia lantzen den bitartean. Pertsonak gidatu, kontrastatu eta baliozkotzen du. Hasierako ideia erabat gizakiarena izan daiteke.</p>
+        <ul class="eg"><li>Elkarrizketan garatutako ikerketa</li><li>Ikuspegi-aldaketak eskatuz doitutako testua</li><li>Hainbat itzulitan findutako material didaktikoa</li></ul>
+        <b class="warn">Mezu kopuruak ez du sorkidetza zehazten; alde bakoitzaren ekarpenak egiten du.</b>
+      </div>
+    </section>
+
+    <section class="level l5">
+      <div class="tag"><b>5</b><span>Gainbegiratzea</span></div>
+      <div>
+        <p class="split">IAk sortzen du, pertsonak gainbegiratzen du.</p>
+        <p class="desc">IAk azken produktua lantzen du jasotzen dituen parametroetatik abiatuta. Pertsonak kalitatea berrikusi eta baliozkotzen du erabili aurretik, edukia berreraiki gabe.</p>
+        <ul class="eg"><li>Sortutako ilustrazioa, gero baliozkotua</li><li>Sortutako testua, egiaztatu eta erabilia</li><li>Laburpen automatikoa, argitaratu aurretik berrikusia</li></ul>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>Esparru osoa: <a href="https://jjdeharo.github.io/miae/v2.1/eu/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+
+<div class="sheet back">
+
+  <header class="masthead">
+    <h2><small>MIAE 2.1 · Gida azkarra</small>Zeregin bat eta bere aldaketak nola sailkatu</h2>
+  </header>
+
+  <div class="rules">
+
+    <section class="rule">
+      <span class="n">1</span>
+      <div>
+        <h3>Zer sailkatzen den</h3>
+        <p>Lehenik eta behin, <b>zer zeregin edo osagai sailkatzen den eta nork egiten duen</b> mugatzen da. Testu bat sortzea hura aztertzeko eta haren azterketa prestatzea prozesu desberdinak dira. Proiektu bereko testua, irudiak edo kodea ere bereiz daitezke haien garapenak prozesu desberdinak jarraitzen dituenean. Obran funtzio antzemangarria duten unitateak bereizten dira, eta osotasunarekin duten harremana esplizitu egiten da.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">2</span>
+      <div>
+        <h3>Prozesu osoa</h3>
+        <p>Maila IAren ekarpenak eta emaitza garatzeko pertsonaren rolak zehazten du, prozesu osoa kontuan hartuta. Ez da lehen eskaerarekin edo ideiaren jatorriarekin finkatzen. Jarduera bat 1. mailako birformulazio gisa hasi eta 4. mailako ko-sorkuntza bihur daiteke. Era berean, modu autonomoan sortutako testu bat pertsonak nabarmen berreraikitzen duen zirriborro bat izaten amai daiteke, 3. mailako prozesu bat sortuz. Behin-behineko sailkapena alda daiteke ondorengo lanari buruz jakitean.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">3</span>
+      <div>
+        <h3>Prozesu mistoak</h3>
+        <p>Prozesu mistoetan mailak <b>fase edo osagaien arabera</b> adieraztea komeni da. Adibidez, "2. maila plangintzan eta 1. maila giza garapen baten birformulazioan", edo "IA gabeko testua eta 5. mailako ilustrazioa". Zifra bakarra behar izanez gero, produktu nagusiaren garapena ezaugarritzen duen maila adierazten da, alde garrantzitsuekin batera. Mailarik behar bezala deskribatzen ez duenean, prozesu mistoa deklaratu eta inplikatutako mailak zehazten dira.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">4</span>
+      <div>
+        <h3>Ekarpena</h3>
+        <p>Edozein interakzioren mailarik altuena ez da automatikoki esleitzen. Ekarpen bat balioesteko, haren funtzioa, bere irismena eta nola txertatu edo eraldatzen den behatzen dira. Ekarpen <b>substantiboak</b> produktuaren edukia, arrazoibidea, antolaketa kontzeptuala edo funtzionamendua aldatzen du. Laburra eta erabakigarria izan daiteke, ondorioa aldatzen duen bereizketa bat bezala. Bere garrantzia ez da nahikoa maila zehazteko: pertsonak garatzen duen, berreraikitzen duen, IArekin batera sortzen duen edo gainbegiratu ondoren onartzen badu ere balio du.</p>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="n">5</span>
+      <div>
+        <h3>Baztertutako kontsultak</h3>
+        <p>Lanean eraginik ez duen baztertutako erantzunak ez du produktuaren maila igotzea eskatzen. Kontsulta erregistratzea komeni da; Ez litzateke zuzena IA inongo faserik erabili ez dela esatea. Erantzun bat kopiatu ote den egiaztatzea ere ez da nahikoa: iradokizun batek argudio batean eragin dezake gero beste hitz batzuekin adierazi arren. Estilo-zuzenketak 1. mailakoak dira oraindik, argitasuna asko hobetzen duten arren.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="colophon">
+    <span>Juan José de Haro</span>
+    <span>Esparru osoa: <a href="https://jjdeharo.github.io/miae/v2.1/eu/">jjdeharo.github.io/miae</a></span>
+    <span>CC BY-SA 4.0</span>
+  </footer>
+
+</div>
+</body>
+</html>

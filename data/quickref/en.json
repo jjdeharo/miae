@@ -1,0 +1,102 @@
+{
+  "kicker": "MIAE v2.1 · Quick guide",
+  "title": "Framework for integrating generative AI into educational tasks",
+  "lead": "The scale describes <b>how work is shared</b> in an educational task: it does not measure quality, effort or learning. The levels are not cumulative and a higher level is not better.",
+  "levels": [
+    {
+      "name": "No AI",
+      "split": "The person creates.",
+      "desc": "Generative AI is not used at any stage: the content, the ideas and the structure come from the person. Searching the Internet or using a digital tool does not in itself count as generative AI.",
+      "examples": [
+        "Written exam in class",
+        "Debate or oral test",
+        "Work done with books and notes",
+        "Rubric written by the teacher"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Reformulation",
+      "split": "The person creates, AI reformulates.",
+      "desc": "AI re-expresses material that already exists. It contributes no ideas, analysis or conclusions: the content remains entirely the person’s.",
+      "examples": [
+        "Correcting spelling and style",
+        "Summarising one’s own text",
+        "Translating and checking the meaning",
+        "Writing from one’s own notes",
+        "Turning data into a table"
+      ],
+      "warn": "Correcting style is still level 1, even when it greatly improves clarity."
+    },
+    {
+      "name": "Planning",
+      "split": "The person creates, AI plans.",
+      "desc": "AI suggests ideas, approaches or a structure to prepare the work. The person then develops and writes all the final content.",
+      "examples": [
+        "Initial brainstorming",
+        "Outline or contents of an essay",
+        "Suggested topics or sources",
+        "Ideas for classroom activities"
+      ],
+      "warn": "If what is submitted is the outline itself, it is no longer planning: classify it as the product."
+    },
+    {
+      "name": "Draft",
+      "split": "AI creates a draft, the person builds.",
+      "desc": "AI generates new content that serves as a starting point and the person rebuilds it substantially: rewriting, reorganising and adding their own. The flow goes in one direction only.",
+      "examples": [
+        "AI-written section, then rewritten",
+        "Reworked data analysis",
+        "Exam questions selected and reformulated",
+        "Presentation reorganised with own arguments"
+      ],
+      "warn": ""
+    },
+    {
+      "name": "Co-creation",
+      "split": "The person and AI co-create.",
+      "desc": "Two-way dialogue: both parties develop the content as it is produced. The person directs, checks and validates. The initial idea may be entirely human.",
+      "examples": [
+        "Research developed in conversation",
+        "Text adjusted by asking for changes of approach",
+        "Teaching material refined over several rounds"
+      ],
+      "warn": "The number of messages does not determine co-creation; each side’s contribution does."
+    },
+    {
+      "name": "Supervision",
+      "split": "AI creates, the person supervises.",
+      "desc": "AI produces the final work from the parameters it receives. The person reviews its quality and validates it before use, without rebuilding its content.",
+      "examples": [
+        "Generated illustration, then validated",
+        "Generated text that is checked and used",
+        "Automatic summary reviewed before publishing"
+      ],
+      "warn": ""
+    }
+  ],
+  "back_title": "How to classify a task and its changes",
+  "rules": [
+    {
+      "label": "What is classified",
+      "text": "First, <b>what task or component is classified and who performs it</b> is delimited. Generating a text to analyze it and preparing its analysis are different processes. Text, images or code from the same project can also be distinguished when their development follows different processes. Units with a recognizable function in the work are distinguished, and their relationship with the whole is made explicit."
+    },
+    {
+      "label": "The whole process",
+      "text": "The level is determined by the contribution of AI and the role of the person in developing the result, considering the entire process. It is not fixed by the first request or by the origin of the idea. An activity may begin as a level 1 reformulation and become a level 4 co-creation. Similarly, an autonomously generated text may end up being a draft that the person significantly reconstructs, giving rise to a level 3 process. The provisional classification may change when learning about subsequent work."
+    },
+    {
+      "label": "Mixed processes",
+      "text": "In mixed processes it is advisable to indicate the levels <b>by phases or components</b>. For example, \"level 2 in planning and level 1 in the reformulation of a human development\", or \"text without AI and illustration of level 5\". If a single figure is needed, the level characterizing the development of the main product is indicated, accompanied by relevant differences. When no level sufficiently describes it, the mixed process is declared and the levels involved are specified."
+    },
+    {
+      "label": "The contribution",
+      "text": "The highest level of any interaction is not automatically assigned. To value a contribution, its function, its scope and how it is incorporated or transformed are observed. A <b>substantive</b> contribution modifies the content, reasoning, conceptual organization or operation of the product. It can be brief and decisive, like a distinction that changes the conclusion. Its importance is not enough to determine the level: it also counts if the person develops it, reconstructs it, co-creates it with AI or accepts it after supervising it."
+    },
+    {
+      "label": "Discarded queries",
+      "text": "A discarded answer without influence on the work does not require raising the level of the product. It is advisable to register the query; It would not be correct to state that AI was not used at any stage. It is also not enough to check whether an answer was copied: a suggestion can influence an argument even if it is later expressed in other words. Styling corrections are still level 1, even though they greatly improve clarity."
+    }
+  ],
+  "full_framework": "Full framework:"
+}

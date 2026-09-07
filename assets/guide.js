@@ -24,23 +24,4 @@
     });
     editor.classList.add('interactive-ready');
   });
-  document.querySelectorAll('[data-case]').forEach(form => {
-    const result = form.querySelector('[role="status"]');
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      const selected = form.querySelector('input:checked');
-      if (!selected) {
-        result.textContent = form.dataset.choose;
-        return;
-      }
-      const correct = selected.value === form.dataset.answer;
-      result.textContent = `${correct ? form.dataset.correct : form.dataset.retry} ${form.dataset.explanation}`;
-      result.dataset.correct = String(correct);
-    });
-    form.addEventListener('change', () => {
-      result.textContent = '';
-      delete result.dataset.correct;
-    });
-    form.classList.add('interactive-ready');
-  });
 })();

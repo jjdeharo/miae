@@ -1,27 +1,64 @@
 {
-  "start": "MIAE ulertu 3 minututan", "index": "Orrialde honetan",
-  "guide_title": "Hasteko gida", "guide_intro": "MIAEk ikasleei eta irakasleei laguntzen die IA sortzailearen erabilera deskribatzen, zeregin batean nola erabil daitekeen adosten eta jarraitutako prozesua azaltzen.",
+  "start": "MIAE ulertu 3 minututan",
+  "index": "Orrialde honetan",
+  "guide_title": "Hasteko gida",
+  "guide_intro": "MIAEk ikasleei eta irakasleei laguntzen die IA sortzailearen erabilera deskribatzen, zeregin batean nola erabil daitekeen adosten eta jarraitutako prozesua azaltzen.",
   "principle": "Mailek lanaren banaketa deskribatzen dute. Maila altuagoak ez du kalitate edo ikaskuntza handiagoa esan nahi; aurreko mailetatik pasatzea ere ez da beharrezkoa.",
-  "steps": [["Zeregina zehaztu", "Adierazi nork egiten duen eta zer produktu edo osagai sailkatzen ari zaren: txosten bat, haren ilustrazioa edo testu baten analisia."], ["Prozesu osoa aztertu", "Deskribatu IAk zer ekarri duen eta pertsonak horrekin zer egin duen. Lehen eskaerak, testu kopuruak edo mezu kopuruak ez dute maila zehazten."], ["Sailkapena azaldu", "Justifikatu maila lanaren banaketaren arabera. Fase edo osagai desberdinak badaude, adierazi bakoitzaren maila; ez aukeratu automatikoki altuena."]],
-  "compare_title": "Ekosistema bati buruzko txosten bat, sei prozesu", "compare_intro": "Kasu guztietan produktua txosten bat da. Hura egiteko modua aldatzen da. Hautatu maila bat haren definizio osoa irakurtzeko.",
-  "examples": ["Pertsonak ekosistema behatzen du, iturriak kontsultatzen ditu eta txostena idazten du, inongo etapatan IA sortzailerik erabili gabe.", "Pertsonak dagoeneko garatutako behaketak, azalpenak eta ondorioak ematen ditu. IAk adierazpena hobetzen du, edukirik gehitu edo ideien arteko harremanak aldatu gabe.", "IAk galderak eta aurkibide bat proposatzen ditu lana bideratzeko. Pertsonak ikertu eta bere kabuz garatzen ditu azalpen guztiak eta azken idazketa.", "IAk lehen txosten bat idazten du. Pertsonak edukia berreraikitzen du: harreman ekologikoak berrikusten ditu, bere datuak txertatzen ditu eta bere azalpen eta ondorio berriak garatzen ditu.", "Pertsonak eta IAk elkarrizketaren bidez garatzen dute txostena. Pertsonak behaketak ematen ditu, azalpen bat zalantzan jartzen du eta beste bat proposatzen du; bien ekarpenek edukia aldatzen dute garapenean zehar.", "Pertsonak gaia, datuak eta baldintzak ematen ditu. IAk txosten osoa garatzen du; pertsonak zehaztasuna egiaztatu eta baliozkotzen du, edukia berreraiki edo elkarrekin sortu gabe."],
-  "template_title": "Adierazi nola erabili duzun IA", "template_intro": "Bete fitxa hau eta erantsi lanari. Hemen editatu, kopiatu edo testu gisa deskarga dezakezu. Baztertutako kontsultak ere deskribatu, halakorik egon bada.",
-  "fields": ["Zeregina edo osagaia eta nork egiten duen", "Nik neuk garatu dudana", "IA tresna eta zertarako erabili dudan", "Nola berrikusi edo eraldatu ditudan haren ekarpenak", "MIAE maila edo mailak eta justifikazioa"],
-  "copy": "Testua kopiatu", "download": "Fitxa deskargatu (.txt)", "copied": "Testua kopiatuta.", "copy_failed": "Ezin izan da kopiatu. Hautatu fitxaren testua eta kopiatu eskuz.",
-  "filled_title": "Ikusi adierazpen bete bat", "filled": ["Ekosistema bati buruzko txostena; ikasle batek egina.", "Azalpen ekologikoak eta ondorioak nire behaketetatik eta kontsultatutako iturrietatik abiatuta garatu ditut.", "ChatGPT: aurkibidea proposatzeko eta nik idatzitako testuaren hizkuntza zuzentzeko.", "Aurkibideko atalak aukeratu ditut eta zuzenketak ideiarik gehitzen edo nire ondorioak aldatzen ez zituela egiaztatu dut.", "2. maila plangintzan eta 1. maila pertsonak garatutako edukiaren birformulazioan. IAk ez du txostenaren edukia garatu."],
-  "teacher_title": "Irakasleentzat: baimendutako erabilerak jakinarazi", "teacher_intro": "Egokitu txantiloi hau ikaskuntza-helburura. Mailak prozesua deskribatzen du; ebaluazio-irizpideek ikaskuntza eta lanaren kalitatea baloratu behar dituzte.",
-  "teacher_fields": ["Zeregina eta ikaskuntza-helburua", "Baimendutako IA erabilerak, fase edo osagai bakoitzean", "Jarduera honetan baimentzen ez diren IA erabilerak", "Ikasleek egin beharreko lana eta aurkeztuko dituzten ebidentziak", "Nola adieraziko den IAren erabilera eta zer irizpideren arabera ebaluatuko den lana"],
-  "faq_title": "Ohiko galderak",
-  "faqs": [["IArekin idaztea beti al da 5. maila?", "Ez. Pertsonak dagoeneko garatutako edukiak ematen baditu eta IAk horiek adierazi edo leialki birformulatzen baditu, 1. maila da. Gai bat soilik ematea ez da garapen hori ematea."], ["Zerk bereizten ditu 2. eta 3. mailak?", "2. mailan IAk ideiak edo egitura prestatzen ditu eta pertsonak edukia garatzen du. 3. mailan, IAk garatutako edukia duen zirriborro bat dago, eta pertsonak nabarmen berreraikitzen du. Eskatutako produktua eskema bera bada, haren sorkuntza produktu gisa sailkatu behar da."], ["Aldaketa asko eskatzeak 4. maila esan nahi al du?", "Ez. Edukia elkarrekin garatu behar da, pertsonaren ekarpenekin eta irizpidearekin. Estilo-aldaketak eskatzea edo proposamenak onartzea ez da nahikoa. 5. mailan pertsonak produktua gainbegiratzen du; 3. mailan, nagusiki bere kabuz berreraikitzen du."], ["Zer egin testuak eta irudiek maila desberdinak badituzte?", "Adierazi bereizita eta azaldu osotasunarekin duten lotura. Adibidez: IArik gabeko testua eta 5. mailako ilustrazioa. Ez zaio automatikoki mailarik altuena esleitzen proiektu osoari."], ["Mailak adierazten al du zer dagoen baimenduta edo zer nota merezi duen?", "Berez, ez. Irakasleak baimendutako erabilerak zehaztu behar ditu zereginaren helburuaren arabera. Mailak ez ditu ikaskuntza, kalitatea edo ahalegina neurtzen."], ["IAk sortutako testu bat aztertzea 5. maila al da?", "Testuaren sorkuntza 5. mailakoa izan daiteke. Irakasleak ematen badu eta ikasleek IArik gabe aztertzen badute, analisia 0. mailakoa izan daiteke. Ikasleak testua eskatu eta gero aztertzen badu, bi zatiak deskribatzea komeni da."]],
-  "practice_title": "Probatu lau kasurekin", "practice_intro": "Aukeratu sailkapen bat eta egiaztatu arrazoibidea. Deskribatutako prozesua sailkatzen da, ez emaitzaren kalitatea.",
-  "mixed": "Prozesu mistoa", "check": "Egiaztatu", "choose": "Hautatu erantzun bat egiaztatu aurretik.", "correct": "Zuzena.", "retry": "Berrikusi sailkapena.", "answer": "Azalpena ikusi", "level": "Maila",
-  "cases": [
-    {"question": "Ikasle batek bere argudio eta ondorio osoak ematen dizkio IAri. IAk argi idazten ditu, ideiarik gehitu gabe. Zer mailak deskribatzen du laguntza hori?", "correct": "1", "explanation": "1. maila: IAk pertsonak dagoeneko garatutako edukia birformulatzen du. Idazten duen testu kopuruak ez du 5. maila bihurtzen."},
-    {"question": "Irakasle batek txosten oso bat eskatzen dio IAri, datuak egiaztatzen ditu eta emaitza onartzen du estilo-ukitu txikiekin. Zer mailak deskribatzen du txostenaren garapena?", "correct": "5", "explanation": "5. maila: sorkuntza autonomoa eta gainbegiratzea daude. Ukitu txikiak ez dira 3. mailako berreraikuntza esanguratsua edo 4. mailako elkarsorkuntza."},
-    {"question": "IAk azalpen ekologiko bat proposatzen du; ikasleak kontraesan bat antzematen du, bere datuak eta beste hipotesi bat ematen ditu, eta bi aldeek azalpen berri bat garatzen dute elkarrizketaren bidez. Zer maila dagokio?", "correct": "4", "explanation": "4. maila: pertsonak eta IAk edukia garatzen laguntzen dute. Funtsezkoa garapen partekatua da, ez mezu kopurua."},
-    {"question": "IAk aurkibide bat proposatzen du. Ikasleak eduki osoa IArik gabe idazten du. Ondoren, IAk adierazpena zuzentzen du, ideiarik gehitu gabe. Nola deskribatzen da hobekien prozesua?", "correct": "mixed", "explanation": "Prozesu mistoa: 2. maila plangintzan eta 1. maila pertsonak garatutako edukiaren birformulazioan. Bi faseak adieraztea komeni da."}
+  "steps": [
+    [
+      "Zeregina zehaztu",
+      "Adierazi nork egiten duen eta zer produktu edo osagai sailkatzen ari zaren: txosten bat, haren ilustrazioa edo testu baten analisia."
+    ],
+    [
+      "Prozesu osoa aztertu",
+      "Deskribatu IAk zer ekarri duen eta pertsonak horrekin zer egin duen. Lehen eskaerak, testu kopuruak edo mezu kopuruak ez dute maila zehazten."
+    ],
+    [
+      "Sailkapena azaldu",
+      "Justifikatu maila lanaren banaketaren arabera. Fase edo osagai desberdinak badaude, adierazi bakoitzaren maila; ez aukeratu automatikoki altuena."
+    ]
   ],
-  "changes_title": "Zer argitzen du 2.1 bertsioak?", "changes_intro": "2. bertsio berrikusiaren sei mailak mantentzen ditu eta haiek nola aplikatu zehazten du:",
-  "changes": ["Birformulazioa dagoeneko garatutako ohar eta argudioetatik abia daiteke, azken testu gisa idatzita ez badaude ere.", "Sailkapenak prozesu osoa hartzen du kontuan eta alda daiteke ondoren berreraikuntza edo elkarsorkuntza badago.", "Prozesu mistoak fase edo osagaien arabera deskribatzen dira, automatikoki mailarik altuena hartu gabe.", "Plangintzaren, berreraikuntzaren, elkarsorkuntzaren eta gainbegiratzearen arteko mugak zehazten dira."],
-  "summary": "Mailen laburpena", "classify": "Zeregin bat nola sailkatu", "full_details": "Definizio osoa irakurri"
+  "compare_title": "Ekosistema bati buruzko txosten bat, sei prozesu",
+  "compare_intro": "Kasu guztietan produktua txosten bat da. Hura egiteko modua aldatzen da. Hautatu maila bat haren definizio osoa irakurtzeko.",
+  "examples": [
+    "Pertsonak ekosistema behatzen du, iturriak kontsultatzen ditu eta txostena idazten du, inongo etapatan IA sortzailerik erabili gabe.",
+    "Pertsonak dagoeneko garatutako behaketak, azalpenak eta ondorioak ematen ditu. IAk adierazpena hobetzen du, edukirik gehitu edo ideien arteko harremanak aldatu gabe.",
+    "IAk galderak eta aurkibide bat proposatzen ditu lana bideratzeko. Pertsonak ikertu eta bere kabuz garatzen ditu azalpen guztiak eta azken idazketa.",
+    "IAk lehen txosten bat idazten du. Pertsonak edukia berreraikitzen du: harreman ekologikoak berrikusten ditu, bere datuak txertatzen ditu eta bere azalpen eta ondorio berriak garatzen ditu.",
+    "Pertsonak eta IAk elkarrizketaren bidez garatzen dute txostena. Pertsonak behaketak ematen ditu, azalpen bat zalantzan jartzen du eta beste bat proposatzen du; bien ekarpenek edukia aldatzen dute garapenean zehar.",
+    "Pertsonak gaia, datuak eta baldintzak ematen ditu. IAk txosten osoa garatzen du; pertsonak zehaztasuna egiaztatu eta baliozkotzen du, edukia berreraiki edo elkarrekin sortu gabe."
+  ],
+  "template_title": "Adierazi nola erabili duzun IA",
+  "template_intro": "Bete fitxa hau eta erantsi lanari. Hemen editatu, kopiatu edo testu gisa deskarga dezakezu. Baztertutako kontsultak ere deskribatu, halakorik egon bada.",
+  "fields": [
+    "Zeregina edo osagaia eta nork egiten duen",
+    "Nik neuk garatu dudana",
+    "IA tresna eta zertarako erabili dudan",
+    "Nola berrikusi edo eraldatu ditudan haren ekarpenak",
+    "MIAE maila edo mailak eta justifikazioa"
+  ],
+  "copy": "Testua kopiatu",
+  "download": "Fitxa deskargatu (.txt)",
+  "copied": "Testua kopiatuta.",
+  "copy_failed": "Ezin izan da kopiatu. Hautatu fitxaren testua eta kopiatu eskuz.",
+  "filled_title": "Ikusi adierazpen bete bat",
+  "filled": [
+    "Ekosistema bati buruzko txostena; ikasle batek egina.",
+    "Azalpen ekologikoak eta ondorioak nire behaketetatik eta kontsultatutako iturrietatik abiatuta garatu ditut.",
+    "ChatGPT: aurkibidea proposatzeko eta nik idatzitako testuaren hizkuntza zuzentzeko.",
+    "Aurkibideko atalak aukeratu ditut eta zuzenketak ideiarik gehitzen edo nire ondorioak aldatzen ez zituela egiaztatu dut.",
+    "2. maila plangintzan eta 1. maila pertsonak garatutako edukiaren birformulazioan. IAk ez du txostenaren edukia garatu."
+  ],
+  "teacher_title": "Irakasleentzat: baimendutako erabilerak jakinarazi",
+  "teacher_intro": "Egokitu txantiloi hau ikaskuntza-helburura. Mailak prozesua deskribatzen du; ebaluazio-irizpideek ikaskuntza eta lanaren kalitatea baloratu behar dituzte.",
+  "teacher_fields": [
+    "Zeregina eta ikaskuntza-helburua",
+    "Baimendutako IA erabilerak, fase edo osagai bakoitzean",
+    "Jarduera honetan baimentzen ez diren IA erabilerak",
+    "Ikasleek egin beharreko lana eta aurkeztuko dituzten ebidentziak",
+    "Nola adieraziko den IAren erabilera eta zer irizpideren arabera ebaluatuko den lana"
+  ],
+  "summary": "Mailen laburpena",
+  "classify": "Zeregin bat nola sailkatu",
+  "full_details": "Definizio osoa irakurri"
 }

@@ -1,27 +1,64 @@
 {
-  "start": "Entender MIAE en 3 minutos", "index": "Nesta páxina",
-  "guide_title": "Unha guía para comezar", "guide_intro": "MIAE serve ao alumnado e ao profesorado para describir o uso de IA xerativa, acordar como se pode utilizar nunha tarefa e explicar o proceso seguido.",
+  "start": "Entender MIAE en 3 minutos",
+  "index": "Nesta páxina",
+  "guide_title": "Unha guía para comezar",
+  "guide_intro": "MIAE serve ao alumnado e ao profesorado para describir o uso de IA xerativa, acordar como se pode utilizar nunha tarefa e explicar o proceso seguido.",
   "principle": "Os niveis describen unha repartición do traballo. Un nivel máis alto non significa máis calidade nin máis aprendizaxe; tampouco hai que pasar polos anteriores.",
-  "steps": [["Delimita a tarefa", "Indica quen a realiza e que produto ou compoñente estás clasificando: un informe, a súa ilustración ou a análise dun texto."], ["Observa o proceso completo", "Describe que achegou a IA e que fixo a persoa con iso. A primeira petición, a cantidade de texto ou o número de mensaxes non determinan o nivel."], ["Explica a clasificación", "Xustifica o nivel pola repartición do traballo. Se hai fases ou compoñentes diferentes, declara os niveis de cada un; non escollas automaticamente o máis alto."]],
-  "compare_title": "Un informe sobre un ecosistema, seis procesos", "compare_intro": "En todos os casos o produto é un informe. O que cambia é como se elabora. Preme un nivel para consultar a súa definición completa.",
-  "examples": ["A persoa observa o ecosistema, consulta fontes e redacta o informe sen IA xerativa en ningunha etapa.", "A persoa achega as súas observacións, explicacións e conclusións xa desenvolvidas. A IA mellora a súa expresión sen engadir contido nin cambiar as relacións entre as ideas.", "A IA propón preguntas e un índice para orientar o traballo. A persoa investiga e desenvolve por si mesma todas as explicacións e a redacción final.", "A IA redacta un primeiro informe. A persoa reconstrúe o seu contido: revisa as relacións ecolóxicas, incorpora os seus datos e elabora novas explicacións e conclusións propias.", "A persoa e a IA desenvolven o informe mediante o diálogo. A persoa achega observacións, cuestiona unha explicación e propón outra; ambas as contribucións transforman o contido durante a súa elaboración.", "A persoa proporciona o tema, os datos e os requisitos. A IA desenvolve o informe completo; a persoa comproba a súa exactitude e valídao, sen reconstruílo nin cocrear o seu contido."],
-  "template_title": "Declara como utilizaches a IA", "template_intro": "Completa esta ficha e achégaa ao traballo. Podes editala aquí, copiala ou descargala como texto. Describe tamén as consultas descartadas se as houbo.",
-  "fields": ["Tarefa ou compoñente e quen o realiza", "Que elaborei eu", "Ferramenta de IA e para que a utilicei", "Como revisei ou transformei as súas achegas", "Nivel ou niveis MIAE e xustificación"],
-  "copy": "Copiar texto", "download": "Descargar ficha (.txt)", "copied": "Texto copiado.", "copy_failed": "Non se puido copiar. Selecciona o texto da ficha e cópiao manualmente.",
-  "filled_title": "Ver unha declaración cuberta", "filled": ["Informe sobre un ecosistema; realizado por unha estudante.", "Desenvolvín as explicacións ecolóxicas e as conclusións a partir das miñas observacións e das fontes consultadas.", "ChatGPT: proposta de índice e corrección lingüística do texto que redactei.", "Escollín os apartados do índice e comprobei que a corrección non engadise ideas nin alterase as miñas conclusións.", "Nivel 2 na planificación e nivel 1 na reformulación dun desenvolvemento humano. A IA non desenvolveu o contido do informe."],
-  "teacher_title": "Para docentes: comunica os usos permitidos", "teacher_intro": "Adapta este modelo ao obxectivo de aprendizaxe. O nivel describe o proceso; os criterios de avaliación deben valorar a aprendizaxe e a calidade do traballo.",
-  "teacher_fields": ["Tarefa e obxectivo de aprendizaxe", "Usos de IA permitidos por fase ou compoñente", "Usos de IA que non se permiten nesta actividade", "Traballo que debe realizar o alumnado e evidencias que entregará", "Como se declarará o uso de IA e con que criterios se avaliará o traballo"],
-  "faq_title": "Dúbidas frecuentes",
-  "faqs": [["Redactar con IA sempre é nivel 5?", "Non. Se a persoa achega os contidos xa desenvolvidos e a IA só os expresa ou reformula fielmente, é nivel 1. Dar unicamente un tema non equivale a achegar ese desenvolvemento."], ["Que distingue o nivel 2 do 3?", "No 2 a IA prepara ideas ou estrutura e a persoa desenvolve o contido. No 3 xa hai un borrador con contido elaborado por IA que a persoa reconstrúe significativamente. Se o produto encargado é o propio esquema, hai que clasificar a súa elaboración como produto."], ["Moitas peticións de cambios implican nivel 4?", "Non. Debe haber desenvolvemento compartido do contido con achegas e xuízo humano. Pedir cambios de estilo ou aceptar propostas non abonda. No 5 a persoa supervisa o produto; no 3 reconstrúeo principalmente por si mesma."], ["Que fago se o texto e as imaxes teñen niveis distintos?", "Decláraos por separado, indicando a súa relación co conxunto. Por exemplo: texto sen IA e ilustración de nivel 5. Non se asigna automaticamente o nivel máis alto a todo o proxecto."], ["O nivel indica que está permitido ou que nota merece?", "Por si só, non. O docente debe concretar os usos permitidos segundo o obxectivo da tarefa. O nivel non mide a aprendizaxe, a calidade nin o esforzo."], ["Analizar un texto xerado por IA é nivel 5?", "A xeración do texto pode ser nivel 5. Se o docente o proporciona e o alumnado o analiza sen IA, a análise pode ser nivel 0. Se o alumno encarga o texto e despois o analiza, convén describir ambas as partes."]],
-  "practice_title": "Proba con catro casos", "practice_intro": "Escolle unha clasificación e comproba o razoamento. Clasifícase o proceso descrito, non a calidade do resultado.",
-  "mixed": "Proceso mixto", "check": "Comprobar", "choose": "Selecciona unha resposta antes de comprobar.", "correct": "Correcto.", "retry": "Revisa a clasificación.", "answer": "Ver explicación", "level": "Nivel",
-  "cases": [
-    {"question": "Unha alumna entrega á IA os seus argumentos e conclusións completos. A IA redáctaos con claridade sen engadir ideas. Que nivel describe esta axuda?", "correct": "1", "explanation": "Nivel 1: a IA reformula contido humano xa desenvolvido. A cantidade de texto que redacta non o converte en nivel 5."},
-    {"question": "Un profesor pide un informe completo á IA, comproba os datos e acepta o resultado con pequenos retoques de estilo. Que nivel describe a elaboración do informe?", "correct": "5", "explanation": "Nivel 5: hai xeración autónoma e supervisión. Os retoques menores non son reconstrución significativa de nivel 3 nin cocreación de nivel 4."},
-    {"question": "A IA propón unha explicación ecolóxica; a alumna detecta unha contradición, achega os seus datos e unha hipótese alternativa, e ambas as partes desenvolven unha nova explicación mediante o diálogo. Que nivel corresponde?", "correct": "4", "explanation": "Nivel 4: a persoa e a IA contribúen ao desenvolvemento do contido. O decisivo é a elaboración compartida, non o número de mensaxes."},
-    {"question": "A IA propón un índice. O alumno redacta todo o contido sen IA. Despois, a IA corrixe a expresión sen engadir ideas. Como se describe mellor o proceso?", "correct": "mixed", "explanation": "Proceso mixto: nivel 2 na planificación e nivel 1 na reformulación dun desenvolvemento humano. Convén declarar as dúas fases."}
+  "steps": [
+    [
+      "Delimita a tarefa",
+      "Indica quen a realiza e que produto ou compoñente estás clasificando: un informe, a súa ilustración ou a análise dun texto."
+    ],
+    [
+      "Observa o proceso completo",
+      "Describe que achegou a IA e que fixo a persoa con iso. A primeira petición, a cantidade de texto ou o número de mensaxes non determinan o nivel."
+    ],
+    [
+      "Explica a clasificación",
+      "Xustifica o nivel pola repartición do traballo. Se hai fases ou compoñentes diferentes, declara os niveis de cada un; non escollas automaticamente o máis alto."
+    ]
   ],
-  "changes_title": "Que aclara a versión 2.1", "changes_intro": "Mantén os seis niveis da versión 2 revisada e precisa como aplicalos:",
-  "changes": ["A reformulación pode partir de notas e argumentos xa desenvolvidos, aínda que non estean redactados como texto final.", "A clasificación considera o proceso completo e pode cambiar se despois hai reconstrución ou cocreación.", "Os procesos mixtos descríbense por fases ou compoñentes, sen tomar automaticamente o nivel máis alto.", "Concrétanse as fronteiras entre planificación, reconstrución, cocreación e supervisión."],
-  "summary": "Resumo de niveis", "classify": "Como clasificar unha tarefa", "full_details": "Consultar a definición completa"
+  "compare_title": "Un informe sobre un ecosistema, seis procesos",
+  "compare_intro": "En todos os casos o produto é un informe. O que cambia é como se elabora. Preme un nivel para consultar a súa definición completa.",
+  "examples": [
+    "A persoa observa o ecosistema, consulta fontes e redacta o informe sen IA xerativa en ningunha etapa.",
+    "A persoa achega as súas observacións, explicacións e conclusións xa desenvolvidas. A IA mellora a súa expresión sen engadir contido nin cambiar as relacións entre as ideas.",
+    "A IA propón preguntas e un índice para orientar o traballo. A persoa investiga e desenvolve por si mesma todas as explicacións e a redacción final.",
+    "A IA redacta un primeiro informe. A persoa reconstrúe o seu contido: revisa as relacións ecolóxicas, incorpora os seus datos e elabora novas explicacións e conclusións propias.",
+    "A persoa e a IA desenvolven o informe mediante o diálogo. A persoa achega observacións, cuestiona unha explicación e propón outra; ambas as contribucións transforman o contido durante a súa elaboración.",
+    "A persoa proporciona o tema, os datos e os requisitos. A IA desenvolve o informe completo; a persoa comproba a súa exactitude e valídao, sen reconstruílo nin cocrear o seu contido."
+  ],
+  "template_title": "Declara como utilizaches a IA",
+  "template_intro": "Completa esta ficha e achégaa ao traballo. Podes editala aquí, copiala ou descargala como texto. Describe tamén as consultas descartadas se as houbo.",
+  "fields": [
+    "Tarefa ou compoñente e quen o realiza",
+    "Que elaborei eu",
+    "Ferramenta de IA e para que a utilicei",
+    "Como revisei ou transformei as súas achegas",
+    "Nivel ou niveis MIAE e xustificación"
+  ],
+  "copy": "Copiar texto",
+  "download": "Descargar ficha (.txt)",
+  "copied": "Texto copiado.",
+  "copy_failed": "Non se puido copiar. Selecciona o texto da ficha e cópiao manualmente.",
+  "filled_title": "Ver unha declaración cuberta",
+  "filled": [
+    "Informe sobre un ecosistema; realizado por unha estudante.",
+    "Desenvolvín as explicacións ecolóxicas e as conclusións a partir das miñas observacións e das fontes consultadas.",
+    "ChatGPT: proposta de índice e corrección lingüística do texto que redactei.",
+    "Escollín os apartados do índice e comprobei que a corrección non engadise ideas nin alterase as miñas conclusións.",
+    "Nivel 2 na planificación e nivel 1 na reformulación dun desenvolvemento humano. A IA non desenvolveu o contido do informe."
+  ],
+  "teacher_title": "Para docentes: comunica os usos permitidos",
+  "teacher_intro": "Adapta este modelo ao obxectivo de aprendizaxe. O nivel describe o proceso; os criterios de avaliación deben valorar a aprendizaxe e a calidade do traballo.",
+  "teacher_fields": [
+    "Tarefa e obxectivo de aprendizaxe",
+    "Usos de IA permitidos por fase ou compoñente",
+    "Usos de IA que non se permiten nesta actividade",
+    "Traballo que debe realizar o alumnado e evidencias que entregará",
+    "Como se declarará o uso de IA e con que criterios se avaliará o traballo"
+  ],
+  "summary": "Resumo de niveis",
+  "classify": "Como clasificar unha tarefa",
+  "full_details": "Consultar a definición completa"
 }

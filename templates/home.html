@@ -11,7 +11,6 @@
   {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base_url }}/">
   <link rel="stylesheet" href="{{ root }}assets/site.css">
   <script src="{{ root }}assets/site.js" defer></script>
-  <script src="{{ root }}assets/guide.js" defer></script>
 </head>
 <body class="home-page" data-page="home" data-root="{{ root }}"{% if automatic %} data-auto-language{% endif %}>
   <a class="skip-link" href="#contenido">{{ ui.skip }}</a>
@@ -29,25 +28,22 @@
   </header>
   <main id="contenido">
     <section class="home-intro">
-      <div>
-        <p class="eyebrow">{{ ui.current_version }} · 2.1</p>
-        <h1>{{ ui.home_title }}</h1>
-        <p class="home-lead">{{ ui.home_lead }}</p>
-        <div class="home-actions">
-          <a class="button primary" href="#guia">{{ guide.start }}</a>
-          <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
-          <a class="button" href="{{ root }}output/pdf/miae-v2.1-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
-          <a class="button" href="{{ root }}assets/v2.1/resumen-es.png">{{ ui.infographic_link }}</a>
-        </div>
-      </div>
-      <div class="level-spectrum" aria-label="{{ ui.levels }}">
-        {% for level in range(6) %}<a class="level-{{ level }}" href="#ejemplo-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{% endfor %}
+      <p class="eyebrow">{{ ui.current_version }} · 2.1</p>
+      <h1>{{ ui.home_title }}</h1>
+      <p class="home-lead">{{ ui.home_lead }}</p>
+      <div class="home-actions">
+        <a class="button primary" href="{{ root }}{{ lang }}/guia/">{{ ui.quickref_link }}</a>
+        <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
       </div>
     </section>
     {% include "guide.html" %}
     <section class="home-resources" aria-labelledby="recursos-portada">
       <div><p class="eyebrow">MIAE 2.1</p><h2 id="recursos-portada">{{ ui.resources }}</h2></div>
       <div class="resource-grid">
+        <a href="{{ root }}{{ lang }}/guia/"><strong>{{ ui.quickref_link }}</strong><span>{{ ui.quickref_note }}</span></a>
+        <a href="{{ root }}output/pdf/miae-v2.1-{{ lang }}.pdf" download><strong>{{ ui.download_pdf }}</strong><span>{{ ui.pdf_note }}</span></a>
+        <a href="{{ root }}assets/v2.1/resumen-{{ lang }}.png"><strong>{{ ui.infographic_link }}</strong><span>{{ ui.infographic_note }}</span></a>
+        <a href="{{ root }}{{ lang }}/ficha/"><strong>{{ guide.template_title }}</strong><span>{{ ui.template_note }}</span></a>
         <a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1"><strong>{{ ui.article }}</strong><span>{{ ui.article_note }}</span></a>
         <a href="https://archive.org/download/bilateria/miae-v2-1-podcast.mp3"><strong>{{ ui.podcast }}</strong><span>{{ ui.podcast_note }}</span></a>
         <a href="https://www.youtube.com/watch?v=Sz64CskmLdI"><strong>{{ ui.video }}</strong><span>{{ ui.video_note }}</span></a>
