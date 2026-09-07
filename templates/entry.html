@@ -8,6 +8,6 @@
 </head>
 <body data-page="document" data-root="../" data-auto-language>
   <h1>MIAE v2.1</h1>
-  <nav><a href="es/" lang="es">Castellano</a> <a href="ca/" lang="ca">Català</a> <a href="eu/" lang="eu">Euskara</a> <a href="gl/" lang="gl">Galego</a> <a href="en/" lang="en">English</a> </nav>
+  <nav>{% for code, item in languages.items() %}<a href="{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav>
 </body>
 </html>

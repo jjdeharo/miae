@@ -10,18 +10,19 @@
   {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base_url }}/v2.1/es/">
   <link rel="stylesheet" href="{{ root }}assets/site.css">
 </head>
-<body>
+<body data-page="document" data-root="{{ root }}">
   <a class="skip-link" href="#contenido">{{ ui.skip }}</a>
   <header class="site-header">
-    <a class="brand" href="{{ root }}" aria-label="MIAE">
+    <a class="brand" href="{{ root }}{{ lang }}/" aria-label="MIAE">
       <span class="brand-mark" aria-hidden="true">M</span>
       <span><strong>MIAE</strong><small>{{ ui.brand_subtitle }}</small></span>
     </a>
     <nav class="header-actions" aria-label="{{ ui.navigation }}">
-      <a href="{{ root }}">{{ ui.home }}</a>
+      <a href="{{ root }}{{ lang }}/">{{ ui.home }}</a>
       <label class="language-picker">
         <span>{{ ui.language }}</span>
         <select data-language-select aria-label="{{ ui.language }}">
+          <option value="auto">{{ ui.automatic }}</option>
           {% for code, item in languages.items() %}<option value="{{ code }}"{% if code == lang %} selected{% endif %}>{{ item.native }}</option>{% endfor %}
         </select>
       </label>

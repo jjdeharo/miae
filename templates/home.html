@@ -1,47 +1,56 @@
 <!doctype html>
-<html lang="es">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MIAE · Marco para la integración de la IA generativa</title>
-  <meta name="description" content="Marco para comprender y declarar cómo se reparte el trabajo entre la persona y la IA generativa en las tareas educativas.">
-  <link rel="stylesheet" href="assets/site.css">
+  <title>MIAE · {{ ui.brand_subtitle }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ base_url }}/{{ lang }}/">
+  {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ base_url }}/{{ code }}/">
+  {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base_url }}/">
+  <link rel="stylesheet" href="{{ root }}assets/site.css">
+  <script src="{{ root }}assets/site.js" defer></script>
 </head>
-<body class="home-page">
+<body class="home-page" data-page="home" data-root="{{ root }}"{% if automatic %} data-auto-language{% endif %}>
+  <a class="skip-link" href="#contenido">{{ ui.skip }}</a>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="MIAE"><span class="brand-mark" aria-hidden="true">M</span><span><strong>MIAE</strong><small>Marco de integración de la IA</small></span></a>
-    <a class="author-link" href="https://bilateria.org">Juan José de Haro</a>
+    <a class="brand" href="{{ root }}{{ lang }}/" aria-label="MIAE"><span class="brand-mark" aria-hidden="true">M</span><span><strong>MIAE</strong><small>{{ ui.brand_subtitle }}</small></span></a>
+    <nav class="header-actions" aria-label="{{ ui.navigation }}">
+      <a class="author-link" href="https://bilateria.org">Juan José de Haro</a>
+      <label class="language-picker"><span>{{ ui.language }}</span>
+        <select data-language-select aria-label="{{ ui.language }}">
+          <option value="auto">{{ ui.automatic }}</option>
+          {% for code, item in languages.items() %}<option value="{{ code }}"{% if code == lang %} selected{% endif %}>{{ item.native }}</option>{% endfor %}
+        </select>
+      </label>
+    </nav>
   </header>
-  <main>
+  <main id="contenido">
     <section class="home-intro">
       <div>
-        <p class="eyebrow">Versión vigente · 2.1</p>
-        <h1>Seis formas de repartir el trabajo entre la persona y la IA</h1>
-        <p class="home-lead">El MIAE permite describir con precisión qué aporta cada parte en una tarea educativa. No mide la calidad, el esfuerzo ni el aprendizaje.</p>
+        <p class="eyebrow">{{ ui.current_version }} · 2.1</p>
+        <h1>{{ ui.home_title }}</h1>
+        <p class="home-lead">{{ ui.home_lead }}</p>
+        <div class="home-actions">
+          <a class="button primary" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
+          <a class="button" href="{{ root }}output/pdf/miae-v2.1-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
+        </div>
       </div>
-      <div class="level-spectrum" aria-label="Niveles del cero al cinco">
+      <div class="level-spectrum" aria-label="{{ ui.levels }}">
         {% for level in range(6) %}<span class="level-{{ level }}">{{ level }}</span>{% endfor %}
       </div>
     </section>
-    <section class="language-entry" aria-labelledby="elige-idioma">
-      <div>
-        <p class="eyebrow">Texto completo y PDF</p>
-        <h2 id="elige-idioma">Elegir idioma</h2>
-      </div>
-      <div class="language-grid">
-        {% for code, item in languages.items() %}<a href="v2.1/{{ code }}/"><strong>{{ item.native }}</strong><span>{{ item.label }}</span><b aria-hidden="true">→</b></a>{% endfor %}
-      </div>
-    </section>
     <section class="home-resources" aria-labelledby="recursos-portada">
-      <div><p class="eyebrow">MIAE 2.1</p><h2 id="recursos-portada">Recursos</h2></div>
+      <div><p class="eyebrow">MIAE 2.1</p><h2 id="recursos-portada">{{ ui.resources }}</h2></div>
       <div class="resource-grid">
-        <a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1"><strong>Artículo</strong><span>Presentación y explicación de la versión 2.1</span></a>
-        <a href="https://archive.org/download/bilateria/miae-v2-1-podcast.mp3"><strong>Pódcast</strong><span>34 minutos · español</span></a>
-        <a href="https://www.youtube.com/watch?v=Sz64CskmLdI"><strong>Vídeo</strong><span>Explicación visual · español</span></a>
-        <a href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a"><strong>Asistente</strong><span>Consultas y clasificación de casos</span></a>
+        <a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1"><strong>{{ ui.article }}</strong><span>{{ ui.article_note }}</span></a>
+        <a href="https://archive.org/download/bilateria/miae-v2-1-podcast.mp3"><strong>{{ ui.podcast }}</strong><span>{{ ui.podcast_note }}</span></a>
+        <a href="https://www.youtube.com/watch?v=Sz64CskmLdI"><strong>{{ ui.video }}</strong><span>{{ ui.video_note }}</span></a>
+        <a href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a"><strong>{{ ui.assistant }}</strong><span>{{ ui.assistant_note }}</span></a>
       </div>
     </section>
+    <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
   </main>
-  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a><a href="v2-revisada/">Versión 2 revisada</a></footer>
+  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="{{ root }}v2-revisada/">{{ ui.previous_version }}</a></footer>
 </body>
 </html>

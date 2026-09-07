@@ -1,0 +1,47 @@
+{
+  "es": {
+    "home_title": "Seis formas de repartir el trabajo entre la persona y la IA",
+    "home_lead": "El MIAE permite describir con precisión qué aporta cada parte en una tarea educativa. No mide la calidad, el esfuerzo ni el aprendizaje.",
+    "read_framework": "Leer el marco",
+    "article": "Artículo",
+    "article_note": "Presentación de la versión 2.1 · español",
+    "automatic": "Automático (navegador)",
+    "previous_version": "Versión 2 revisada · español"
+  },
+  "ca": {
+    "home_title": "Sis maneres de repartir el treball entre la persona i la IA",
+    "home_lead": "El MIAE permet descriure amb precisió què aporta cada part en una tasca educativa. No mesura la qualitat, l’esforç ni l’aprenentatge.",
+    "read_framework": "Llegir el marc",
+    "article": "Article",
+    "article_note": "Presentació de la versió 2.1 · castellà",
+    "automatic": "Automàtic (navegador)",
+    "previous_version": "Versió 2 revisada · castellà"
+  },
+  "eu": {
+    "home_title": "Pertsonaren eta IAren artean lana banatzeko sei modu",
+    "home_lead": "MIAEk hezkuntza-zeregin batean alde bakoitzak zer ekarpen egiten duen zehaztasunez deskribatzeko aukera ematen du. Ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen.",
+    "read_framework": "Esparrua irakurri",
+    "article": "Artikulua",
+    "article_note": "2.1 bertsioaren aurkezpena · gaztelaniaz",
+    "automatic": "Automatikoa (nabigatzailea)",
+    "previous_version": "2. bertsio berrikusia · gaztelaniaz"
+  },
+  "gl": {
+    "home_title": "Seis formas de repartir o traballo entre a persoa e a IA",
+    "home_lead": "O MIAE permite describir con precisión que achega cada parte nunha tarefa educativa. Non mide a calidade, o esforzo nin a aprendizaxe.",
+    "read_framework": "Ler o marco",
+    "article": "Artigo",
+    "article_note": "Presentación da versión 2.1 · castelán",
+    "automatic": "Automático (navegador)",
+    "previous_version": "Versión 2 revisada · castelán"
+  },
+  "en": {
+    "home_title": "Six ways to share work between people and AI",
+    "home_lead": "MIAE describes precisely what each contributes to an educational task. It does not measure quality, effort or learning.",
+    "read_framework": "Read the framework",
+    "article": "Article",
+    "article_note": "Introducing version 2.1 · Spanish",
+    "automatic": "Automatic (browser)",
+    "previous_version": "Revised version 2 · Spanish"
+  }
+}

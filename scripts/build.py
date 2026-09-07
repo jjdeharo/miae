@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import argparse
+import json
 import re
 
 import markdown
@@ -86,6 +87,9 @@ UI = {
     },
 }
 
+for lang, labels in json.loads((ROOT / "data" / "home-ui.json").read_text()).items():
+    UI[lang].update(labels)
+
 DESCRIPTIONS = {
     "es": "Marco para describir cómo se reparte el trabajo entre la persona y la IA generativa en las tareas educativas.",
     "ca": "Marc per descriure com es reparteix el treball entre la persona i la IA generativa en les tasques educatives.",
@@ -124,9 +128,18 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--pdf", action="store_true", help="Generate the five downloadable PDF editions")
     args = parser.parse_args()
-    (ROOT / "index.html").write_text(
-        env.get_template("home.html").render(languages=LANGUAGES, range=range), encoding="utf-8"
-    )
+    def build_home(lang, root_path, automatic=False):
+        return env.get_template("home.html").render(
+            lang=lang, ui=UI[lang], description=DESCRIPTIONS[lang],
+            languages=LANGUAGES, range=range, root=root_path,
+            base_url=BASE_URL, automatic=automatic,
+            license_lang=lang if lang in {"es", "ca"} else "en",
+        )
+    (ROOT / "index.html").write_text(build_home("es", "./", True), encoding="utf-8")
+    for lang in LANGUAGES:
+        home_dir = ROOT / lang
+        home_dir.mkdir(exist_ok=True)
+        (home_dir / "index.html").write_text(build_home(lang, "../"), encoding="utf-8")
     available = []
     for lang in LANGUAGES:
         if not (ROOT / "content" / "v2.1" / f"{lang}.md").exists():
@@ -142,8 +155,9 @@ def main() -> None:
             HTML(filename=str(output_dir / "index.html")).write_pdf(
                 pdf_dir / f"miae-v2.1-{lang}.pdf"
             )
-    redirect = """<!doctype html><html lang=\"es\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width\"><title>MIAE v2.1</title><meta http-equiv=\"refresh\" content=\"0;url=es/\"><link rel=\"canonical\" href=\"es/\"><p><a href=\"es/\">MIAE v2.1</a></p></html>"""
-    (ROOT / "v2.1" / "index.html").write_text(redirect, encoding="utf-8")
+    (ROOT / "v2.1" / "index.html").write_text(
+        env.get_template("entry.html").render(languages=LANGUAGES), encoding="utf-8"
+    )
     suffix = " and PDF editions" if args.pdf else ""
     print(f"Generated home and {len(available)} language page(s){suffix}: {', '.join(available)}")
 
