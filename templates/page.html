@@ -68,7 +68,7 @@
         <p class="eyebrow">{{ ui.document }}</p>
         <h2>{{ ui.read_download }}</h2>
         <a class="button primary" href="../../output/pdf/miae-v2.1-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
-{% if lang == 'es' %}        <a class="button" href="{{ root }}assets/v2.1/resumen-es.png">{{ ui.summary_image }}</a>{% endif %}
+        <a class="button" href="{{ root }}assets/v2.1/resumen-es.png">{{ ui.infographic_link }}</a>
         <a class="button" href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1">{{ ui.blog_article }}</a>
       </div>
       {% include "document-index.html" %}

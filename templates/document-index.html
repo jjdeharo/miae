@@ -1,5 +1,6 @@
 <nav class="document-index" aria-label="{{ guide.index }}">
   <a href="{{ root }}{{ lang }}/#guia">{{ guide.start }}</a>
+  <a href="{{ root }}assets/v2.1/resumen-es.png">{{ ui.infographic_link }}</a>
   <a href="#resumen">{{ guide.summary }}</a>
   <a href="#clasificar">{{ guide.classify }}</a>
   {% for level in range(6) %}<a href="#nivel-{{ level }}"><span class="level-dot level-{{ level }}">{{ level }}</span>{{ ui.level_names[level] }}</a>{% endfor %}
