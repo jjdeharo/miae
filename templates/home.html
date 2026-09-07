@@ -34,7 +34,7 @@
       <div class="home-actions">
         <a class="button primary" href="{{ root }}{{ lang }}/guia/">{{ ui.quickref_link }}</a>
         <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
-        <a class="button" href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a">{{ ui.assistant }}</a>
+        <a class="button" href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a" target="_blank" rel="noopener">{{ ui.assistant }}</a>
       </div>
     </section>
     {% include "guide.html" %}
@@ -48,7 +48,7 @@
         <a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1"><strong>{{ ui.article }}</strong><span>{{ ui.article_note }}</span></a>
         <a href="https://archive.org/download/bilateria/miae-v2-1-podcast.mp3"><strong>{{ ui.podcast }}</strong><span>{{ ui.podcast_note }}</span></a>
         <a href="https://www.youtube.com/watch?v=Sz64CskmLdI"><strong>{{ ui.video }}</strong><span>{{ ui.video_note }}</span></a>
-        <a href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a"><strong>{{ ui.assistant }}</strong><span>{{ ui.assistant_note }}</span></a>
+        <a href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a" target="_blank" rel="noopener"><strong>{{ ui.assistant }}</strong><span>{{ ui.assistant_note }}</span></a>
       </div>
     </section>
     <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
