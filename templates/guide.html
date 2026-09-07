@@ -5,14 +5,3 @@
   <ol class="guide-steps">{% for title, text in guide.steps %}<li><h3>{{ title }}</h3><p>{{ text }}</p></li>{% endfor %}</ol>
   <p class="principle">{{ guide.principle }}</p>
 </section>
-<section class="guide-section" id="niveles" aria-labelledby="niveles-title">
-  <h2 id="niveles-title">{{ guide.compare_title }}</h2>
-  <p class="section-intro">{{ guide.compare_intro }}</p>
-  <div class="level-cards">
-    {% for example in guide.examples %}<a class="level-card level-{{ loop.index0 }}" id="ejemplo-{{ loop.index0 }}" href="{{ root }}v2.1/{{ lang }}/#nivel-{{ loop.index0 }}">
-      <b>{{ loop.index0 }}</b>
-      <strong>{{ ui.level_names[loop.index0] }}</strong>
-      <span>{{ example }}</span>
-    </a>{% endfor %}
-  </div>
-</section>

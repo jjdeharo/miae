@@ -18,16 +18,6 @@
       "Justifica el nivel por el reparto del trabajo. Si hay fases o componentes diferentes, declara los niveles de cada uno; no elijas automáticamente el más alto."
     ]
   ],
-  "compare_title": "Un informe sobre un ecosistema, seis procesos",
-  "compare_intro": "En todos los casos el producto es un informe. Lo que cambia es cómo se elabora. Pulsa un nivel para consultar su definición completa.",
-  "examples": [
-    "La persona observa el ecosistema, consulta fuentes y redacta el informe sin IA generativa en ninguna etapa.",
-    "La persona aporta sus observaciones, explicaciones y conclusiones ya desarrolladas. La IA mejora su expresión sin añadir contenido ni cambiar las relaciones entre las ideas.",
-    "La IA propone preguntas y un índice para orientar el trabajo. La persona investiga y desarrolla por sí misma todas las explicaciones y la redacción final.",
-    "La IA redacta un primer informe. La persona reconstruye su contenido: revisa las relaciones ecológicas, incorpora sus datos y elabora nuevas explicaciones y conclusiones propias.",
-    "La persona y la IA desarrollan el informe mediante diálogo. La persona aporta observaciones, cuestiona una explicación y propone otra; ambas contribuciones transforman el contenido durante su elaboración.",
-    "La persona proporciona el tema, los datos y los requisitos. La IA desarrolla el informe completo; la persona comprueba su exactitud y lo valida, sin reconstruirlo ni cocrear su contenido."
-  ],
   "template_title": "Declara cómo has utilizado la IA",
   "template_intro": "Completa esta ficha y adjúntala al trabajo. Puedes editarla aquí, copiarla o descargarla como texto. Describe también las consultas descartadas si las hubo.",
   "fields": [

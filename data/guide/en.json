@@ -18,16 +18,6 @@
       "Justify the level through the division of work. If phases or components differ, declare their respective levels rather than automatically choosing the highest."
     ]
   ],
-  "compare_title": "One ecosystem report, six processes",
-  "compare_intro": "In every case the product is a report. What changes is how it is developed. Select a level to read its full definition.",
-  "examples": [
-    "The person observes the ecosystem, consults sources and writes the report without generative AI at any stage.",
-    "The person provides fully developed observations, explanations and conclusions. AI improves their expression without adding content or changing the relationships between ideas.",
-    "AI suggests questions and an outline to guide the work. The person researches and independently develops all the explanations and the final wording.",
-    "AI writes an initial report. The person reconstructs its content: revises the ecological relationships, incorporates their own data and develops new explanations and conclusions of their own.",
-    "The person and AI develop the report through dialogue. The person contributes observations, challenges an explanation and proposes another; both contributions shape the content as it is developed.",
-    "The person provides the topic, data and requirements. AI develops the entire report; the person checks its accuracy and approves it without reconstructing or co-creating its content."
-  ],
   "template_title": "Declare how you used AI",
   "template_intro": "Complete this form and attach it to your work. You can edit it here, copy it or download it as text. Also describe any consultations you discarded.",
   "fields": [

@@ -98,7 +98,7 @@ footer a { color: white; }
 .language-grid strong { font: 700 1.15rem/1.2 var(--font-sans); }
 .language-grid span { margin-top: .35rem; color: var(--muted); font-size: .78rem; }
 .language-grid b { margin-top: auto; color: var(--accent); font-size: 1.5rem; }
-.home-resources .resource-grid { grid-template-columns: repeat(4, 1fr); }
+.home-resources .resource-grid { grid-template-columns: repeat(3, 1fr); }
 
 @media (max-width: 850px) {
   .media-grid { grid-template-columns: 1fr; }
@@ -154,7 +154,7 @@ footer a { color: white; }
 .level-spectrum a { min-height: 116px; display: flex; flex-direction: column; gap: .5rem; padding: 1rem; color: white; text-decoration: none; }
 .level-spectrum a b { font: 700 2rem/1 var(--font-sans); }
 .level-spectrum a span { font: 600 .88rem/1.35 var(--font-sans); }
-.level-spectrum a:hover, .level-spectrum a:focus-visible, .level-card:hover, .level-card:focus-visible { color: white; }
+.level-spectrum a:hover, .level-spectrum a:focus-visible { color: white; }
 .level-spectrum a:hover span, .level-spectrum a:focus-visible span { text-decoration: underline; }
 .home-intro h1 { max-width: 24ch; font-size: clamp(1.9rem, 3.4vw, 3.05rem); line-height: 1.14; }
 @media (max-width: 850px) {
@@ -174,12 +174,6 @@ footer a { color: white; }
 .guide-steps h3 { font-size: 1.08rem; margin: 0; }
 .guide-steps p { margin: .6rem 0 0; }
 .principle { padding: 1rem 1.3rem; border-left: 4px solid var(--accent); background: white; }
-.level-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 2rem; }
-.level-card { display: flex; flex-direction: column; gap: .55rem; padding: 1.3rem; color: white; text-decoration: none; scroll-margin-top: 1rem; }
-.level-card b { font: 700 2.4rem/1 var(--font-sans); }
-.level-card strong { font: 700 1.05rem/1.25 var(--font-sans); }
-.level-card span { font-size: .87rem; line-height: 1.45; }
-.level-card:hover strong, .level-card:focus-visible strong { text-decoration: underline; }
 .guide-section details { border-top: 1px solid var(--line); padding: 1rem 0; }
 summary { cursor: pointer; font-weight: 700; padding: .25rem 0; }
 .guide-section details > p { margin-bottom: .25rem; }
@@ -210,10 +204,8 @@ button.button { font-family: inherit; cursor: pointer; }
   .framework-document > h1 + p { font-size: 1rem; }
   .document-heading { margin-bottom: 1rem; }
   .guide-steps { grid-template-columns: 1fr; gap: 1.5rem; }
-  .level-cards { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
-  .level-cards { grid-template-columns: 1fr; }
   .guide-section { padding: 2.5rem 0; }
   .home-intro h1 { font-size: 2.3rem; }
 }
@@ -221,7 +213,7 @@ button.button { font-family: inherit; cursor: pointer; }
 @media print {
   .mobile-index, .document-index, .interactive-only { display: none !important; }
   .document-tools { display: none !important; }
-  .guide-section, .level-card { break-inside: avoid; }
+  .guide-section { break-inside: avoid; }
 }
 @media screen and (max-width: 520px) {
   .site-header { gap: 1rem; }

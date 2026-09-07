@@ -18,7 +18,7 @@ def page(path):
 for lang in LANGUAGES:
     guide = json.loads((ROOT / f'data/guide/{lang}.json').read_text())
     assert guide.keys() == reference.keys(), f'{lang}: missing translated fields'
-    for key in ('steps', 'examples', 'fields', 'filled', 'teacher_fields'):
+    for key in ('steps', 'fields', 'filled', 'teacher_fields'):
         assert len(guide[key]) == len(reference[key]), f'{lang}: incomplete {key}'
     for path in (ROOT / lang / 'index.html', ROOT / lang / 'ficha' / 'index.html',
                  ROOT / lang / 'guia' / 'index.html', ROOT / 'v2.1' / lang / 'index.html'):
@@ -41,7 +41,7 @@ for lang in LANGUAGES:
             if target.fragment and resolved.suffix == '.html':
                 assert page(resolved).find(id=unquote(target.fragment)), f'{path}: broken anchor {target.geturl()}'
     home = page(ROOT / lang / 'index.html')
-    assert len(home.select('.level-card')) == 6
+    assert len(home.select('.level-spectrum a')) == 6
     # The homepage is description plus access: no forms, no quiz.
     assert not home.select('[data-editor]') and not home.select('form')
     assert home.select_one(f'.resource-grid a[href="../{lang}/ficha/"]')
