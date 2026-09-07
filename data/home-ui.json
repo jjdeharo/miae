@@ -1,7 +1,7 @@
 {
   "es": {
-    "home_title": "Seis formas de repartir el trabajo entre la persona y la IA",
-    "home_lead": "El MIAE permite describir con precisión qué aporta cada parte en una tarea educativa. No mide la calidad, el esfuerzo ni el aprendizaje.",
+    "home_title": "Marco para la integración de la IA generativa en las tareas educativas (MIAE), v.2.1",
+    "home_lead": "Seis formas de repartir el trabajo entre la persona y la IA. El MIAE permite describir con precisión qué aporta cada parte en una tarea educativa. No mide la calidad, el esfuerzo ni el aprendizaje.",
     "read_framework": "Leer el marco",
     "article": "Artículo",
     "article_note": "Presentación de la versión 2.1 · español",
@@ -19,8 +19,8 @@
     "video_media_note": "Explicación visual generada con Gemini Notebook · 7 minutos"
   },
   "ca": {
-    "home_title": "Sis maneres de repartir el treball entre la persona i la IA",
-    "home_lead": "El MIAE permet descriure amb precisió què aporta cada part en una tasca educativa. No mesura la qualitat, l’esforç ni l’aprenentatge.",
+    "home_title": "Marc per a la integració de la IA generativa en les tasques educatives (MIAE), v.2.1",
+    "home_lead": "Sis maneres de repartir el treball entre la persona i la IA. El MIAE permet descriure amb precisió què aporta cada part en una tasca educativa. No mesura la qualitat, l’esforç ni l’aprenentatge.",
     "read_framework": "Llegir el marc",
     "article": "Article",
     "article_note": "Presentació de la versió 2.1 · castellà",
@@ -35,8 +35,8 @@
     "quickref_note": "Els sis nivells en un full"
   },
   "eu": {
-    "home_title": "Pertsonaren eta IAren artean lana banatzeko sei modu",
-    "home_lead": "MIAEk hezkuntza-zeregin batean alde bakoitzak zer ekarpen egiten duen zehaztasunez deskribatzeko aukera ematen du. Ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen.",
+    "home_title": "Hezkuntza-zereginetan IA sortzailea integratzeko esparrua (MIAE), 2.1 bertsioa",
+    "home_lead": "Pertsonaren eta IAren artean lana banatzeko sei modu. MIAEk hezkuntza-zeregin batean alde bakoitzak zer ekarpen egiten duen zehaztasunez deskribatzeko aukera ematen du. Ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen.",
     "read_framework": "Esparrua irakurri",
     "article": "Artikulua",
     "article_note": "2.1 bertsioaren aurkezpena · gaztelaniaz",
@@ -51,8 +51,8 @@
     "quickref_note": "Sei mailak orri batean"
   },
   "gl": {
-    "home_title": "Seis formas de repartir o traballo entre a persoa e a IA",
-    "home_lead": "O MIAE permite describir con precisión que achega cada parte nunha tarefa educativa. Non mide a calidade, o esforzo nin a aprendizaxe.",
+    "home_title": "Marco para a integración da IA xerativa nas tarefas educativas (MIAE), v.2.1",
+    "home_lead": "Seis formas de repartir o traballo entre a persoa e a IA. O MIAE permite describir con precisión que achega cada parte nunha tarefa educativa. Non mide a calidade, o esforzo nin a aprendizaxe.",
     "read_framework": "Ler o marco",
     "article": "Artigo",
     "article_note": "Presentación da versión 2.1 · castelán",
@@ -67,8 +67,8 @@
     "quickref_note": "Os seis niveis nunha folla"
   },
   "en": {
-    "home_title": "Six ways to share work between people and AI",
-    "home_lead": "MIAE describes precisely what each contributes to an educational task. It does not measure quality, effort or learning.",
+    "home_title": "Framework for integrating generative AI into educational tasks (MIAE), v2.1",
+    "home_lead": "Six ways to share work between people and AI. MIAE describes precisely what each contributes to an educational task. It does not measure quality, effort or learning.",
     "read_framework": "Read the framework",
     "article": "Article",
     "article_note": "Introducing version 2.1 · Spanish",
