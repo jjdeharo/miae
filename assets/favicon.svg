@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>MIAE</title>
+  <rect width="64" height="64" rx="10" fill="#172033"/>
+  <polygon points="14,48 14,16 22,16 32,35 42,16 50,16 50,48 42,48 42,30 35,43 29,43 22,30 22,48" fill="#fff"/>
+</svg>

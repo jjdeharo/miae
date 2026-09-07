@@ -58,3 +58,7 @@ Comprobaciones adicionales:
 python3 scripts/validate-site.py
 node scripts/test-guide.cjs
 ```
+
+El favicon usa la «M» geométrica sobre el azul oscuro de la web. Se incluye en
+SVG, ICO (16, 32, 48 y 64 píxeles) y PNG para accesos directos de Apple.
+Se regenera con `python3 scripts/build-icons.py`.
