@@ -98,12 +98,12 @@ body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
   <nav class="qr-bar" aria-label="{{ ui.navigation }}">
     <a href="{{ root }}{{ lang }}/">{{ ui.home }}</a>
     <a class="qr-pdf" href="{{ root }}output/pdf/miae-v2.1-guia-{{ lang }}.pdf" download>{{ ui.download_pdf }}</a>
-    <label class="language-picker"><span>{{ ui.language }}</span>
+    <span class="language-picker"><span>{{ ui.language }}</span>
       <select data-language-select aria-label="{{ ui.language }}">
         <option value="auto">{{ ui.automatic }}</option>
         {% for code, item in languages.items() %}<option value="{{ code }}"{% if code == lang %} selected{% endif %}>{{ item.native }}</option>{% endfor %}
       </select>
-    </label>
+    </span>
   </nav>
 <div class="sheet">
 

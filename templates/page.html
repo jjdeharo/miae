@@ -20,13 +20,13 @@
     </a>
     <nav class="header-actions" aria-label="{{ ui.navigation }}">
       <a href="{{ root }}{{ lang }}/">{{ ui.home }}</a>
-      <label class="language-picker">
+      <span class="language-picker">
         <span>{{ ui.language }}</span>
         <select data-language-select aria-label="{{ ui.language }}">
           <option value="auto">{{ ui.automatic }}</option>
           {% for code, item in languages.items() %}<option value="{{ code }}"{% if code == lang %} selected{% endif %}>{{ item.native }}</option>{% endfor %}
         </select>
-      </label>
+      </span>
     </nav>
   </header>
 
