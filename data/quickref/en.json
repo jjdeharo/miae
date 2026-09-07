@@ -1,7 +1,7 @@
 {
   "kicker": "MIAE v2.1 · Quick guide",
   "title": "Framework for integrating generative AI into educational tasks",
-  "lead": "The scale describes <b>how work is shared</b> in an educational task: it does not measure quality, effort or learning. The levels are not cumulative and a higher level is not better.",
+  "lead": "The scale describes <b>how work is shared</b> in an educational task: it does not measure quality, effort or learning. The levels are not cumulative and neither a higher nor a lower level is better.",
   "levels": [
     {
       "name": "No AI",

@@ -1,7 +1,7 @@
 {
   "kicker": "MIAE 2.1 · Gida azkarra",
   "title": "Hezkuntza-zereginetan IA sortzailea integratzeko esparrua",
-  "lead": "Eskalak <b>lana nola banatzen den</b> deskribatzen du hezkuntza-zeregin batean: ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen. Mailak ez dira metagarriak eta maila altuago bat ez da hobea.",
+  "lead": "Eskalak <b>lana nola banatzen den</b> deskribatzen du hezkuntza-zeregin batean: ez ditu kalitatea, ahalegina edo ikaskuntza neurtzen. Mailak ez dira metagarriak eta maila altuago bat, edo baxuago bat, ez da hobea.",
   "levels": [
     {
       "name": "IArik gabe",

@@ -1,7 +1,7 @@
 {
   "kicker": "MIAE v2.1 · Guia ràpida",
   "title": "Marc per a la integració de la IA generativa en les tasques educatives",
-  "lead": "L'escala descriu <b>com es reparteix el treball</b> en una tasca educativa: no mesura la qualitat, l'esforç ni l'aprenentatge. Els nivells no són acumulatius i un nivell més alt no és millor.",
+  "lead": "L'escala descriu <b>com es reparteix el treball</b> en una tasca educativa: no mesura la qualitat, l'esforç ni l'aprenentatge. Els nivells no són acumulatius i un nivell més alt, o més baix, no és millor.",
   "levels": [
     {
       "name": "Sense IA",

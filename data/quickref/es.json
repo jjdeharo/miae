@@ -1,7 +1,7 @@
 {
   "kicker": "MIAE v2.1 · Guía rápida",
   "title": "Marco para la integración de la IA generativa en las tareas educativas",
-  "lead": "La escala describe <b>cómo se reparte el trabajo</b> en una tarea educativa: no mide la calidad, el esfuerzo ni el aprendizaje. Los niveles no son acumulativos y un nivel más alto no es mejor.",
+  "lead": "La escala describe <b>cómo se reparte el trabajo</b> en una tarea educativa: no mide la calidad, el esfuerzo ni el aprendizaje. Los niveles no son acumulativos y un nivel más alto, o más bajo, no es mejor.",
   "levels": [
     {
       "name": "Sin IA",
