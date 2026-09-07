@@ -13,7 +13,10 @@
     "pdf_note": "Documento completo para descargar",
     "infographic_note": "Los seis niveles en una imagen",
     "quickref_link": "Guía rápida",
-    "quickref_note": "Los seis niveles en un folio"
+    "quickref_note": "Los seis niveles en un folio",
+    "media_title": "Escuchar y ver",
+    "podcast_media_note": "Conversación sobre el marco generada con Gemini Notebook · 34 minutos",
+    "video_media_note": "Explicación visual generada con Gemini Notebook · 7 minutos"
   },
   "ca": {
     "home_title": "Sis maneres de repartir el treball entre la persona i la IA",

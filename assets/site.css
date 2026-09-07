@@ -71,6 +71,17 @@ select { min-height: 42px; border: 1px solid var(--line); border-radius: 0; back
 .resource-grid strong { font: 700 1.15rem/1.2 var(--font-sans); }
 .resource-grid span { color: var(--muted); font-size: .8rem; }
 
+/* Pódcast y vídeo incrustados: solo existen en español. */
+.resource-panel .resource-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.media-grid { display: grid; grid-template-columns: 1.55fr 1fr; align-items: start; gap: 1.5rem; margin: 1.5rem 0 2rem; }
+.media-item { display: flex; flex-direction: column; gap: .9rem; margin: 0; padding: 1.2rem; background: white; border: 1px solid var(--line); }
+.media-frame { position: relative; padding-top: 56.25%; background: var(--ink); }
+.media-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.media-item audio { width: 100%; min-height: 54px; }
+.media-item figcaption { display: flex; flex-direction: column; gap: .3rem; }
+.media-item figcaption strong { font: 700 1.15rem/1.2 var(--font-sans); }
+.media-item figcaption span { color: var(--muted); font-size: .8rem; }
+
 footer { min-height: 96px; padding: 2rem clamp(1rem, 4vw, 4rem); display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.5rem; background: var(--ink); color: #c9d1df; font-size: .82rem; }
 footer a { color: white; }
 
@@ -90,6 +101,7 @@ footer a { color: white; }
 .home-resources .resource-grid { grid-template-columns: repeat(4, 1fr); }
 
 @media (max-width: 850px) {
+  .media-grid { grid-template-columns: 1fr; }
   .site-header { height: auto; min-height: 72px; padding-block: .7rem; }
   .brand small, .language-picker > span, .header-actions > a { display: none; }
   .document-layout { display: block; padding-top: 2.5rem; }
@@ -111,7 +123,7 @@ footer a { color: white; }
 @media print {
   @page { size: A4; margin: 18mm 17mm 20mm; @bottom-center { content: counter(page); color: #687386; font-size: 9pt; } }
   body { font-size: 10pt; line-height: 1.48; color: #111827; }
-  .site-header, .version-strip, .document-tools, footer, .resource-panel, .skip-link { display: none !important; }
+  .site-header, .version-strip, .document-tools, footer, .resource-panel, .media-grid, .skip-link { display: none !important; }
   .document-layout { display: block; width: auto; margin: 0; padding: 0; }
   .framework-document { max-width: none; }
   .framework-document > h1 { font-size: 27pt; margin: 20mm 0 10mm; page-break-after: avoid; }

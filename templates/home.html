@@ -45,12 +45,14 @@
         <a href="{{ root }}output/pdf/miae-v2.1-{{ lang }}.pdf" download><strong>{{ ui.download_pdf }}</strong><span>{{ ui.pdf_note }}</span></a>
         <a href="{{ root }}assets/v2.1/resumen-{{ lang }}.png"><strong>{{ ui.infographic_link }}</strong><span>{{ ui.infographic_note }}</span></a>
         <a href="{{ root }}{{ lang }}/ficha/"><strong>{{ guide.template_title }}</strong><span>{{ ui.template_note }}</span></a>
-        <a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1"><strong>{{ ui.article }}</strong><span>{{ ui.article_note }}</span></a>
-        <a href="https://archive.org/download/bilateria/miae-v2-1-podcast.mp3"><strong>{{ ui.podcast }}</strong><span>{{ ui.podcast_note }}</span></a>
-        <a href="https://www.youtube.com/watch?v=Sz64CskmLdI"><strong>{{ ui.video }}</strong><span>{{ ui.video_note }}</span></a>
+        {% if lang == "es" %}<a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-miae-v-2-1"><strong>{{ ui.article }}</strong><span>{{ ui.article_note }}</span></a>{% endif %}
         <a href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a" target="_blank" rel="noopener"><strong>{{ ui.assistant }}</strong><span>{{ ui.assistant_note }}</span></a>
       </div>
     </section>
+    {% if lang == "es" %}<section class="home-resources" aria-labelledby="medios-portada">
+      <div><p class="eyebrow">MIAE 2.1</p><h2 id="medios-portada">{{ ui.media_title }}</h2></div>
+      {% include "media.html" %}
+    </section>{% endif %}
     <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
   </main>
   <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a></footer>
