@@ -154,6 +154,7 @@ footer a { color: white; }
 .level-spectrum a { min-height: 116px; display: flex; flex-direction: column; gap: .5rem; padding: 1rem; color: white; text-decoration: none; }
 .level-spectrum a b { font: 700 2rem/1 var(--font-sans); }
 .level-spectrum a span { font: 600 .88rem/1.35 var(--font-sans); }
+.level-spectrum a:hover, .level-spectrum a:focus-visible, .level-card:hover, .level-card:focus-visible { color: white; }
 .level-spectrum a:hover span, .level-spectrum a:focus-visible span { text-decoration: underline; }
 .home-intro h1 { max-width: 24ch; font-size: clamp(1.9rem, 3.4vw, 3.05rem); line-height: 1.14; }
 @media (max-width: 850px) {

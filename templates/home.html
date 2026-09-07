@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="level-spectrum" aria-label="{{ ui.levels }}">
-        {% for level in range(6) %}<a class="level-{{ level }}" href="#ejemplo-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{% endfor %}
+        {% for level in range(6) %}<a class="level-{{ level }}" href="{{ root }}v2.1/{{ lang }}/#nivel-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{% endfor %}
       </div>
     </section>
     {% include "guide.html" %}
