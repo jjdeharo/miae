@@ -1,0 +1,17 @@
+{
+  "latest": "2.1",
+  "versions": [
+    {
+      "version": "2.1",
+      "date": "2026-09-06",
+      "status": "current",
+      "languages": ["es", "ca", "eu", "gl", "en"]
+    },
+    {
+      "version": "2 revisada",
+      "date": "2025-11-03",
+      "status": "archived",
+      "path": "v2-revisada/"
+    }
+  ]
+}

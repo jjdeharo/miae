@@ -20,7 +20,7 @@
         <p class="home-lead">El MIAE permite describir con precisión qué aporta cada parte en una tarea educativa. No mide la calidad, el esfuerzo ni el aprendizaje.</p>
       </div>
       <div class="level-spectrum" aria-label="Niveles del cero al cinco">
-        <span class="level-0">0</span><span class="level-1">1</span><span class="level-2">2</span><span class="level-3">3</span><span class="level-4">4</span><span class="level-5">5</span>
+        {% for level in range(6) %}<span class="level-{{ level }}">{{ level }}</span>{% endfor %}
       </div>
     </section>
     <section class="language-entry" aria-labelledby="elige-idioma">
@@ -29,7 +29,7 @@
         <h2 id="elige-idioma">Elegir idioma</h2>
       </div>
       <div class="language-grid">
-        <a href="v2.1/es/"><strong>Castellano</strong><span>Español</span><b aria-hidden="true">→</b></a><a href="v2.1/ca/"><strong>Català</strong><span>Catalán</span><b aria-hidden="true">→</b></a><a href="v2.1/eu/"><strong>Euskara</strong><span>Euskera</span><b aria-hidden="true">→</b></a><a href="v2.1/gl/"><strong>Galego</strong><span>Gallego</span><b aria-hidden="true">→</b></a><a href="v2.1/en/"><strong>English</strong><span>Inglés</span><b aria-hidden="true">→</b></a>
+        {% for code, item in languages.items() %}<a href="v2.1/{{ code }}/"><strong>{{ item.native }}</strong><span>{{ item.label }}</span><b aria-hidden="true">→</b></a>{% endfor %}
       </div>
     </section>
     <section class="home-resources" aria-labelledby="recursos-portada">
