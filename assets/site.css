@@ -149,8 +149,21 @@ footer a { color: white; }
 }
 
 /* Guided introduction and practical resources. */
-.home-intro { padding: 3rem 0; }
+.home-intro { display: grid; grid-template-columns: 1.35fr .85fr; gap: 3.5rem; align-items: center; padding: 3.5rem 0; }
+.level-spectrum { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; box-shadow: var(--shadow); }
+.level-spectrum a { min-height: 116px; display: flex; flex-direction: column; gap: .5rem; padding: 1rem; color: white; text-decoration: none; }
+.level-spectrum a b { font: 700 2rem/1 var(--font-sans); }
+.level-spectrum a span { font: 600 .88rem/1.35 var(--font-sans); }
+.level-spectrum a:hover span, .level-spectrum a:focus-visible span { text-decoration: underline; }
 .home-intro h1 { max-width: 24ch; font-size: clamp(1.9rem, 3.4vw, 3.05rem); line-height: 1.14; }
+@media (max-width: 850px) {
+  .home-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+  .level-spectrum { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 520px) {
+  .level-spectrum { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .level-spectrum a { min-height: 100px; }
+}
 .guide-section { padding: 3.5rem 0; border-bottom: 1px solid var(--line); scroll-margin-top: 1rem; }
 .guide-section h2 { margin: 0 0 1rem; font: 700 clamp(1.6rem, 3vw, 2.2rem)/1.2 var(--font-sans); }
 .guide-section p, .guide-section li { max-width: 78ch; }

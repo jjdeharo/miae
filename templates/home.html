@@ -28,13 +28,18 @@
   </header>
   <main id="contenido">
     <section class="home-intro">
-      <p class="eyebrow">{{ ui.current_version }} · 2.1</p>
-      <h1>{{ ui.home_title }}</h1>
-      <p class="home-lead">{{ ui.home_lead }}</p>
-      <div class="home-actions">
-        <a class="button primary" href="{{ root }}{{ lang }}/guia/">{{ ui.quickref_link }}</a>
-        <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
-        <a class="button" href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a" target="_blank" rel="noopener">{{ ui.assistant }}</a>
+      <div>
+        <p class="eyebrow">{{ ui.current_version }} · 2.1</p>
+        <h1>{{ ui.home_title }}</h1>
+        <p class="home-lead">{{ ui.home_lead }}</p>
+        <div class="home-actions">
+          <a class="button primary" href="{{ root }}{{ lang }}/guia/">{{ ui.quickref_link }}</a>
+          <a class="button" href="{{ root }}v2.1/{{ lang }}/">{{ ui.read_framework }}</a>
+          <a class="button" href="https://notebook.google.com/notebook/f2a24925-0322-4c89-ba7b-edeba3bbdb1a" target="_blank" rel="noopener">{{ ui.assistant }}</a>
+        </div>
+      </div>
+      <div class="level-spectrum" aria-label="{{ ui.levels }}">
+        {% for level in range(6) %}<a class="level-{{ level }}" href="#ejemplo-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{% endfor %}
       </div>
     </section>
     {% include "guide.html" %}
