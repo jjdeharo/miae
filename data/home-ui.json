@@ -16,7 +16,10 @@
     "quickref_note": "Los seis niveles en un folio",
     "media_title": "Escuchar y ver",
     "podcast_media_note": "Conversación sobre el marco generada con Gemini Notebook · 34 minutos",
-    "video_media_note": "Explicación visual generada con Gemini Notebook · 7 minutos"
+    "video_media_note": "Explicación visual generada con Gemini Notebook · 7 minutos",
+    "quickref_help": "Los seis niveles resumidos en un folio, listo para imprimir o descargar en PDF.",
+    "framework_help": "El texto completo del MIAE v2.1: los seis niveles, cómo clasificar una tarea y ejemplos de cada nivel.",
+    "assistant_help": "Cuaderno de Gemini Notebook para consultar el marco y clasificar casos concretos. Se abre en una ventana nueva."
   },
   "ca": {
     "home_title": "Marc per a la integració de la IA generativa en les tasques educatives (MIAE)",
@@ -32,7 +35,10 @@
     "pdf_note": "Document complet per descarregar",
     "infographic_note": "Els sis nivells en una imatge",
     "quickref_link": "Guia ràpida",
-    "quickref_note": "Els sis nivells en un full"
+    "quickref_note": "Els sis nivells en un full",
+    "quickref_help": "Els sis nivells resumits en un full, a punt per imprimir o descarregar en PDF.",
+    "framework_help": "El text complet del MIAE v2.1: els sis nivells, com classificar una tasca i exemples de cada nivell.",
+    "assistant_help": "Quadern de Gemini Notebook per consultar el marc i classificar casos concrets. S’obre en una finestra nova."
   },
   "eu": {
     "home_title": "Hezkuntza-zereginetan IA sortzailea integratzeko esparrua (MIAE)",
@@ -48,7 +54,10 @@
     "pdf_note": "Dokumentu osoa deskargatzeko",
     "infographic_note": "Sei mailak irudi batean",
     "quickref_link": "Gida azkarra",
-    "quickref_note": "Sei mailak orri batean"
+    "quickref_note": "Sei mailak orri batean",
+    "quickref_help": "Sei mailak orri bakarrean laburtuta, inprimatzeko edo PDFn deskargatzeko prest.",
+    "framework_help": "MIAE 2.1en testu osoa: sei mailak, zeregin bat nola sailkatu eta maila bakoitzaren adibideak.",
+    "assistant_help": "Gemini Notebook-eko koadernoa, esparrua kontsultatzeko eta kasu zehatzak sailkatzeko. Leiho berri batean irekitzen da."
   },
   "gl": {
     "home_title": "Marco para a integración da IA xerativa nas tarefas educativas (MIAE)",
@@ -64,7 +73,10 @@
     "pdf_note": "Documento completo para descargar",
     "infographic_note": "Os seis niveis nunha imaxe",
     "quickref_link": "Guía rápida",
-    "quickref_note": "Os seis niveis nunha folla"
+    "quickref_note": "Os seis niveis nunha folla",
+    "quickref_help": "Os seis niveis resumidos nunha folla, listo para imprimir ou descargar en PDF.",
+    "framework_help": "O texto completo do MIAE v2.1: os seis niveis, como clasificar unha tarefa e exemplos de cada nivel.",
+    "assistant_help": "Caderno de Gemini Notebook para consultar o marco e clasificar casos concretos. Ábrese nunha ventá nova."
   },
   "en": {
     "home_title": "Framework for integrating generative AI into educational tasks (MIAE)",
@@ -80,6 +92,9 @@
     "pdf_note": "Full document to download",
     "infographic_note": "The six levels in one image",
     "quickref_link": "Quick guide",
-    "quickref_note": "The six levels on one sheet"
+    "quickref_note": "The six levels on one sheet",
+    "quickref_help": "The six levels summarised on one sheet, ready to print or download as a PDF.",
+    "framework_help": "The full text of MIAE v2.1: the six levels, how to classify a task and examples of each level.",
+    "assistant_help": "A Gemini Notebook assistant for exploring the framework and classifying specific cases. Opens in a new window."
   }
 }
