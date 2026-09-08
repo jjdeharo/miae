@@ -77,10 +77,29 @@ body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
 .qr-bar { display: flex; align-items: center; gap: 1rem; margin: -1.5rem -1.5rem 1.5rem;
           padding: .65rem 1.1rem; background: var(--ink); color: #fff; font-size: .82rem; }
 .qr-bar a { color: #fff; }
-.qr-bar .qr-pdf { margin-left: auto; font-weight: 700; }
 .qr-bar .language-picker { display: flex; align-items: center; gap: .45rem; }
 .qr-bar select { font: inherit; padding: .15rem .3rem; }
-@media print { .qr-bar { display: none !important; } }
+.qr-bar [hidden] { display: none !important; }
+
+.qr-zoom { margin-left: auto; display: flex; align-items: center;
+           border: 1px solid rgba(255,255,255,.35); border-radius: 999px; overflow: hidden; }
+.qr-zoom button { appearance: none; background: none; border: 0; color: #fff; cursor: pointer;
+                  font: inherit; line-height: 1; padding: .32rem .6rem; }
+.qr-zoom button:hover:not(:disabled) { background: rgba(255,255,255,.16); }
+.qr-zoom button:disabled { opacity: .35; cursor: default; }
+.qr-zoom .qr-zoom-step { font-size: 1.05rem; padding: .28rem .65rem; }
+.qr-zoom .qr-zoom-value { min-width: 4.4rem; font-variant-numeric: tabular-nums;
+                          border-left: 1px solid rgba(255,255,255,.25);
+                          border-right: 1px solid rgba(255,255,255,.25); }
+
+.qr-pdf { display: inline-flex; align-items: center; gap: .4rem; padding: .34rem .85rem;
+          border-radius: 999px; background: var(--accent); color: #fff !important; font-weight: 700;
+          text-decoration: none; }
+.qr-pdf:hover { background: #0d8189; }
+.qr-pdf::before { content: "\2193"; font-weight: 700; }
+
+.sheet { zoom: var(--qr-zoom, 1); }
+@media print { .qr-bar { display: none !important; } .sheet { zoom: 1; } }
 
 @page { size: A4; margin: 10mm 9mm; }
 @media print {
@@ -103,6 +122,11 @@ body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
 <body data-page="quickref" data-root="../../">
   <nav class="qr-bar" aria-label="Navegación principal">
     <a href="../../es/">Inicio</a>
+    <span class="qr-zoom" role="group" aria-label="Zoom" data-zoom hidden>
+      <button type="button" class="qr-zoom-step" data-zoom-step="-1" aria-label="Reducir" title="Reducir">&minus;</button>
+      <button type="button" class="qr-zoom-value" data-zoom-reset title="Restablecer el zoom">100&nbsp;%</button>
+      <button type="button" class="qr-zoom-step" data-zoom-step="1" aria-label="Ampliar" title="Ampliar">+</button>
+    </span>
     <a class="qr-pdf" href="../../output/pdf/miae-v2.1-guia-es.pdf" download>Descargar PDF</a>
     <span class="language-picker"><span>Idioma</span>
       <select data-language-select aria-label="Idioma">

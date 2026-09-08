@@ -37,3 +37,35 @@
     window.location.assign(destination(choice === 'auto' ? browserLanguage() : choice).href);
   });
 })();
+
+(() => {
+  const controls = document.querySelector('[data-zoom]');
+  if (!controls || !CSS.supports('zoom', '1.5')) return;
+  const steps = [0.6, 0.7, 0.8, 0.9, 1, 1.15, 1.3, 1.5, 1.75, 2];
+  const key = 'miae-quickref-zoom';
+  const value = controls.querySelector('[data-zoom-reset]');
+  const buttons = controls.querySelectorAll('[data-zoom-step]');
+  let index = steps.indexOf(1);
+  let stored;
+  try { stored = Number(localStorage.getItem(key)); } catch (_) { /* Storage may be disabled. */ }
+  if (steps.includes(stored)) index = steps.indexOf(stored);
+  const apply = (remember) => {
+    const level = steps[index];
+    document.documentElement.style.setProperty('--qr-zoom', level);
+    value.textContent = `${Math.round(level * 100)}\u00a0%`;
+    buttons.forEach((button) => {
+      const next = index + Number(button.dataset.zoomStep);
+      button.disabled = next < 0 || next >= steps.length;
+    });
+    if (remember) { try { localStorage.setItem(key, level); } catch (_) { /* Zoom still applies. */ } }
+  };
+  buttons.forEach((button) => button.addEventListener('click', () => {
+    const next = index + Number(button.dataset.zoomStep);
+    if (next < 0 || next >= steps.length) return;
+    index = next;
+    apply(true);
+  }));
+  value.addEventListener('click', () => { index = steps.indexOf(1); apply(true); });
+  controls.hidden = false;
+  apply(false);
+})();
