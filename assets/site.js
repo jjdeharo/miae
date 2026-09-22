@@ -132,4 +132,5 @@
     history.replaceState(null, '', url.href);
   });
   dialog.showModal();
+  card.focus({ preventScroll: true });
 })();

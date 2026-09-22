@@ -58,13 +58,13 @@
       {% include "media.html" %}
     </section>{% endif %}
     <dialog class="level-dialog" data-level-dialog aria-labelledby="nivel-dialogo-titulo">
-      {% for level in levels %}<article class="level-card" data-level-card="{{ level.number }}" hidden>
-        <p class="eyebrow">MIAE 2.1 · {{ ui.level_names[level.number] }}</p>
-        <h2><span class="level-dot level-{{ level.number }}" aria-hidden="true">{{ level.number }}</span><span>{{ ui.level_word }} {{ level.number }}. {{ level.title }}</span></h2>
+      {% for level in levels %}<article class="level-card" data-level-card="{{ level.number }}" tabindex="-1" hidden>
+        <p class="level-card-label"><span class="level-dot level-{{ level.number }}" aria-hidden="true">{{ level.number }}</span><span>{{ ui.level_word }} {{ level.number }} · {{ ui.level_names[level.number] }}</span></p>
+        <h2>{{ level.title }}</h2>
         <p>{{ level.html | safe }}</p>
         <div class="level-card-actions">
           <a class="button primary" href="{{ root }}v2.1/{{ lang }}/#nivel-{{ level.number }}">{{ ui.go_to_level }}</a>
-          <button class="button" type="button" data-level-close>{{ ui.close }}</button>
+          <button class="level-card-close" type="button" data-level-close>{{ ui.close }}</button>
         </div>
       </article>{% endfor %}
     </dialog>

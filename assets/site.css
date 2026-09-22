@@ -247,18 +247,22 @@ button.button { font-family: inherit; cursor: pointer; }
 .level-dialog[open]::backdrop { animation: backdrop-in .28s ease-out; }
 @keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
 @keyframes backdrop-in { from { opacity: 0; } to { opacity: 1; } }
-.level-card { padding: 1.8rem 2rem 2rem; border-top: 6px solid var(--accent); }
+.level-card { padding: 2.4rem 2.6rem 2.2rem; border-top: 6px solid var(--accent); outline: none; }
 .level-card[data-level-card="0"] { border-top-color: var(--l0); }.level-card[data-level-card="1"] { border-top-color: var(--l1); }.level-card[data-level-card="2"] { border-top-color: var(--l2); }.level-card[data-level-card="3"] { border-top-color: var(--l3); }.level-card[data-level-card="4"] { border-top-color: var(--l4); }.level-card[data-level-card="5"] { border-top-color: var(--l5); }
-.level-card h2 { display: flex; align-items: flex-start; gap: .9rem; margin: 0 0 1rem; font: 700 1.45rem/1.25 var(--font-sans); letter-spacing: -.01em; }
-.level-card h2 .level-dot { width: 44px; height: 44px; font-size: 1.3rem; }
-.level-card h2 > span:last-child { padding-top: .35rem; }
-.level-card > p { margin: 0; max-width: none; }
-.level-card-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
-.level-card-actions .button { margin: 0; }
+.level-card-label { display: flex; align-items: center; gap: .75rem; margin: 0 0 1.1rem; color: var(--muted); font-size: .9rem; font-weight: 600; }
+.level-card-label .level-dot { width: 34px; height: 34px; font-size: 1rem; }
+.level-card h2 { margin: 0 0 1.1rem; font: 700 1.55rem/1.3 var(--font-sans); letter-spacing: -.01em; }
+.level-card > p { margin: 0; max-width: 58ch; font-size: 1.02rem; line-height: 1.72; color: #2c3648; }
+.level-card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+.level-card-actions .button { margin: 0; padding: .8rem 1.2rem; }
+.level-card-close { padding: .4rem 0; border: 0; background: none; color: var(--muted); font: inherit; font-size: .92rem; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: .2em; }
+.level-card-close:hover { color: var(--ink); }
 @media (max-width: 520px) {
-  .level-card { padding: 1.3rem 1.2rem 1.4rem; }
-  .level-card h2 { font-size: 1.2rem; }
-  .level-card-actions .button { flex: 1 1 100%; text-align: center; }
+  .level-card { padding: 1.6rem 1.4rem 1.5rem; }
+  .level-card h2 { font-size: 1.28rem; }
+  .level-card > p { font-size: 1rem; }
+  .level-card-actions { gap: 1.1rem; }
+  .level-card-actions .button, .level-card-close { flex: 1 1 100%; text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
   .level-dialog[open], .level-dialog[open]::backdrop { animation: none; }
