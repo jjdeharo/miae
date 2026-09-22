@@ -6,9 +6,9 @@ function run({languages = ['es'], saved, automatic = true, page = 'home', lang =
   let navigated, handler;
   const selector = {value: lang, addEventListener: (_, callback) => { handler = callback; }};
   const context = {
-    URL, navigator: {languages},
+    URL, navigator: {languages}, CSS: {supports: () => false},
     localStorage: {getItem: () => { if (blocked) throw Error(); return saved; }, setItem: (_, value) => { if (blocked) throw Error(); saved = value; }},
-    document: {body: {dataset: {page, root}, hasAttribute: () => automatic}, documentElement: {lang}, querySelector: () => selector},
+    document: {body: {dataset: {page, root}, hasAttribute: () => automatic}, documentElement: {lang}, querySelector: () => selector, querySelectorAll: () => []},
     window: {location: {href, search: new URL(href).search, hash: new URL(href).hash, replace: url => {navigated = url;}, assign: url => {navigated = url;}}}
   };
   vm.runInNewContext(source, context);

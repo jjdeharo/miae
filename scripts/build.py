@@ -21,6 +21,7 @@ LANGUAGES = {
 
 UI = {
     "es": {
+        "share_level": "Copiar el enlace a este nivel", "link_copied": "Enlace copiado", "close": "Cerrar", "go_to_level": "Ir a la descripción del nivel", "level_word": "Nivel",
         "skip": "Saltar al contenido", "brand_subtitle": "Marco de integración de la IA",
         "navigation": "Navegación principal", "home": "Inicio", "language": "Idioma",
         "current_version": "Versión vigente", "resources": "Recursos", "document": "Documento",
@@ -35,6 +36,7 @@ UI = {
         "level_names": ["La persona crea", "La IA reformula", "La IA planifica", "La persona construye", "Cocreación", "La persona supervisa"],
     },
     "ca": {
+        "share_level": "Copiar l’enllaç a aquest nivell", "link_copied": "Enllaç copiat", "close": "Tancar", "go_to_level": "Anar a la descripció del nivell", "level_word": "Nivell",
         "skip": "Ves al contingut", "brand_subtitle": "Marc d’integració de la IA",
         "navigation": "Navegació principal", "home": "Inici", "language": "Idioma",
         "current_version": "Versió vigent", "resources": "Recursos", "document": "Document",
@@ -49,6 +51,7 @@ UI = {
         "level_names": ["La persona crea", "La IA reformula", "La IA planifica", "La persona construeix", "Cocreació", "La persona supervisa"],
     },
     "eu": {
+        "share_level": "Maila honetarako esteka kopiatu", "link_copied": "Esteka kopiatu da", "close": "Itxi", "go_to_level": "Mailaren deskribapenera joan", "level_word": "Maila",
         "skip": "Edukira joan", "brand_subtitle": "IA integratzeko esparrua",
         "navigation": "Nabigazio nagusia", "home": "Hasiera", "language": "Hizkuntza",
         "current_version": "Uneko bertsioa", "resources": "Baliabideak", "document": "Dokumentua",
@@ -63,6 +66,7 @@ UI = {
         "level_names": ["Pertsonak sortzen du", "IAk birformulatzen du", "IAk planifikatzen du", "Pertsonak eraikitzen du", "Elkarrekin sortzea", "Pertsonak gainbegiratzen du"],
     },
     "gl": {
+        "share_level": "Copiar a ligazón a este nivel", "link_copied": "Ligazón copiada", "close": "Pechar", "go_to_level": "Ir á descrición do nivel", "level_word": "Nivel",
         "skip": "Ir ao contido", "brand_subtitle": "Marco de integración da IA",
         "navigation": "Navegación principal", "home": "Inicio", "language": "Idioma",
         "current_version": "Versión vixente", "resources": "Recursos", "document": "Documento",
@@ -77,6 +81,7 @@ UI = {
         "level_names": ["A persoa crea", "A IA reformula", "A IA planifica", "A persoa constrúe", "Cocreación", "A persoa supervisa"],
     },
     "en": {
+        "share_level": "Copy the link to this level", "link_copied": "Link copied", "close": "Close", "go_to_level": "Go to the level description", "level_word": "Level",
         "skip": "Skip to content", "brand_subtitle": "AI integration framework",
         "navigation": "Main navigation", "home": "Home", "language": "Language",
         "current_version": "Current version", "resources": "Resources", "document": "Document",
@@ -103,12 +108,46 @@ DESCRIPTIONS = {
     "en": "A framework for describing how work is shared between people and generative AI in educational tasks.",
 }
 
+SHARE_ICON = (
+    '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>'
+    '<line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>'
+)
+
+LEVEL_TITLE = re.compile(r"^(?:(?:Nivel|Nivell|Level)\s+([0-5])|([0-5])\.\s*maila)\s*[–.\-:]\s*(.+)$", re.I)
+
+def level_summaries(lang: str) -> list:
+    """The six one-paragraph summaries, taken from the 'summary of levels' section of the source."""
+    text = (ROOT / "content" / "v2.1" / f"{lang}.md").read_text(encoding="utf-8")
+    sections = re.split(r"^## ", text, flags=re.M)
+    summary = sections[3]  # title, origin, scale, summary, description, references
+    levels = []
+    for match in re.finditer(r"^\*\*(.+?)\*\*:\s*(.+)$", summary, re.M):
+        title = LEVEL_TITLE.match(match.group(1))
+        if not title:
+            continue
+        number = int(title.group(1) or title.group(2))
+        description = markdown.markdown(match.group(2).strip()).removeprefix("<p>").removesuffix("</p>")
+        levels.append({"number": number, "title": title.group(3).strip(), "html": description})
+    assert [level["number"] for level in levels] == list(range(6)), f"{lang}: six level summaries expected"
+    return levels
+
 GUIDES = {lang: json.loads((ROOT / "data" / "guide" / f"{lang}.json").read_text()) for lang in LANGUAGES}
 QUICKREF = {lang: json.loads((ROOT / "data" / "quickref" / f"{lang}.json").read_text()) for lang in LANGUAGES}
+LEVELS = {lang: level_summaries(lang) for lang in LANGUAGES}
 
 env = Environment(undefined=StrictUndefined, loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
 
-def heading_ids(html: str) -> str:
+def share_link(lang: str, level: int, tag: str = "a") -> str:
+    """Share control for a level: an anchor to the shareable URL, or a button on the page it opens."""
+    label = f'{UI[lang]["share_level"]} ({UI[lang]["level_word"]} {level})'
+    link = f"{BASE_URL}/{lang}/?nivel={level}"
+    href = f' href="{link}"' if tag == "a" else f' type="button" data-share-url="{link}"'
+    return (f'<{tag} class="share-level"{href} data-share-level="{level}" data-copied="{UI[lang]["link_copied"]}" '
+            f'title="{label}" aria-label="{label}">{SHARE_ICON}</{tag}>')
+
+def heading_ids(html: str, lang: str) -> str:
     def add_id(match: re.Match) -> str:
         inner = match.group(1)
         plain = re.sub(r"<[^>]+>", "", inner)
@@ -116,7 +155,7 @@ def heading_ids(html: str) -> str:
         if not number:
             return match.group(0)
         level = number.group(1) or number.group(2)
-        return f'<h3 id="nivel-{level}">{inner}</h3>'
+        return f'<h3 id="nivel-{level}"><span>{inner}</span>{share_link(lang, int(level))}</h3>'
     html = re.sub(r"<h3>(.*?)</h3>", add_id, html)
     # Stable anchors across translations; the first h3 is the classification section.
     html = re.sub(r"<h3>", '<h3 id="clasificar">', html, count=1)
@@ -127,7 +166,7 @@ def build_page(lang: str) -> str:
     source = ROOT / "content" / "v2.1" / f"{lang}.md"
     text = source.read_text(encoding="utf-8")
     html_content = markdown.markdown(text, extensions=["extra", "sane_lists"])
-    html_content = heading_ids(html_content)
+    html_content = heading_ids(html_content, lang)
     title = re.sub(r"^#\s+", "", text.splitlines()[0])
     return env.get_template("page.html").render(
         lang=lang, page_title=f"{title} · MIAE", description=DESCRIPTIONS[lang],
@@ -143,7 +182,8 @@ def main() -> None:
     def build_home(lang, root_path, automatic=False):
         return env.get_template("home.html").render(
             lang=lang, ui=UI[lang], guide=GUIDES[lang], description=DESCRIPTIONS[lang],
-            languages=LANGUAGES, range=range, root=root_path,
+            languages=LANGUAGES, range=range, root=root_path, levels=LEVELS[lang],
+            share_button=lambda level: share_link(lang, level, "button"),
             base_url=BASE_URL, automatic=automatic,
             license_lang=lang if lang in {"es", "ca"} else "en",
         )

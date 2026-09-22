@@ -69,3 +69,67 @@
   controls.hidden = false;
   apply(false);
 })();
+
+// Sharing a level: the control copies a link that opens this level's summary on the home page.
+(() => {
+  const controls = document.querySelectorAll('[data-share-level]');
+  if (!controls.length) return;
+  const home = new URL(`${document.documentElement.lang}/`, new URL(document.body.dataset.root || './', window.location.href));
+  const copy = async (text) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const field = document.createElement('textarea');
+    field.value = text;
+    field.setAttribute('readonly', '');
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.append(field);
+    field.select();
+    const done = document.execCommand('copy');
+    field.remove();
+    if (!done) throw new Error('copy');
+  };
+  controls.forEach((control) => {
+    const link = control.getAttribute('href') || control.dataset.shareUrl || `${home.href}?nivel=${control.dataset.shareLevel}`;
+    const toast = document.createElement('span');
+    toast.className = 'share-toast';
+    toast.setAttribute('role', 'status');
+    control.insertAdjacentElement('afterend', toast);
+    let timer;
+    control.addEventListener('click', async (event) => {
+      event.preventDefault();
+      try {
+        await copy(link);
+        toast.textContent = control.dataset.copied;
+      } catch (_) {
+        toast.textContent = link;
+      }
+      toast.classList.add('is-visible');
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.remove('is-visible'), 2400);
+    });
+  });
+})();
+
+// A shared link (?nivel=N) opens the level summary in a dialog on the home page.
+(() => {
+  const dialog = document.querySelector('[data-level-dialog]');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const url = new URL(window.location.href);
+  const level = url.searchParams.get('nivel');
+  const card = /^[0-5]$/.test(level || '') && dialog.querySelector(`[data-level-card="${level}"]`);
+  if (!card) return;
+  card.hidden = false;
+  card.querySelector('h2').id = 'nivel-dialogo-titulo';
+  const close = () => dialog.close();
+  card.querySelector('[data-level-close]').addEventListener('click', close);
+  dialog.addEventListener('click', (event) => { if (event.target === dialog) close(); });
+  dialog.addEventListener('close', () => {
+    // Closing clears the parameter so a reload or a bookmark shows the plain home page.
+    url.searchParams.delete('nivel');
+    history.replaceState(null, '', url.href);
+  });
+  dialog.showModal();
+})();

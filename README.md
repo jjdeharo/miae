@@ -36,6 +36,18 @@ correspondientes. El enlace del pie a la versión anterior abre su artículo en
 Bilateria; los archivos históricos se conservan en el repositorio.
 
 La lógica de selección se comprueba con `node scripts/test-language.cjs`.
+Las decisiones que condicionan el trabajo futuro están en [`docs/adr`](docs/adr/README.md).
+
+## Citar un nivel desde otra web
+
+Cada nivel tiene una dirección propia para citarlo: `/<idioma>/?nivel=N`, con N
+de 0 a 5 (por ejemplo, `https://jjdeharo.github.io/miae/es/?nivel=3`). Al
+abrirla, la portada muestra el nivel y su resumen en un modal, con la opción de
+cerrarlo o ir a la descripción completa. La raíz `/?nivel=N` elige antes el
+idioma del navegador. El botón con el icono de compartir, en el espectro de la
+portada y en el título de cada nivel del documento, copia esa dirección al
+portapapeles. El resumen del modal sale del apartado «Resumen de niveles» de
+`content/`. El motivo está en el [ADR 3](docs/adr/0003-enlaces-para-citar-un-nivel.md).
 
 ## Guía práctica
 

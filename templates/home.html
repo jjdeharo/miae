@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="level-spectrum" aria-label="{{ ui.levels }}">
-        {% for level in range(6) %}<a class="level-{{ level }}" href="{{ root }}v2.1/{{ lang }}/#nivel-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{% endfor %}
+        {% for level in range(6) %}<div class="level-{{ level }}"><a href="{{ root }}v2.1/{{ lang }}/#nivel-{{ level }}"><b>{{ level }}</b><span>{{ ui.level_names[level] }}</span></a>{{ share_button(level) | safe }}</div>{% endfor %}
       </div>
     </section>
     {% include "guide.html" %}
@@ -57,6 +57,17 @@
       <div><p class="eyebrow">MIAE 2.1</p><h2 id="medios-portada">{{ ui.media_title }}</h2></div>
       {% include "media.html" %}
     </section>{% endif %}
+    <dialog class="level-dialog" data-level-dialog aria-labelledby="nivel-dialogo-titulo">
+      {% for level in levels %}<article class="level-card" data-level-card="{{ level.number }}" hidden>
+        <p class="eyebrow">MIAE 2.1 · {{ ui.level_names[level.number] }}</p>
+        <h2><span class="level-dot level-{{ level.number }}" aria-hidden="true">{{ level.number }}</span><span>{{ ui.level_word }} {{ level.number }}. {{ level.title }}</span></h2>
+        <p>{{ level.html | safe }}</p>
+        <div class="level-card-actions">
+          <a class="button primary" href="{{ root }}v2.1/{{ lang }}/#nivel-{{ level.number }}">{{ ui.go_to_level }}</a>
+          <button class="button" type="button" data-level-close>{{ ui.close }}</button>
+        </div>
+      </article>{% endfor %}
+    </dialog>
     <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
   </main>
   <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a></footer>
