@@ -59,12 +59,12 @@
     </section>{% endif %}
     <dialog class="level-dialog" data-level-dialog aria-labelledby="nivel-dialogo-titulo">
       {% for level in levels %}<article class="level-card" data-level-card="{{ level.number }}" tabindex="-1" hidden>
+        <button class="level-card-close" type="button" data-level-close title="{{ ui.close }}" aria-label="{{ ui.close }}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
         <p class="level-card-label"><span class="level-dot level-{{ level.number }}" aria-hidden="true">{{ level.number }}</span><span>{{ ui.level_word }} {{ level.number }} · {{ ui.level_names[level.number] }}</span></p>
         <h2>{{ level.title }}</h2>
         <p>{{ level.html | safe }}</p>
         <div class="level-card-actions">
           <a class="button primary" href="{{ root }}v2.1/{{ lang }}/#nivel-{{ level.number }}">{{ ui.go_to_level }}</a>
-          <button class="level-card-close" type="button" data-level-close>{{ ui.close }}</button>
         </div>
       </article>{% endfor %}
     </dialog>
