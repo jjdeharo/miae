@@ -70,6 +70,6 @@
     </dialog>
     <noscript><nav aria-label="{{ ui.language }}">{% for code, item in languages.items() %}<a href="{{ root }}{{ code }}/" lang="{{ code }}">{{ item.native }}</a> {% endfor %}</nav></noscript>
   </main>
-  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a></footer>
+  <footer><span>© 2026 Juan José de Haro</span><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.{{ license_lang }}">CC BY-SA 4.0</a><a href="https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada">{{ ui.previous_version }}</a><a href="{{ base_url }}/{{ lang }}/?nivel=4">{{ ui.ai_use }}</a></footer>
 </body>
 </html>

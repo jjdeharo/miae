@@ -26,7 +26,9 @@ for lang in LANGUAGES:
         assert soup.html['lang'] == lang
         # The quick guide is a standalone printable sheet and carries its own colophon.
         if not soup.select('.sheet'):
-            assert soup.select('footer a')[-1]['href'] == 'https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada'
+            enlaces = [a['href'] for a in soup.select('footer a')]
+            assert 'https://educacion.bilateria.org/marco-para-la-integracion-de-la-ia-generativa-en-las-tareas-educativas-v-2-revisada' in enlaces
+            assert f'https://jjdeharo.github.io/miae/{lang}/?nivel=4' in enlaces, f'{path}: missing the AI use statement'
         ids = [element['id'] for element in soup.select('[id]')]
         assert len(ids) == len(set(ids)), f'{path}: duplicate IDs'
         assert 'built-in method' not in str(soup), f'{path}: template attribute collision'

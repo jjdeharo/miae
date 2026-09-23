@@ -1,3 +1,8 @@
+// MIAE site behaviour. Nothing is sent anywhere: the only data kept, in this browser's
+// localStorage, are the chosen language and the quick-reference zoom.
+
+// Language: neutral entry points (/ and /v2.1/) redirect to the preferred language, and the
+// selector saves a manual choice or goes back to "Automatic" (the browser's languages).
 (() => {
   const supported = ['es', 'ca', 'eu', 'gl', 'en'];
   const key = 'miae-language';
@@ -13,6 +18,7 @@
   let saved;
   try { saved = localStorage.getItem(key); } catch (_) { /* Storage may be disabled. */ }
   const preferred = supported.includes(saved) ? saved : browserLanguage();
+  // Each kind of page keeps its equivalent in the other language; the default is the home page.
   const paths = {document: (lang) => `v2.1/${lang}/`, tools: (lang) => `${lang}/ficha/`,
                  quickref: (lang) => `${lang}/guia/`};
   const destination = (lang) => {
@@ -38,6 +44,7 @@
   });
 })();
 
+// Quick-reference zoom: fixed steps, remembered in this browser. Hidden where CSS zoom is unsupported.
 (() => {
   const controls = document.querySelector('[data-zoom]');
   if (!controls || !CSS.supports('zoom', '1.5')) return;
@@ -75,6 +82,7 @@
   const controls = document.querySelectorAll('[data-share-level]');
   if (!controls.length) return;
   const home = new URL(`${document.documentElement.lang}/`, new URL(document.body.dataset.root || './', window.location.href));
+  // The Clipboard API needs a secure context; otherwise fall back to a hidden text field.
   const copy = async (text) => {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);

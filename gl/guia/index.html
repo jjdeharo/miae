@@ -21,7 +21,7 @@
   --font-sans: "Noto Sans", "Segoe UI", sans-serif;
   --ink: #172033; --muted: #5f6979; --line: #d8dde6; --wash: #f3f6fa;
   --accent: #0b6e75; --accent-dark: #075158;
-  --l0: #65758b; --l1: #4263a3; --l2: #376f9e; --l3: #16828d; --l4: #258763; --l5: #547a35;
+  --l0: #65758b; --l1: #4263a3; --l2: #376f9e; --l3: #16828d; --l4: #207d5b; --l5: #547a35;
 }
 * { box-sizing: border-box; }
 body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
@@ -80,6 +80,12 @@ body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
 .qr-bar .language-picker { display: flex; align-items: center; gap: .45rem; }
 .qr-bar select { font: inherit; padding: .15rem .3rem; }
 .qr-bar [hidden] { display: none !important; }
+/* En un móvil la barra no cabe en una fila: pasa a dos y el selector de idioma se estrecha */
+@media (max-width: 520px) {
+  .qr-bar { flex-wrap: wrap; row-gap: .5rem; }
+  .qr-bar .language-picker > span { display: none; }
+  .qr-bar .language-picker, .qr-bar select { min-width: 0; max-width: 100%; }
+}
 
 .qr-zoom { margin-left: auto; display: flex; align-items: center;
            border: 1px solid rgba(255,255,255,.35); border-radius: 999px; overflow: hidden; }
@@ -206,7 +212,7 @@ body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
   <footer class="colophon">
     <span>Juan José de Haro</span>
     <span>Marco completo: <a href="https://jjdeharo.github.io/miae/v2.1/gl/">jjdeharo.github.io/miae</a></span>
-    <span>CC BY-SA 4.0</span>
+    <span>CC BY-SA 4.0 · <a href="https://jjdeharo.github.io/miae/gl/?nivel=4">Elaborado con IA, nivel 4 do MIAE</a></span>
   </footer>
 
 </div>
@@ -264,7 +270,7 @@ body { margin: 0; padding: 1.5rem; background: var(--wash); color: var(--ink);
   <footer class="colophon">
     <span>Juan José de Haro</span>
     <span>Marco completo: <a href="https://jjdeharo.github.io/miae/v2.1/gl/">jjdeharo.github.io/miae</a></span>
-    <span>CC BY-SA 4.0</span>
+    <span>CC BY-SA 4.0 · <a href="https://jjdeharo.github.io/miae/gl/?nivel=4">Elaborado con IA, nivel 4 do MIAE</a></span>
   </footer>
 
 </div>

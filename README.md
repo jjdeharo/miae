@@ -21,6 +21,23 @@ El script genera la portada, las páginas de cada idioma y los PDF de
 
 [Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional](LICENSE).
 
+## Contenido externo
+
+La web no envía datos ni lleva analítica. Solo guarda en el navegador el idioma
+elegido y el zoom de la guía. La portada incrusta dos recursos alojados fuera,
+ambos del autor:
+
+- el vídeo explicativo, en YouTube, con el reproductor `youtube-nocookie.com`
+  y carga diferida (`loading="lazy"`);
+- el pódcast, en Internet Archive
+  (`archive.org/download/bilateria/miae-v2-1-podcast.mp3`), que no se descarga
+  hasta pulsar el reproductor (`preload="none"`).
+
+Si alguno desaparece, la portada muestra un recuadro vacío, pero el marco, la
+ficha, la guía y los PDF siguen funcionando, porque están en este repositorio.
+El asistente MIAE es un enlace a un cuaderno de NotebookLM, no un contenido
+incrustado.
+
 ## Idioma de la web
 
 La entrada `/` y `/v2.1/` eligen el primer idioma compatible de las
