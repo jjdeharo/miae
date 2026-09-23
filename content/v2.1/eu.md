@@ -256,6 +256,6 @@ Ondoko adibideetan, **5. maila baliabidearen sorrerari dagokio**: ipuina, errepo
 
 Miller, M. (2024). [IA in the classroom: What’s cheating? What’s OK?](https://ditchthattextbook.com/ai-cheating/) *Ditch That Textbook*
 
-Perkins, M., Furze, L., Roe, J., MacVaugh, J.(2024). The Artificial Intelligence Assessment Scale (AIAS): A Framework for Ethical Integration of Generative IA in Educational Assessment. *Journal of University Teaching and Learning Practice, 21(6)*. <https://doi.org/10.53761/q3azde36>
+Perkins, M., Furze, L., Roe, J., & MacVaugh, J. (2024). The Artificial Intelligence Assessment Scale (AIAS): A Framework for Ethical Integration of Generative AI in Educational Assessment. *Journal of University Teaching and Learning Practice, 21*(6). <https://doi.org/10.53761/q3azde36>
 
-Perkins, M., Roe, J., & Furze, L. (2025). *Reimagining the Artificial Intelligence Assessment Scale (AIAS): A refined framework for educational assessment.* *Journal of University Teaching and Learning Practice, 22*(7). <https://doi.org/10.53761/rrm4y757>
+Perkins, M., Roe, J., & Furze, L. (2025). Reimagining the Artificial Intelligence Assessment Scale: A refined framework for educational assessment. *Journal of University Teaching and Learning Practice, 22*(7). <https://doi.org/10.53761/rrm4y757>
