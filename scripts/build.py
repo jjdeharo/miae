@@ -39,7 +39,7 @@ UI = {
         "more_resources": "Otros formatos", "podcast": "Pódcast", "podcast_note": "34 minutos · español",
         "video": "Vídeo", "video_note": "Explicación visual · español", "assistant": "Asistente MIAE",
         "assistant_note": "Consultar el marco y clasificar casos", "citation": "Referencia",
-        "how_to_cite": "Cómo citar este trabajo", "previous_version": "Versión 2 revisada", "ai_use": "Elaborado con IA, nivel 4 del MIAE",
+        "how_to_cite": "Cómo citar este trabajo", "previous_version": "Versión 2 revisada", "ai_use": "Elaborado con IA, nivel 4 del MIAE: el autor ha dirigido y revisado el contenido",
         "level_names": ["La persona crea", "La IA reformula", "La IA planifica", "La persona construye", "Cocreación", "La persona supervisa"],
     },
     "ca": {
@@ -54,7 +54,7 @@ UI = {
         "more_resources": "Altres formats", "podcast": "Pòdcast", "podcast_note": "34 minuts · castellà",
         "video": "Vídeo", "video_note": "Explicació visual · castellà", "assistant": "Assistent MIAE",
         "assistant_note": "Consultar el marc i classificar casos", "citation": "Referència",
-        "how_to_cite": "Com citar aquest treball", "previous_version": "Versió 2 revisada", "ai_use": "Elaborat amb IA, nivell 4 del MIAE",
+        "how_to_cite": "Com citar aquest treball", "previous_version": "Versió 2 revisada", "ai_use": "Elaborat amb IA, nivell 4 del MIAE: l'autor n'ha dirigit i revisat el contingut",
         "level_names": ["La persona crea", "La IA reformula", "La IA planifica", "La persona construeix", "Cocreació", "La persona supervisa"],
     },
     "eu": {
@@ -69,7 +69,7 @@ UI = {
         "more_resources": "Beste formatu batzuk", "podcast": "Podcasta", "podcast_note": "34 minutu · gaztelaniaz",
         "video": "Bideoa", "video_note": "Azalpen bisuala · gaztelaniaz", "assistant": "MIAE laguntzailea",
         "assistant_note": "Esparrua kontsultatu eta kasuak sailkatu", "citation": "Erreferentzia",
-        "how_to_cite": "Lan hau nola aipatu", "previous_version": "2. bertsio berrikusia", "ai_use": "IArekin landua, MIAEren 4. maila",
+        "how_to_cite": "Lan hau nola aipatu", "previous_version": "2. bertsio berrikusia", "ai_use": "IArekin landua, MIAEren 4. maila: egileak edukia zuzendu eta berrikusi du",
         "level_names": ["Pertsonak sortzen du", "IAk birformulatzen du", "IAk planifikatzen du", "Pertsonak eraikitzen du", "Elkarrekin sortzea", "Pertsonak gainbegiratzen du"],
     },
     "gl": {
@@ -84,7 +84,7 @@ UI = {
         "more_resources": "Outros formatos", "podcast": "Pódcast", "podcast_note": "34 minutos · castelán",
         "video": "Vídeo", "video_note": "Explicación visual · castelán", "assistant": "Asistente MIAE",
         "assistant_note": "Consultar o marco e clasificar casos", "citation": "Referencia",
-        "how_to_cite": "Como citar este traballo", "previous_version": "Versión 2 revisada", "ai_use": "Elaborado con IA, nivel 4 do MIAE",
+        "how_to_cite": "Como citar este traballo", "previous_version": "Versión 2 revisada", "ai_use": "Elaborado con IA, nivel 4 do MIAE: o autor dirixiu e revisou o contido",
         "level_names": ["A persoa crea", "A IA reformula", "A IA planifica", "A persoa constrúe", "Cocreación", "A persoa supervisa"],
     },
     "en": {
@@ -99,7 +99,7 @@ UI = {
         "more_resources": "Other formats", "podcast": "Podcast", "podcast_note": "34 minutes · Spanish",
         "video": "Video", "video_note": "Visual explanation · Spanish", "assistant": "MIAE assistant",
         "assistant_note": "Explore the framework and classify cases", "citation": "Reference",
-        "how_to_cite": "How to cite this work", "previous_version": "Revised version 2", "ai_use": "Made with AI, MIAE level 4",
+        "how_to_cite": "How to cite this work", "previous_version": "Revised version 2", "ai_use": "Made with AI, MIAE level 4: the author directed and reviewed the content",
         "level_names": ["The person creates", "AI reformulates", "AI plans", "The person builds", "Co-creation", "The person supervises"],
     },
 }

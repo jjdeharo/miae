@@ -11,10 +11,10 @@ Autors com els del treball esmentat i altres com Matt Miller se centren en el **
 Aquest marc s'ha generalitzat per a la integració de la IA generativa a les tasques educatives (MIAE), sobretot per **clarificar l'ús que es fa de la IA en els treballs docents**. Des d'aquest punt de vista, és aplicable tant per a l'alumnat com per al professorat. Aquesta visió té innegables avantatges
 
 - Permet situar l'alumnat i el professorat en un **marc comprensible**, clarificant la relació que mantenen amb la IA. Això facilita una major transparència i entesa sobre l'ús de la tecnologia a l'entorn educatiu.
-- Estableix **fronteres** clares per a l'ocupació de la IA a l'aula, i permet als educadors delimitar el grau d'intervenció de la IA que volen permetre segons els objectius educatius. Aquestes fronteres inclouen consideracions sobre el plagi i l'engany, assegurant que es mantingui la integritat acadèmica.
+- Estableix **fronteres** clares per a l'ocupació de la IA a l'aula, i permet al professorat delimitar el grau d'intervenció de la IA que vol permetre segons els objectius educatius. Aquestes fronteres inclouen consideracions sobre el plagi i l'engany, assegurant que es mantingui la integritat acadèmica.
 - Ofereix una guia per integrar la IA al currículum, proporcionant un enfocament estructurat que ajuda a maximitzar els beneficis educatius de la IA mentre es minimitzen els riscos associats amb el seu ús indegut.
 
-El marc es basa en el grau d'autonomia i contribució de la IA al procés educatiu, progressant des de l'absència total d'IA fins a la generació autònoma de contingut per IA per a ús educatiu, supervisat per humans. Aquesta aproximació no sols aborda les preocupacions ètiques, sinó que també ofereix un enfocament per comprendre i utilitzar la IA en diversos contextos educatius, des de treballs escrits fins a projectes, presentacions i desenvolupament de materials didàctics. Aquesta integració permet als docents i estudiants aprofitar al màxim les capacitats de la IA, promovent un aprenentatge i un ensenyament més eficaços.
+El marc es basa en el grau d'autonomia i contribució de la IA al procés educatiu, progressant des de l'absència total d'IA fins a la generació autònoma de contingut per IA per a ús educatiu, supervisat per persones. Aquesta aproximació no sols aborda les preocupacions ètiques, sinó que també ofereix un enfocament per comprendre i utilitzar la IA en diversos contextos educatius, des de treballs escrits fins a projectes, presentacions i desenvolupament de materials didàctics. Aquesta integració permet al professorat i a l'alumnat aprofitar al màxim les capacitats de la IA, promovent un aprenentatge i un ensenyament més eficaços.
 
 ## Escala d’integració de la IA generativa
 
@@ -57,7 +57,7 @@ A continuació presentem una breu descripció de cada nivell que ajuda a localit
 
 **Nivell 4 – Col·laboració avançada persona-IA (cocreació)**: Hi ha un **diàleg continu i bidireccional** en què la persona i la IA contribueixen al desenvolupament del contingut. La persona guia, contrasta i refina les aportacions durant l’elaboració. El resultat és una **fusió estreta i cocreada** del treball de totes dues parts. La idea inicial pot ser completament humana; el nombre d’intercanvis, per si sol, no determina la cocreació.
 
-**Nivell 5. Supervisió humana d'IA autònoma**: La IA genera el producte final de manera autònoma basant-se en paràmetres humans. L'humà actua només com a supervisor final, revisant la qualitat i validant el producte abans d'usar-lo.
+**Nivell 5. Supervisió humana d'IA autònoma**: La IA genera el producte final de manera autònoma basant-se en paràmetres humans. La persona actua només com a supervisora final, revisant la qualitat i validant el producte abans d'usar-lo.
 
 ## Descripció de cada nivell
 
@@ -65,14 +65,14 @@ A continuació es detallen cadascun dels nivells i es donen alguns dels aspectes
 
 ### Nivell 0. Treball completament humà
 
-No hi ha ús d’IA en cap etapa. Tot el contingut, les idees i l'estructura són generats exclusivament per l'humà utilitzant recursos tradicionals.
+No hi ha ús d’IA en cap etapa. Tot el contingut, les idees i l'estructura són generats exclusivament per la persona utilitzant recursos tradicionals.
 
 En aquest marc, l'absència d'IA fa referència a la IA generativa utilitzada per fer la tasca. Utilitzar Internet o una eina digital no implica per si mateix recórrer-hi. Els exemples següents pressuposen que la persona realitza l’activitat sense assistència generativa.
 
 #### Característiques clau
 
 - No es fa servir IA generativa en cap moment durant la tasca.
-- Es depèn exclusivament del coneixement, la comprensió i les habilitats pròpies de l'individu.
+- Es depèn exclusivament del coneixement, la comprensió i les habilitats pròpies de la persona.
 - Totes les idees, anàlisis i continguts són generats per la persona.
 - S'utilitzen únicament recursos tradicionals (Internet, llibres, articles, notes, etc.).
 
@@ -83,14 +83,14 @@ En aquest marc, l'absència d'IA fa referència a la IA generativa utilitzada pe
 - Treballs sense accés a IA.
 - Generació didees sense tecnologia.
 - Exàmens orals.
-- Sessions de preguntes i respostes o discussions formatives entre estudiants i educadors.
+- Sessions de preguntes i respostes o discussions formatives entre alumnat i professorat.
 
 #### Exemples per al professorat
 
 - Dissenyar preguntes dexamen basades en el contingut del curs sense utilitzar eines de IA.
-- Redactar rúbriques i criteris davaluació per als exàmens.
+- Redactar rúbriques i criteris d'avaluació per als exàmens.
 - Desenvolupar plans de lliçons utilitzant només recursos tradicionals (Internet, llibres de text, articles acadèmics, notes de classe).
-- Dissenyar activitats i exercicis que fomentin la participació activa dels estudiants.
+- Dissenyar activitats i exercicis que fomentin la participació activa de l'alumnat.
 
 ------------------------------------------------------------------------
 
@@ -122,16 +122,16 @@ La reorganització daquest nivell és expressiva: millora lordre o la presentaci
 
 - Organitzar dades en taules o gràfics per a presentacions, facilitant la visualització de la informació sense alterar-ne el contingut original.
 - Correcció gramatical, de puntuació i ortogràfica en documents i materials educatius, millorant la qualitat del text.
-- Suggeriment de termes adequats o sinònims per millorar la claredat de les guies destudi i materials escrits.
-- Assistència en la preparació de plans de lliçons, resumint i organitzant informació proporcionada segons els objectius i els criteris ja establerts pel docent.
-- Extreure llistes de termes i conceptes clau presents al material proporcionat per a exàmens i guies d'estudi, seguint els criteris de selecció del docent.
-- Suport en la revisió de treballs i tasques dels estudiants, utilitzant IA per identificar errors dexpressió i proporcionar correccions lingüístiques, sense avaluar ni desenvolupar el contingut disciplinar.
+- Suggeriment de termes adequats o sinònims per millorar la claredat de les guies d'estudi i materials escrits.
+- Assistència en la preparació de plans de lliçons, resumint i organitzant informació proporcionada segons els objectius i els criteris ja establerts pel professorat.
+- Extreure llistes de termes i conceptes clau presents al material proporcionat per a exàmens i guies d'estudi, seguint els criteris de selecció del professorat.
+- Suport en la revisió de treballs i tasques de l'alumnat, utilitzant IA per identificar errors d'expressió i proporcionar correccions lingüístiques, sense avaluar ni desenvolupar el contingut disciplinar.
 
 ------------------------------------------------------------------------
 
 ### Nivell 2. **Planificació i estructuració assistida per IA**
 
-La IA ajuda a la generació inicial d'idees ia l'estructuració del treball, però tot el contingut final és desenvolupat per l'humà. Les seves propostes serveixen per planificar; la persona fa el desenvolupament i la redacció final.
+La IA ajuda a la generació inicial d'idees i a l'estructuració del treball, però tot el contingut final és desenvolupat per la persona. Les seves propostes serveixen per planificar; la persona fa el desenvolupament i la redacció final.
 
 Aquest nivell inclou proposar una estructura, una seqüència argumental o un pla de desenvolupament. Les idees i organització suggerides poden orientar el resultat; la IA no elabora els arguments, les anàlisis o les solucions que el constitueixen. Si es torna a planificar durant la feina, aquesta ajuda continua sent de nivell 2 mentre conservi aquesta funció preparatòria.
 
@@ -141,53 +141,53 @@ Si la IA ajuda a planificar, la persona desenvolupa després tot el contingut i 
 
 - La IA s'utilitza principalment per generar idees inicials i estructurar continguts.
 - Ajuda en el disseny i la planificació del treball, però no en la creació del contingut final.
-- L'humà utilitza els suggeriments de la IA com a punt de partida, però desenvolupa el treball per ell mateix, aplicant el seu propi criteri i coneixement.
+- La persona utilitza els suggeriments de la IA com a punt de partida, però desenvolupa el treball per si mateixa, aplicant el seu propi criteri i coneixement.
 - El producte final no incorpora desenvolupament ni redacció realitzats per la IA, encara que les idees i les estructures suggerides poden orientar el treball.
 - La persona és responsable davaluar críticament, seleccionar i desenvolupar les idees generades per la IA, assegurant que el producte final sigui el resultat de la seva pròpia anàlisi i comprensió.
-- La contribució de la IA es limita a la preparació del treball o de les parts, mentre que l'execució i el desenvolupament detallat són realitzats enterament per l'humà.
+- La contribució de la IA es limita a la preparació del treball o de les parts, mentre que l'execució i el desenvolupament detallat són realitzats enterament per la persona.
 
 #### Exemples per a l'alumnat
 
 - **Fases inicials d'un treball.** Ús d'IA per generar idees i crear un esquema o índex per a un assaig, però la redacció final es fa sense IA.
-- **Pluja d'idees**. Els estudiants poden utilitzar IA per generar idees o possibles enfocaments per resoldre problemes. Aquestes idees es discuteixen, filtren i refinen; lalumnat elabora després les solucions.
+- **Pluja d'idees**. L'alumnat pot utilitzar IA per generar idees o possibles enfocaments per resoldre problemes. Aquestes idees es discuteixen, filtren i refinen; l'alumnat elabora després les solucions.
 - **Esquemes**. Les persones poden utilitzar IA per crear esquemes de la seva feina com a eina de planificació. Aquests esquemes serveixen com a guia per al desenvolupament humà del treball; la seva organització es pot reflectir en el resultat. Si l'encàrrec consisteix a lliurar el propi esquema com a producte final, la seva generació s'ha de classificar com a tal i no com a planificació.
 - **Assistència en la investigació**. La IA pot suggerir temes, àrees dinterès o fonts útils per a la recerca, també a través de cercadors.
 
 #### Exemples per al professorat
 
 - **Elaborar el pla d'una lliçó**. Usar IA per generar idees i crear un esquema o índex per a un pla de lliçó, però el desenvolupament final del pla es realitza sense IA.
-- **Esquemes**. Crear esquemes estructurats per a unitats destudi o programes de curs utilitzant IA, com a guia perquè el professor desenvolupi després les unitats o el programa.
+- **Esquemes**. Crear esquemes estructurats per a unitats d'estudi o programes de curs utilitzant IA, com a guia perquè el professorat desenvolupi després les unitats o el programa.
 - **Assistència en la investigació acadèmica**. La IA pot suggerir temes, àrees d'interès o fonts útils per a investigacions educatives, facilitant la cerca de referències.
-- **Generació d'idees per a projectes de classe i activitats**. La IA dóna idees per a activitats que després són creades, adaptades i refinades pel professor.
+- **Generació d'idees per a projectes de classe i activitats**. La IA dóna idees per a activitats que després són creades, adaptades i refinades pel professorat.
 
 ------------------------------------------------------------------------
 
 ### Nivell 3. Assistència parcial d'IA (ús d'esborranys o esquelet)
 
-La IA genera esborranys inicials o «esquelets» que ja desenvolupen contingut, més enllà de reformular material proporcionat. L'humà utilitza aquest material com a punt de partida, però assumeix l'autoria principal, reescrivint, adaptant i construint significativament sobre la base generada per la IA. La interacció és principalment **unidireccional**: la IA produeix i l'humà revisa i modifica.
+La IA genera esborranys inicials o «esquelets» que ja desenvolupen contingut, més enllà de reformular material proporcionat. La persona utilitza aquest material com a punt de partida, però assumeix l'autoria principal, reescrivint, adaptant i construint significativament sobre la base generada per la IA. La interacció és principalment **unidireccional**: la IA produeix i la persona revisa i modifica.
 
 Un “esquelet” d'aquest nivell conté un desenvolupament inicial que reconstrueix la persona; un índex que només orienta el treball correspon al nivell 2. La reconstrucció significativa afecta el contingut, el raonament o el funcionament del resultat. No n'hi ha prou amb seleccionar una resposta o introduir retocs d'estil. Hi pot haver consultes posteriors a la IA sense que el procés sigui nivell 4, si la persona segueix fent el desenvolupament principal per si mateixa.
 
 #### Característiques clau
 
-- La interacció és principalment unidireccional: la IA produeix, l'humà revisa i modifica.
-- L'humà utilitza la IA per generar esborranys, propostes o esquelets que serveixen com a punt de partida.
-- L'ús de la IA se centra en tasques específiques on aporta eficiència i permet a l'humà enfocar-se en aspectes que requereixen altres habilitats.
+- La interacció és principalment unidireccional: la IA produeix, la persona revisa i modifica.
+- La persona utilitza la IA per generar esborranys, propostes o esquelets que serveixen com a punt de partida.
+- L'ús de la IA se centra en tasques específiques on aporta eficiència i permet a la persona enfocar-se en aspectes que requereixen altres habilitats.
 - La persona manté un control significatiu sobre el procés i el resultat, assumint lautoria final del contingut.
 
 #### Exemples per a l'alumnat
 
-- **Redacció de seccions d'un informe**. La IA pot redactar un esborrany inicial duna secció. Els estudiants revisen aquesta secció, realitzant modificacions, afegint les pròpies idees i assegurant que el contingut final reflecteixi la seva comprensió i anàlisi personal.
-- **Anàlisi de dades**. La IA duu a terme l'anàlisi preliminar d'un conjunt de dades i genera gràfics o taules i els interpreta. Els alumnes revisen i reelaboren significativament aquesta interpretació, incorporen les seues conclusions i construeixen un informe propi sobre les implicacions de les dades.
+- **Redacció de seccions d'un informe**. La IA pot redactar un esborrany inicial d'una secció. L'alumnat revisa aquesta secció, hi fa modificacions, hi afegeix les pròpies idees i s'assegura que el contingut final reflecteixi la seva comprensió i anàlisi personal.
+- **Anàlisi de dades**. La IA duu a terme l'anàlisi preliminar d'un conjunt de dades i genera gràfics o taules i els interpreta. L'alumnat revisa i reelabora significativament aquesta interpretació, incorpora les seves conclusions i construeix un informe propi sobre les implicacions de les dades.
 - **Redacció de preguntes per a un qüestionari**. La IA genera les preguntes d'un qüestionari i la persona les selecciona i reelabora significativament, revisant-ne el plantejament, els continguts que avaluen i l'adequació a les necessitats concretes.
 - **Creació de presentacions**. La IA genera un esborrany d'una presentació i l'alumnat desenvolupa i reorganitza els arguments, incorpora explicacions pròpies i n'adapta els materials.
 
 #### Exemples per al professorat
 
-- **Generació de recursos didàctics**. La IA crea esborranys de recursos didàctics, com ara guies de lectura o materials suplementaris. El professor revisa, adapta i desenvolupa aquests recursos per assegurar-se que siguin adequats per a les necessitats específiques dels estudiants i el currículum.
-- **Disseny d'activitats d'aprenentatge**. La IA proposa una sèrie dactivitats per a una unitat temàtica. El professor avalua cada activitat, en modifica algunes per fer-les més interactives o rellevants per al context específic, i afegeix noves activitats basades en la seva experiència i coneixement de les necessitats d'aprenentatge dels seus estudiants.
-- **Desenvolupament de casos pràctics**. La IA genera una llista de possibles casos pràctics basats en els conceptes clau del curs. El docent selecciona, revisa i enriqueix el cas, afegint-hi context real i preguntes d'anàlisi que fomentin el pensament crític i l'aplicació pràctica dels coneixements adquirits.
-- **Creació d'exàmens**. La IA proposa un conjunt de preguntes per a un examen. El professor selecciona les més apropiades, en modifica d'altres per ajustar la seva dificultat o enfocament, i afegeix les seves pròpies preguntes per assegurar una avaluació completa i equilibrada dels coneixements i les habilitats dels estudiants.
+- **Generació de recursos didàctics**. La IA crea esborranys de recursos didàctics, com ara guies de lectura o materials suplementaris. El professorat revisa, adapta i desenvolupa aquests recursos per assegurar-se que siguin adequats per a les necessitats específiques de l'alumnat i el currículum.
+- **Disseny d'activitats d'aprenentatge**. La IA proposa una sèrie d'activitats per a una unitat temàtica. El professorat avalua cada activitat, en modifica algunes per fer-les més interactives o rellevants per al context específic, i afegeix noves activitats basades en la seva experiència i coneixement de les necessitats d'aprenentatge del seu alumnat.
+- **Desenvolupament de casos pràctics**. La IA genera una llista de possibles casos pràctics basats en els conceptes clau del curs. El professorat selecciona, revisa i enriqueix el cas, afegint-hi context real i preguntes d'anàlisi que fomentin el pensament crític i l'aplicació pràctica dels coneixements adquirits.
+- **Creació d'exàmens**. La IA proposa un conjunt de preguntes per a un examen. El professorat selecciona les més apropiades, en modifica d'altres per ajustar la seva dificultat o enfocament, i afegeix les seves pròpies preguntes per assegurar una avaluació completa i equilibrada dels coneixements i les habilitats de l'alumnat.
 
 ------------------------------------------------------------------------
 
@@ -201,31 +201,31 @@ La repetició d'instruccions, l'acceptació de propostes o les peticions de canv
 
 #### Característiques clau
 
-- Hi ha un diàleg continu i bidireccional entre l'humà i la IA, amb iteracions en què tots dos desenvolupen i refinen el contingut.
-- L'humà manté un paper crucial en la direcció, el refinament i la validació del treball, assegurant la coherència general i la qualitat del producte final.
-- La creativitat i el judici crític de l‟humà s‟apliquen per millorar, personalitzar i donar coherència al resultat de la IA.
+- Hi ha un diàleg continu i bidireccional entre la persona i la IA, amb iteracions en què tots dos desenvolupen i refinen el contingut.
+- La persona manté un paper crucial en la direcció, el refinament i la validació del treball, assegurant la coherència general i la qualitat del producte final.
+- La creativitat i el judici crític de la persona s'apliquen per millorar, personalitzar i donar coherència al resultat de la IA.
 - La persona actua com a coordinadora i directora del projecte, prenent decisions crítiques sobre lestructura, el contingut i la presentació del treball.
 
 #### Exemples per a l'alumnat
 
-- **Projecte de recerca**. L'estudiant i la IA col·laboren en un procés iteratiu. La IA ajuda a cercar fonts, proposar esborranys de text i crear gràfics. L'estudiant dialoga amb la IA per ajustar aquest contingut, demanant correccions, ampliacions i canvis d'enfocament per assegurar-ne la precisió i la rellevància.
-- **Treball escolar**. L'alumne proporciona les dades necessàries per fer la feina. La IA redacta un informe que és examinat pel primer, que us indica les correccions a realitzar. Sestableix un diàleg on lalumnat contrasta les interpretacions, aporta arguments i decideix quines explicacions revisar o ampliar amb la IA.
-- **Resolució de problemes matemàtics**. La IA proporciona passos i solucions detallades per a problemes avançats. L'estudiant contrasta els passos, proposa raonaments i desenvolupa solucions alternatives amb la IA, justificant les decisions que incorpora a la resposta final. Demanar explicacions per comprendre una solució ja donada no n'hi ha prou, per si mateix, per classificar-ne l'elaboració com a cocreació.
-- **Creació d'un pòdcast històric**. Un estudiant comença proporcionant a la IA la idea general. La IA genera un esquema inicial. L'estudiant revisa aquest esquema, sol·licita canvis i demana a la IA que ampliï certs aspectes. La IA produeix esborranys de guions que l'estudiant edita. Col·laboren en la creació de notes i materials complementaris. Aquest procés continua fins que el pòdcast assoleix un alt nivell de qualitat.
-- **Model matemàtic aplicat al canvi climàtic**. L'estudiant descriu el problema a la IA. La IA suggereix enfocaments i l'estudiant demana que els desenvolupi. Demana a la IA un esborrany del model. L'estudiant revisa el model, ajusta variables i incorpora factors addicionals amb l'ajut de la IA. La IA genera visualitzacions i el procés iteratiu continua refinant el model.
+- **Projecte de recerca**. L'alumnat i la IA col·laboren en un procés iteratiu. La IA ajuda a cercar fonts, proposar esborranys de text i crear gràfics. L'alumnat dialoga amb la IA per ajustar aquest contingut, demanant correccions, ampliacions i canvis d'enfocament per assegurar-ne la precisió i la rellevància.
+- **Treball escolar**. L'alumnat proporciona les dades necessàries per fer la feina. La IA redacta un informe, i l'alumnat l'examina i li indica les correccions que ha de fer. S'estableix un diàleg on l'alumnat contrasta les interpretacions, aporta arguments i decideix quines explicacions revisar o ampliar amb la IA.
+- **Resolució de problemes matemàtics**. La IA proporciona passos i solucions detallades per a problemes avançats. L'alumnat contrasta els passos, proposa raonaments i desenvolupa solucions alternatives amb la IA, justificant les decisions que incorpora a la resposta final. Demanar explicacions per comprendre una solució ja donada no n'hi ha prou, per si mateix, per classificar-ne l'elaboració com a cocreació.
+- **Creació d'un pòdcast històric**. L'alumnat comença proporcionant a la IA la idea general. La IA genera un esquema inicial. L'alumnat revisa aquest esquema, sol·licita canvis i demana a la IA que ampliï certs aspectes. La IA produeix esborranys de guions que l'alumnat edita. Col·laboren en la creació de notes i materials complementaris. Aquest procés continua fins que el pòdcast assoleix un alt nivell de qualitat.
+- **Model matemàtic aplicat al canvi climàtic**. L'alumnat descriu el problema a la IA. La IA suggereix enfocaments i l'alumnat demana que els desenvolupi. Demana a la IA un esborrany del model. L'alumnat revisa el model, ajusta variables i incorpora factors addicionals amb l'ajut de la IA. La IA genera visualitzacions i el procés iteratiu continua refinant el model.
 
 #### Exemples per al professorat
 
-- **Planificació d'unitats didàctiques**. El professor i la IA dissenyen iterativament una unitat completa. El professor demana objectius, la IA els genera, el professor sol·licita ajustar-los per al context, la IA suggereix activitats i el professor demana modificar-les, en un diàleg constant.
-- **Desenvolupament d'avaluacions**. El professor col·labora amb la IA per generar preguntes, rúbriques i criteris davaluació. A través d'un diàleg, refineu el nivell de dificultat, demaneu variacions de les preguntes i ajusteu les rúbriques fins que s'alineen amb els objectius del curs.
-- **Desenvolupament de materials interactius**. El professor dirigeix la IA per crear esborranys de simulacions o jocs. A través d'iteracions, el professor revisa, sol·licita ajustaments a la mecànica o el contingut i complementa els materials, co-creant un recurs atractiu i efectiu.
-- **Desenvolupament d'una idea pròpia**. El docent parteix duna idea completament seva i demana ajuda per redactar-la. Durant el diàleg, la IA proposa desglossar conceptes, explorar conseqüències, introduir distincions o aprofundir determinats aspectes. El docent contrasta aquestes propostes, aporta les seves raons, n'accepta unes, en rebutja d'altres i n'orienta el desenvolupament. Les aportacions elaborades conjuntament influeixen en el contingut final. El procés pot haver començat al nivell 1 i passar al nivell 4; el canvi depèn d?aquesta elaboració compartida, no de l?origen de la idea.
+- **Planificació d'unitats didàctiques**. El professorat i la IA dissenyen iterativament una unitat completa. El professorat demana objectius, la IA els genera, el professorat sol·licita ajustar-los per al context, la IA suggereix activitats i el professorat demana modificar-les, en un diàleg constant.
+- **Desenvolupament d'avaluacions**. El professorat col·labora amb la IA per generar preguntes, rúbriques i criteris d'avaluació. A través d'un diàleg, refina el nivell de dificultat, demana variacions de les preguntes i ajusta les rúbriques fins que s'alineen amb els objectius del curs.
+- **Desenvolupament de materials interactius**. El professorat dirigeix la IA per crear esborranys de simulacions o jocs. A través d'iteracions, el professorat revisa, sol·licita ajustaments a la mecànica o el contingut i complementa els materials, co-creant un recurs atractiu i efectiu.
+- **Desenvolupament d'una idea pròpia**. El professorat parteix d'una idea completament seva i demana ajuda per redactar-la. Durant el diàleg, la IA proposa desglossar conceptes, explorar conseqüències, introduir distincions o aprofundir determinats aspectes. El professorat contrasta aquestes propostes, aporta les seves raons, n'accepta unes, en rebutja d'altres i n'orienta el desenvolupament. Les aportacions elaborades conjuntament influeixen en el contingut final. El procés pot haver començat al nivell 1 i passar al nivell 4; el canvi depèn d'aquesta elaboració compartida, no de l'origen de la idea.
 
 ------------------------------------------------------------------------
 
 ### Nivell 5. Supervisió humana de l'IA autònoma
 
-La IA genera el contingut o producte de manera autònoma, amb l'humà actuant com a supervisor. L'humà estableix els paràmetres inicials, però la IA desenvolupa el treball amb intervenció mínima o nul·la durant el procés. **El rol de l'humà és validar el producte final** per al seu ús o entrega, assegurant que compleix els requisits inicials.
+La IA genera el contingut o producte de manera autònoma, amb la persona en el paper de supervisió. La persona estableix els paràmetres inicials, però la IA desenvolupa el treball amb intervenció mínima o nul·la durant el procés. **El paper de la persona és validar el producte final** per al seu ús o entrega, assegurant que compleix els requisits inicials.
 
 L'autonomia fa referència al desenvolupament del contingut o producte encarregat. Proporcionar el tema, les dades o els requisits no impedeix aquest nivell si la IA realitza aquest desenvolupament i la persona es limita a supervisar-lo. Els retocs menors posteriors no constitueixen per si mateixos reconstrucció de nivell 3 ni cocreació de nivell 4. En canvi, una redacció que només reformula continguts humans ja desenvolupats correspon al nivell 1.
 
@@ -233,24 +233,24 @@ L'autonomia fa referència al desenvolupament del contingut o producte encarrega
 
 - La IA genera el contingut de forma independent, basant-se en els paràmetres inicials establerts per la persona.
 - La intervenció humana durant el procés de generació és mínima o nul·la, limitant-se a la configuració inicial i la revisió final.
-- El contingut generat per la IA és el producte final en si mateix que l'humà valida, aprova i utilitza directament.
-- L'humà actua com a director o validador que aprova el resultat, a diferència del Nivell 4 (on és un cocreador) o el Nivell 3 (on és un constructor).
+- El contingut generat per la IA és el producte final en si mateix que la persona valida, aprova i utilitza directament.
+- La persona actua com a directora o validadora que aprova el resultat, a diferència del Nivell 4 (on cocrea) o el Nivell 3 (on construeix).
 
-Als exemples següents, el **nivell 5 correspon a la generació del recurs**: el conte, l'informe, el text històric o el diàleg. L'anàlisi, la comparació o el debat posteriors són tasques diferents i es classifiquen segons com es facin. Si el docent proporciona el recurs i l'alumne l'analitza sense IA, aquesta tasca de l'alumne pot ser de nivell 0. Si el mateix alumne encarrega el recurs i després l'analitza, cal descriure les dues parts; el conjunt no és una feina sense IA.
+Als exemples següents, el **nivell 5 correspon a la generació del recurs**: el conte, l'informe, el text històric o el diàleg. L'anàlisi, la comparació o el debat posteriors són tasques diferents i es classifiquen segons com es facin. Si el professorat proporciona el recurs i l'alumnat l'analitza sense IA, aquesta tasca de l'alumnat pot ser de nivell 0. Si és el mateix alumnat qui encarrega el recurs i després l'analitza, cal descriure les dues parts; el conjunt no és una feina sense IA.
 
 #### Exemples per a l'alumnat
 
-- **Anàlisi literària**: La IA genera un conte o relat breu sobre un tema o gènere literari específic. L'estudiant utilitza aquest conte per fer una anàlisi literària, identificant temes, motius, recursos estilístics i estructures narratives. El treball final de l'alumne no és la modificació del conte sinó l'anàlisi crítica del text generat per la IA.
-- **Anàlisi de dades científiques**: La IA produeix un informe complet basat en un conjunt de dades científiques, com els resultats d'un experiment o una simulació. L'estudiant utilitza aquest informe per fer una anàlisi crítica, discutir la metodologia, interpretar els resultats i avaluar les conclusions. L'informe generat per la IA és tractat com un document font sobre el qual l'estudiant fa la seva anàlisi.
-- **Estudi de casos històrics**: La IA crea una descripció detallada d'un esdeveniment històric, incloent-hi narratives, dates clau i actors involucrats. L'estudiant empra aquest text per fer una comparació entre aquest esdeveniment i un altre estudiat a classe, desenvolupant un assaig comparatiu que analitza les similituds i diferències en contextos històrics.
-- **Discussió filosòfica**: La IA redacta un diàleg filosòfic entre dos personatges sobre un tema ètic contemporani. Els estudiants usen aquest diàleg com a base per a un debat a classe, on discuteixen les posicions de cada personatge, n'analitzen els arguments i desenvolupen les pròpies reflexions filosòfiques a partir del text.
+- **Anàlisi literària**: La IA genera un conte o relat breu sobre un tema o gènere literari específic. L'alumnat utilitza aquest conte per fer una anàlisi literària, identificant temes, motius, recursos estilístics i estructures narratives. El treball final de l'alumnat no és la modificació del conte sinó l'anàlisi crítica del text generat per la IA.
+- **Anàlisi de dades científiques**: La IA produeix un informe complet basat en un conjunt de dades científiques, com els resultats d'un experiment o una simulació. L'alumnat utilitza aquest informe per fer una anàlisi crítica, discutir la metodologia, interpretar els resultats i avaluar les conclusions. L'informe generat per la IA és tractat com un document font sobre el qual l'alumnat fa la seva anàlisi.
+- **Estudi de casos històrics**: La IA crea una descripció detallada d'un esdeveniment històric, incloent-hi narratives, dates clau i actors involucrats. L'alumnat empra aquest text per fer una comparació entre aquest esdeveniment i un altre estudiat a classe, desenvolupant un assaig comparatiu que analitza les similituds i diferències en contextos històrics.
+- **Discussió filosòfica**: La IA redacta un diàleg filosòfic entre dos personatges sobre un tema ètic contemporani. L'alumnat usa aquest diàleg com a base per a un debat a classe, on discuteix les posicions de cada personatge, n'analitza els arguments i desenvolupa les pròpies reflexions filosòfiques a partir del text.
 
 #### Exemples per al professorat
 
-- **Anàlisi de textos a classe**: La IA genera un conjunt de textos expositius sobre diferents teories científiques o conceptes matemàtics. El professor utilitza aquests textos com a material perquè els estudiants facin anàlisis de comprensió, discuteixin en grups o responguin preguntes específiques sobre els conceptes presentats en els textos generats.
-- **Estudi de documents històrics simulats**: La IA produeix discursos o documents simulats de figures històriques en diferents contextos. El professor utilitza aquests documents a classe perquè els estudiants els analitzin com a exercici d'interpretació, identificant-los expressament com a simulacions i sense atribuir-los valor de font històrica autèntica, desenvolupant assajos o discussions basades en el contingut generat.
-- **Pràctica d'interpretació de dades**: La IA crea una sèrie d'informes tècnics o científics que inclouen anàlisis de dades, gràfics i conclusions. El professor utilitza aquests informes en exercicis de classe on els estudiants practiquen la interpretació de dades, critiquen la metodologia utilitzada i desenvolupen les pròpies conclusions basades en la informació presentada.
-- **Preparació per a un debat**: La IA redacta textos que representen diferents posicions en un tema controversial. El professor utilitza aquests textos per preparar els estudiants per a un debat, on cada grup analitza i defensa la posició presentada per la IA, desenvolupant arguments a partir del text base.
+- **Anàlisi de textos a classe**: La IA genera un conjunt de textos expositius sobre diferents teories científiques o conceptes matemàtics. El professorat utilitza aquests textos com a material perquè l'alumnat faci anàlisis de comprensió, discuteixi en grups o respongui preguntes específiques sobre els conceptes presentats en els textos generats.
+- **Estudi de documents històrics simulats**: La IA produeix discursos o documents simulats de figures històriques en diferents contextos. El professorat utilitza aquests documents a classe perquè l'alumnat els analitzi com a exercici d'interpretació, identificant-los expressament com a simulacions i sense atribuir-los valor de font històrica autèntica, desenvolupant assajos o discussions basades en el contingut generat.
+- **Pràctica d'interpretació de dades**: La IA crea una sèrie d'informes tècnics o científics que inclouen anàlisis de dades, gràfics i conclusions. El professorat utilitza aquests informes en exercicis de classe on l'alumnat practica la interpretació de dades, critica la metodologia utilitzada i desenvolupa les pròpies conclusions basades en la informació presentada.
+- **Preparació per a un debat**: La IA redacta textos que representen diferents posicions en un tema controversial. El professorat utilitza aquests textos per preparar l'alumnat per a un debat, on cada grup analitza i defensa la posició presentada per la IA, desenvolupant arguments a partir del text base.
 
 ## Referències
 
