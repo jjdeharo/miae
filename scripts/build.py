@@ -30,7 +30,7 @@ UI = {
     "es": {
         "share_level": "Copiar el enlace a este nivel", "link_copied": "Enlace copiado", "close": "Cerrar", "go_to_level": "Ir a la descripción del nivel", "level_word": "Nivel",
         "skip": "Saltar al contenido", "brand_subtitle": "Marco de integración de la IA",
-        "navigation": "Navegación principal", "home": "Inicio", "language": "Idioma",
+        "navigation": "Navegación principal", "home": "Inicio", "language": "Idioma", "theme": "Modo claro u oscuro",
         "current_version": "Versión vigente", "resources": "Recursos", "document": "Documento",
         "read_download": "Leer o descargar", "download_pdf": "Descargar PDF",
         "zoom": "Zoom", "zoom_out": "Reducir", "zoom_in": "Ampliar", "zoom_reset": "Restablecer el zoom",
@@ -45,7 +45,7 @@ UI = {
     "ca": {
         "share_level": "Copiar l’enllaç a aquest nivell", "link_copied": "Enllaç copiat", "close": "Tancar", "go_to_level": "Anar a la descripció del nivell", "level_word": "Nivell",
         "skip": "Ves al contingut", "brand_subtitle": "Marc d’integració de la IA",
-        "navigation": "Navegació principal", "home": "Inici", "language": "Idioma",
+        "navigation": "Navegació principal", "home": "Inici", "language": "Idioma", "theme": "Mode clar o fosc",
         "current_version": "Versió vigent", "resources": "Recursos", "document": "Document",
         "read_download": "Llegir o descarregar", "download_pdf": "Descarregar PDF",
         "zoom": "Zoom", "zoom_out": "Reduir", "zoom_in": "Ampliar", "zoom_reset": "Restablir el zoom",
@@ -60,7 +60,7 @@ UI = {
     "eu": {
         "share_level": "Maila honetarako esteka kopiatu", "link_copied": "Esteka kopiatu da", "close": "Itxi", "go_to_level": "Mailaren deskribapenera joan", "level_word": "Maila",
         "skip": "Edukira joan", "brand_subtitle": "IA integratzeko esparrua",
-        "navigation": "Nabigazio nagusia", "home": "Hasiera", "language": "Hizkuntza",
+        "navigation": "Nabigazio nagusia", "home": "Hasiera", "language": "Hizkuntza", "theme": "Modu argia edo iluna",
         "current_version": "Uneko bertsioa", "resources": "Baliabideak", "document": "Dokumentua",
         "read_download": "Irakurri edo deskargatu", "download_pdf": "PDFa deskargatu",
         "zoom": "Zooma", "zoom_out": "Txikitu", "zoom_in": "Handitu", "zoom_reset": "Zooma berrezarri",
@@ -75,7 +75,7 @@ UI = {
     "gl": {
         "share_level": "Copiar a ligazón a este nivel", "link_copied": "Ligazón copiada", "close": "Pechar", "go_to_level": "Ir á descrición do nivel", "level_word": "Nivel",
         "skip": "Ir ao contido", "brand_subtitle": "Marco de integración da IA",
-        "navigation": "Navegación principal", "home": "Inicio", "language": "Idioma",
+        "navigation": "Navegación principal", "home": "Inicio", "language": "Idioma", "theme": "Modo claro ou escuro",
         "current_version": "Versión vixente", "resources": "Recursos", "document": "Documento",
         "read_download": "Ler ou descargar", "download_pdf": "Descargar PDF",
         "zoom": "Zoom", "zoom_out": "Reducir", "zoom_in": "Ampliar", "zoom_reset": "Restablecer o zoom",
@@ -90,7 +90,7 @@ UI = {
     "en": {
         "share_level": "Copy the link to this level", "link_copied": "Link copied", "close": "Close", "go_to_level": "Go to the level description", "level_word": "Level",
         "skip": "Skip to content", "brand_subtitle": "AI integration framework",
-        "navigation": "Main navigation", "home": "Home", "language": "Language",
+        "navigation": "Main navigation", "home": "Home", "language": "Language", "theme": "Light or dark mode",
         "current_version": "Current version", "resources": "Resources", "document": "Document",
         "read_download": "Read or download", "download_pdf": "Download PDF",
         "zoom": "Zoom", "zoom_out": "Zoom out", "zoom_in": "Zoom in", "zoom_reset": "Reset zoom",

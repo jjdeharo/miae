@@ -142,3 +142,26 @@
   dialog.showModal();
   card.focus({ preventScroll: true });
 })();
+
+// Light or dark theme: follows the device until the reader picks one. Picking the device's own
+// theme goes back to following it. The choice is stored as "miae-theme", the same key the
+// inline script in <head> reads before the page is painted.
+(() => {
+  if (typeof window.matchMedia !== 'function') return;
+  const button = document.querySelector('[data-theme-toggle]');
+  const key = 'miae-theme';
+  const system = window.matchMedia('(prefers-color-scheme: dark)');
+  const stored = () => { try { return localStorage.getItem(key); } catch (_) { return null; } };
+  const apply = (dark, chosen) => {
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    if (!chosen) return;
+    try {
+      if (dark === system.matches) localStorage.removeItem(key);
+      else localStorage.setItem(key, dark ? 'dark' : 'light');
+    } catch (_) { /* The theme still changes for this visit. */ }
+  };
+  system.addEventListener('change', (event) => { if (stored() === null) apply(event.matches, false); });
+  if (!button) return;
+  button.hidden = false;
+  button.addEventListener('click', () => apply(document.documentElement.dataset.theme !== 'dark', true));
+})();
